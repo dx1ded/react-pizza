@@ -1,0 +1,42 @@
+@use "sass:list";
+@use "sass:map";
+@use "variables";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font);
+}
+
+.container {
+  max-width: calc(var(--design-mw) + var(--container-h-offset) * 2);
+  padding: 0 var(--container-h-offset);
+  margin: 0 auto;
+}
+
+.link-reset {
+  text-decoration: none;
+}
+
+.list-reset {
+  list-style: none;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+@each $name, $properties in variables.$buttons {
+  .btn--#{$name} {
+    color: list.nth($properties, 2);
+    background-color: list.nth($properties, 1);
+  }
+}

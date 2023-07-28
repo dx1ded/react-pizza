@@ -1,0 +1,39 @@
+@use "mixins";
+
+// $name: ($background-color, $color)
+$buttons: (
+  "primary": (var(--black), var(--white))
+);
+
+:root {
+  // Colors
+
+  --black: #000;
+  --white: #fff;
+
+  // Offsets
+
+  --container-h-offset: #{mixins.em(15px)};
+  --design-mw: #{mixins.em(1280px)};
+
+  // Fonts
+
+  --font: "Roboto", sans-serif;
+
+  // Z-indexes
+
+  --z-modal: 1000;
+
+  // Shades
+
+  --shade-1: 0 0 2px rgb(0 0 0 / 70%);
+
+  // Breakpoints
+
+  --bp-laptop: #{mixins.em(1280px)};
+  --bp-laptop-sm: #{mixins.em(1024px)};
+  --bp-tablet: #{mixins.em(768px)};
+  --bp-tablet-sm: #{mixins.em(576px)};
+  --bp-mobile: #{mixins.em(420px)};
+  --bp-mobile-sm: #{mixins.em(375px)};
+}
