@@ -8,19 +8,28 @@ module.exports = {
     "plugin:react/jsx-runtime",
     "plugin:prettier/recommended"
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs', "vite.config.js"],
-  parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
-  settings: { react: { version: '18.2' } },
-  plugins: ['react-refresh', "prettier"],
+  ignorePatterns: ["dist", ".eslintrc.cjs", "vite.config.js"],
+  parserOptions: { ecmaVersion: "latest", sourceType: "module" },
+  settings: { react: { version: "18.2" } },
+  plugins: ["react-refresh", "prettier"],
   rules: {
-    "prettier/prettier": "error",
-    'react-refresh/only-export-components': [
-      'warn',
+    "prettier/prettier": ["error", {
+      trailingComma: "es5",
+      tabWidth: 2,
+      semi: false,
+      singeQuote: false,
+      useTabs: false,
+      printWidth: 80
+    }],
+    "react-refresh/only-export-components": [
+      "warn",
       { allowConstantExport: true },
     ],
     semi: "off",
     quotes: ["error", "double"],
     "comma-dangle": "off",
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "import/no-unresolved": "off",
+    "no-unused-vars": "off"
   },
 }
