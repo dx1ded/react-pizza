@@ -1,10 +1,12 @@
-import { Header } from "./components/Header/Header"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Main } from "./pages/Main/Main"
 
 export function App() {
   return (
-    <div className="container">
-      <Header />
-      <div>Content</div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Main />} />
+      </Routes>
+    </BrowserRouter>
   )
 }

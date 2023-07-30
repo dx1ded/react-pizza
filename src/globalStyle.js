@@ -4,6 +4,33 @@ import normalize from "normalize.css/normalize.css?inline"
 export const GlobalStyle = createGlobalStyle`
   ${normalize}
   
+  @font-face {
+    font-family: "Proxima Nova";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/ProximaNova-Regular.woff2") format("woff2"),
+         url("/ProximaNova-Regular.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Proxima Nova";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/ProximaNova-Bold.woff2") format("woff2"),
+         url("/ProximaNova-Bold.woff") format("woff");
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Proxima Nova";
+    font-style: normal;
+    font-weight: 800;
+    src: url("/ProximaNova-Extrabld.woff2") format("woff2"),
+         url("/ProximaNova-Extrabld.woff") format("woff");
+    font-display: swap;
+  }
+  
   *,
   *::before,
   *::after {
@@ -15,17 +42,22 @@ export const GlobalStyle = createGlobalStyle`
   :root {
     /* Colors */
 
+    --bg: #FFDF8C;
     --black: #000;
     --white: #fff;
+    --dark: #181818;
+    --gray: #7B7B7B;
+    --primary: #fe5f1e;
 
     /* Offsets */
 
-    --container-h-offset: 0.9375em;
-    --design-mw: 80em;
+    --container-h-offset: 3.125em;
+    --container-v-offset: 3.125em;
+    --design-mw: 77.5em;
 
     /* Fonts */
 
-    --font: "Roboto", sans-serif;
+    --font: "Proxima Nova", sans-serif;
 
     /* Z-indexes */
 
@@ -33,7 +65,7 @@ export const GlobalStyle = createGlobalStyle`
 
     /* Shades */
 
-    --shade-1: 0 0 2px rgb(0 0 0 / 70%);
+    --shade-1: 0 15px 20px rgb(0 0 0 / 3%);
 
     /* Breakpoints */
 
@@ -47,12 +79,6 @@ export const GlobalStyle = createGlobalStyle`
 
 
   body {
-    font-family: var(--font);
-  }
-
-  .container {
-    max-width: calc(var(--design-mw) + var(--container-h-offset) * 2);
-    padding: 0 var(--container-h-offset);
-    margin: 0 auto;
+    background-color: var(--bg);
   }
 `

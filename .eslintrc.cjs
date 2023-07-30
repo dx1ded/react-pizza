@@ -31,18 +31,6 @@ module.exports = {
     "import/prefer-default-export": "off",
     "import/no-unresolved": "off",
     "no-unused-vars": "off",
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": [
-          "test.{js,jsx}",
-          "test-*.{js,jsx}",
-          "**/*{.,_}{test,spec}.{js,jsx}",
-          "**/jest.config.js",
-          "**/jest.setup.js"
-        ],
-        "optionalDependencies": false
-      }
-    ]
+    "import/no-extraneous-dependencies": "off"
   },
 }
