@@ -31,6 +31,7 @@ module.exports = {
     "import/prefer-default-export": "off",
     "import/no-unresolved": "off",
     "no-unused-vars": "off",
-    "import/no-extraneous-dependencies": "off"
+    "import/no-extraneous-dependencies": "off",
+    "react/prop-types": "off"
   },
 }
