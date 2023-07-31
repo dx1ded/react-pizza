@@ -9,16 +9,21 @@ import {
 import { Title } from "@components/Title/Title.styled"
 import { Button } from "@components/Button/Button.styled"
 
-function Option({ $type, value, name }) {
+function Option({ id, children, name, isChecked }) {
   return (
     <CardOption>
-      <input type="radio" name={name} />
-      <Button $type={$type}>{value}</Button>
+      <input
+        type="radio"
+        name={id + name}
+        defaultChecked={isChecked}
+        id={id + children}
+      />
+      <label htmlFor={id + children}>{children}</label>
     </CardOption>
   )
 }
 
-export function Card() {
+export function Card({ index }) {
   return (
     <StyledCard>
       <CardImage src="/pizza-img.png" />
@@ -27,13 +32,23 @@ export function Card() {
       </Title>
       <CardOptions>
         <CardOptionsGroup data-group="dough">
-          <Option $type="light" value="thin" name="option-dough" />
-          <Option $type="gray" value="traditional" name="option-dough" />
+          <Option id={index} name="option-dough" isChecked>
+            thin
+          </Option>
+          <Option id={index} name="option-dough">
+            traditional
+          </Option>
         </CardOptionsGroup>
         <CardOptionsGroup data-group="size">
-          <Option $type="light" value="26 cm." name="option-size" />
-          <Option $type="gray" value="30 cm." name="option-size" />
-          <Option $type="gray" value="40 cm." name="option-size" />
+          <Option id={index} name="option-size">
+            26 cm.
+          </Option>
+          <Option id={index} name="option-size" isChecked>
+            30 cm.
+          </Option>
+          <Option id={index} name="option-size">
+            40 cm.
+          </Option>
         </CardOptionsGroup>
       </CardOptions>
       <CardDetails>

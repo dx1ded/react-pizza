@@ -11,15 +11,11 @@ export function Pizza() {
           All pizzas
         </Title>
         <PizzasList>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {Array(8)
+            .fill("")
+            .map((_, index) => (
+              <Card index={index} key={index} />
+            ))}
         </PizzasList>
       </Container>
     </StyledPizza>

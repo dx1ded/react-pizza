@@ -32,6 +32,7 @@ module.exports = {
     "import/no-unresolved": "off",
     "no-unused-vars": "off",
     "import/no-extraneous-dependencies": "off",
-    "react/prop-types": "off"
+    "react/prop-types": "off",
+    "react/no-array-index-key": "off"
   },
 }

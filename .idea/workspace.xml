@@ -2,24 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab777b0c-9b7f-490d-87c0-bca3b9104be0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Card/Card.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Card/Card.styled.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Filter/Filter.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Filter/Filter.styled.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Sections/Sections.styled.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Sort/Sort.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Sort/Sort.styled.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Wrapper/Wrapper.styled.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Main/Pizza.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Main/Pizza.styled.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.eslintrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.cjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Container/Container.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Container/Container.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/globalStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/globalStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/Main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Filter/Filter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Filter/Filter.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Filter/Filter.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Filter/Filter.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/Pizza.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/Pizza.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +65,9 @@
       <workItem from="1690580785061" duration="7630000" />
       <workItem from="1690590105565" duration="3866000" />
       <workItem from="1690673964047" duration="6199000" />
-      <workItem from="1690751231090" duration="16444000" />
+      <workItem from="1690751231090" duration="16947000" />
+      <workItem from="1690781992247" duration="175000" />
+      <workItem from="1690782209096" duration="5935000" />
     </task>
     <servers />
   </component>
