@@ -4,7 +4,6 @@ import {
   StyledOption,
 } from "@components/Filter/Filter.styled"
 import { Container } from "@components/Container/Container.styled"
-import { Button } from "@components/Button/Button.styled"
 import { Sort } from "@components/Sort/Sort"
 
 function Option({ isChecked, children }) {

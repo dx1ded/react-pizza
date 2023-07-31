@@ -18,6 +18,11 @@ const variants = {
     bg: "var(--light-gray)",
     color: "var(--dark)",
   },
+  light_gray: {
+    bg: "var(--white)",
+    color: "#D7D7D7",
+    borderColor: "#D7D7D7",
+  },
   light: {
     bg: "var(--white)",
     color: "var(--dark)",
