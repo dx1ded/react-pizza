@@ -46,7 +46,6 @@ export const CardOption = styled.div`
     display: block;
     width: 100%;
     padding: 0.5rem 0;
-    font-family: var(--font);
     font-size: 0.875rem;
     font-weight: 700;
     cursor: pointer;

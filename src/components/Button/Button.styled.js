@@ -31,7 +31,6 @@ const variants = {
 
 export const Button = styled.button`
   display: inline-block;
-  font-family: var(--font);
   color: ${(props) => variants[props.$type].color};
   cursor: pointer;
   background-color: ${(props) => variants[props.$type].bg};

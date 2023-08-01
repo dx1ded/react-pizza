@@ -28,7 +28,6 @@ export const StyledOption = styled.div`
 
   label {
     padding: 0.8rem 1.5rem;
-    font-family: var(--font);
     font-weight: 700;
     color: var(--dark);
     cursor: pointer;

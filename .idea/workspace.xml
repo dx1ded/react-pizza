@@ -2,19 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab777b0c-9b7f-490d-87c0-bca3b9104be0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/Cart/CartEmpty.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Cart/CartEmpty.styled.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Cart/CartItem.styled.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Cart/CartMenu.styled.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Auth/Auth.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Auth/Auth.styled.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Button/Button.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Filter/Filter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Filter/Filter.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Wrapper/Wrapper.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Wrapper/Wrapper.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Filter/Filter.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Filter/Filter.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Text/Text.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text/Text.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Title/Title.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Title/Title.styled.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/globalStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/globalStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/Cart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartMenu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartItem.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartItem.styled.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +74,9 @@
       <workItem from="1690751231090" duration="16947000" />
       <workItem from="1690781992247" duration="175000" />
       <workItem from="1690782209096" duration="6638000" />
-      <workItem from="1690835320757" duration="8362000" />
+      <workItem from="1690835320757" duration="8435000" />
+      <workItem from="1690851695969" duration="7025000" />
+      <workItem from="1690928511269" duration="1827000" />
     </task>
     <servers />
   </component>

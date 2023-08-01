@@ -80,6 +80,7 @@ export const GlobalStyle = createGlobalStyle`
 
 
   body {
+    font-family: var(--font);
     background-color: var(--bg);
   }
 `

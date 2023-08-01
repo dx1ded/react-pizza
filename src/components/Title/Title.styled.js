@@ -6,7 +6,6 @@ const sizes = {
 }
 
 export const Title = styled.h1`
-  font-family: var(--font);
   font-size: ${(props) => sizes[props.$size] || props.$size};
   font-weight: ${(props) => props.$weight};
   color: ${(props) => props.$color};

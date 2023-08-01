@@ -56,7 +56,6 @@ export const CartItemCounter = styled.div`
 
   input {
     width: 1rem;
-    font-family: var(--font);
     font-size: 1.375rem;
     font-weight: 700;
     text-align: center;
