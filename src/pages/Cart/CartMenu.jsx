@@ -39,10 +39,10 @@ export function CartMenu() {
           <CartItem />
         </CartItems>
         <CartInfo>
-          <Title as="h3" $size="1.375rem" $weight="400">
+          <Title as="h3" $size="md" $weight="400">
             All pizzas: <span>3 pc.</span>
           </Title>
-          <Title as="h3" $size="1.375rem" $weight="400">
+          <Title as="h3" $size="md" $weight="400">
             Order sum: <span>60 $</span>
           </Title>
         </CartInfo>

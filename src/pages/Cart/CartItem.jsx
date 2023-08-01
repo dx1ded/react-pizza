@@ -29,7 +29,7 @@ export function CartItem() {
       <CartItemWrapper>
         <CartItemImage src="/pizza-img.png" />
         <CartItemInfo>
-          <Title as="h3" $size="1.375rem">
+          <Title as="h3" $size="md">
             Raw chicken
           </Title>
           <Text $size="1.125rem" $color="var(--gray)" $weight="400">
@@ -38,7 +38,7 @@ export function CartItem() {
         </CartItemInfo>
       </CartItemWrapper>
       <Counter />
-      <Title as="h2" $size="1.375rem">
+      <Title as="h3" $size="md">
         20 $
       </Title>
       <Button $type="light_gray" aria-label="Delete item from cart">
