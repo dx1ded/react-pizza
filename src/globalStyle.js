@@ -49,6 +49,7 @@ export const GlobalStyle = createGlobalStyle`
     --gray: #7B7B7B;
     --light-gray: #f4f4f4;
     --primary: #fe5f1e;
+    --blue: #3087cf;
 
     /* Offsets */
 
@@ -62,7 +63,7 @@ export const GlobalStyle = createGlobalStyle`
 
     /* Z-indexes */
 
-    --z-modal: 1000;
+    --z-search: 1000;
 
     /* Shades */
 

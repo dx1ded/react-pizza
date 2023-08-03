@@ -1,34 +1,25 @@
-import { NavLink } from "react-router-dom"
 import {
   StyledHeader,
-  CartButton,
-  CartButtonLine,
-  CartButtonItems,
   DivisionLine,
+  HeaderLinks,
 } from "@components/Header/Header.styled"
 import { Container } from "@components/Container/Container.styled"
 import { Logo } from "@components/Logo/Logo"
-import { Text } from "@components/Text/Text.styled"
-import { Icon } from "@components/Icon/Icon.styled"
+import { Search } from "@components/Search/Search"
+import { CartButton } from "./CartButton"
+import { AccountButton } from "./AccountButton"
 
-export function Header() {
+export function Header({ hasSearch }) {
   return (
     <>
       <StyledHeader>
         <Container>
           <Logo />
-          <CartButton as={NavLink} $type="primary" to="/cart">
-            <Text $size="md" $color="var(--white)">
-              520 $
-            </Text>
-            <CartButtonLine />
-            <CartButtonItems>
-              <Icon $name="shopping_cart" $size="16px" />
-              <Text $size="md" $color="var(--white)">
-                3
-              </Text>
-            </CartButtonItems>
-          </CartButton>
+          {hasSearch && <Search />}
+          <HeaderLinks>
+            <CartButton />
+            <AccountButton />
+          </HeaderLinks>
         </Container>
       </StyledHeader>
       <DivisionLine />

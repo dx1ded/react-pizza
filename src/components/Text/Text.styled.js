@@ -9,6 +9,7 @@ export const Text = styled.p`
   font-size: ${(props) => sizes[props.$size] || props.$size};
   font-weight: ${(props) => props.$weight};
   color: ${(props) => props.$color};
+  ${(props) => props.$mb && `margin-bottom: ${props.$mb}`}
 `
 
 Text.defaultProps = {

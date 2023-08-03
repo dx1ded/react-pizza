@@ -1,16 +1,14 @@
 import { Wrapper } from "@components/Wrapper/Wrapper.styled"
 import { Header } from "@components/Header/Header"
 import { Sections } from "@components/Sections/Sections.styled"
-import { Filter } from "@components/Filter/Filter"
-import { Pizza } from "./Pizza"
+import { AccountInfo } from "./AccountInfo"
 
-export function Main() {
+export function Account() {
   return (
     <Wrapper>
-      <Header hasSearch />
+      <Header />
       <Sections>
-        <Filter />
-        <Pizza />
+        <AccountInfo />
       </Sections>
     </Wrapper>
   )

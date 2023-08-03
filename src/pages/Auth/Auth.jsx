@@ -50,7 +50,7 @@ function LoginForm({ setHasAccount }) {
         <Text
           as="button"
           $size="md"
-          $color="#3087cf"
+          $color="var(--blue)"
           onClick={() => setHasAccount(false)}
         >
           Sign in
@@ -130,7 +130,7 @@ function RegisterForm({ setHasAccount }) {
         <Text
           as="button"
           $size="md"
-          $color="#3087cf"
+          $color="var(--blue)"
           onClick={() => setHasAccount(true)}
         >
           Sign in
