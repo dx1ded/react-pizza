@@ -1,17 +1,16 @@
-import { Wrapper } from "@components/Wrapper/Wrapper.styled"
+import { PageWrapper } from "@ui"
 import { Header } from "@components/Header/Header"
-import { Sections } from "@components/Sections/Sections.styled"
-import { Filter } from "@components/Filter/Filter"
-import { Pizza } from "./Pizza"
+// import { Filter } from "@components/Filter/Filter"
+// import { Pizza } from "./Pizza"
 
 export function Main() {
   return (
-    <Wrapper>
+    <PageWrapper>
       <Header hasSearch />
-      <Sections>
-        <Filter />
-        <Pizza />
-      </Sections>
-    </Wrapper>
+      {/* <Sections> */}
+      {/*  <Filter /> */}
+      {/*  <Pizza /> */}
+      {/* </Sections> */}
+    </PageWrapper>
   )
 }

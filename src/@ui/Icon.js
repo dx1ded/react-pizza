@@ -5,14 +5,5 @@ export const Icon = styled.span.attrs(() => ({
 }))`
   font-size: ${(props) => props.$size};
   color: ${(props) => props.$color};
-  background-color: ${(props) => props.$bg};
-
-  &::after {
-    content: "${(props) => props.$name}";
-  }
+  background-color: ${(props) => props.$bg || "transparent"};
 `
-
-Icon.defaultProps = {
-  $bg: "transparent",
-  $color: "var(--white)",
-}

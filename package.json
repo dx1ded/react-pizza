@@ -34,6 +34,7 @@
     "postcss-styled-syntax": "^0.4.0",
     "prettier": "^3.0.0",
     "sass": "^1.64.1",
+    "styled-tools": "^1.7.2",
     "stylelint": "^15.10.2",
     "stylelint-config-recess-order": "^4.3.0",
     "stylelint-config-standard-scss": "^10.0.0",

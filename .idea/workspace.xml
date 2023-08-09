@@ -2,24 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab777b0c-9b7f-490d-87c0-bca3b9104be0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Header/AccountButton.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/AccountButton.styled.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/CartButton.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header/CartButton.styled.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Search/Seach.styled.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Search/Search.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Account/Account.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Account/AccountInfo.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Account/AccountInfo.styled.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/@ui/Grid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/@ui/Heading.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/@ui/_ui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/breakpoints.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Nav/Nav.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Nav/Nav.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.cjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.stylelintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.stylelintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/@ui/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Container/Container.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/@ui/Container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/AccountButton.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/AccountButton.styled.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/CartButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/CartButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/CartButton.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/CartButton.styled.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Text/Text.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Text/Text.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Title/Title.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Title/Title.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Icon/Icon.styled.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/@ui/Icon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Logo/Logo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Logo/Logo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Logo/Logo.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Logo/Logo.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/Seach.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search/Search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sections/Sections.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/@ui/Sections.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Text/Text.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/@ui/Text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Title/Title.styled.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Wrapper/Wrapper.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/@ui/PageWrapper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/globalStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/globalStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Auth/Auth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Auth/Auth.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/Main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,10 +69,17 @@
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/volodymyr/WebstormProjects/react-pizza/node_modules/prettier&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.JavaScript&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;PLAIN_TEXT&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Nav" />
+      <recent name="$PROJECT_DIR$/src/@ui" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src/assets" />
     </key>
@@ -82,7 +103,12 @@
       <workItem from="1690835320757" duration="8435000" />
       <workItem from="1690851695969" duration="7025000" />
       <workItem from="1690928511269" duration="4427000" />
-      <workItem from="1691008976735" duration="11117000" />
+      <workItem from="1691008976735" duration="14741000" />
+      <workItem from="1691036454643" duration="2132000" />
+      <workItem from="1691100010789" duration="7375000" />
+      <workItem from="1691187236209" duration="6387000" />
+      <workItem from="1691358996925" duration="7970000" />
+      <workItem from="1691444250908" duration="15629000" />
     </task>
     <servers />
   </component>

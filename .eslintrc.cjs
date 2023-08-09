@@ -33,6 +33,6 @@ module.exports = {
     "no-unused-vars": "off",
     "import/no-extraneous-dependencies": "off",
     "react/prop-types": "off",
-    "react/no-array-index-key": "off"
+    "react/no-array-index-key": "off",
   },
 }

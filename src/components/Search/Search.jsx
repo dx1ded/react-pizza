@@ -1,29 +1,30 @@
+import { Icon } from "@ui"
 import {
-  SearchInput,
-  SearchResultList,
   StyledSearch,
-} from "@components/Search/Seach.styled"
-import { Icon } from "@components/Icon/Icon.styled"
-import { Text } from "@components/Text/Text.styled"
+  SearchBar,
+  SearchResult,
+  SearchItem,
+} from "./Search.styled"
 
 export function Search() {
   return (
     <StyledSearch>
-      <SearchInput>
-        <Icon $name="search" $color="var(--gray)" $size="1.6rem" />
-        <input type="text" placeholder="Search pizza..." />
-      </SearchInput>
-      <SearchResultList>
-        <Text as="li" $size="md" $color="var(--dark)">
-          Mozarella
-        </Text>
-        <Text as="li" $size="md" $color="var(--dark)">
-          CheeseBurger Pizza
-        </Text>
-        <Text as="li" $size="md" $color="var(--dark)">
-          3 types of Cheese
-        </Text>
-      </SearchResultList>
+      <SearchBar>
+        <Icon
+          as="label"
+          $color="var(--gray)"
+          $size="1.6rem"
+          htmlFor="search-input"
+        >
+          search
+        </Icon>
+        <input type="text" placeholder="Search pizza..." id="search-input" />
+      </SearchBar>
+      <SearchResult>
+        <SearchItem>Mozarella</SearchItem>
+        <SearchItem>CheeseBurger Pizza</SearchItem>
+        <SearchItem>3 types of cheese</SearchItem>
+      </SearchResult>
     </StyledSearch>
   )
 }

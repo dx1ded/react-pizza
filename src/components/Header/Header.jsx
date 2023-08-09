@@ -1,28 +1,18 @@
-import {
-  StyledHeader,
-  DivisionLine,
-  HeaderLinks,
-} from "@components/Header/Header.styled"
-import { Container } from "@components/Container/Container.styled"
+import { Container } from "@ui"
 import { Logo } from "@components/Logo/Logo"
 import { Search } from "@components/Search/Search"
-import { CartButton } from "./CartButton"
-import { AccountButton } from "./AccountButton"
+import { Nav } from "@components/Nav/Nav"
+import { StyledHeader, DivisionLine } from "./Header.styled"
 
 export function Header({ hasSearch }) {
   return (
-    <>
-      <StyledHeader>
-        <Container>
-          <Logo />
-          {hasSearch && <Search />}
-          <HeaderLinks>
-            <CartButton />
-            <AccountButton />
-          </HeaderLinks>
-        </Container>
-      </StyledHeader>
+    <StyledHeader>
+      <Container>
+        <Logo />
+        {hasSearch && <Search />}
+        <Nav />
+      </Container>
       <DivisionLine />
-    </>
+    </StyledHeader>
   )
 }

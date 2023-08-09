@@ -7,10 +7,11 @@
   "plugins": ["stylelint-order"],
   "rules": {
     "no-empty-source": null,
-    "no-missing-end-of-source-newline": true,
+    "no-missing-end-of-source-newline": null,
     "no-descending-specificity": null,
     "value-no-vendor-prefix": null,
     "scss/operator-no-unspaced": null,
+    "scss/operator-no-newline-after": null,
     "order/order": [
       "custom-properties",
       "dollar-variables",

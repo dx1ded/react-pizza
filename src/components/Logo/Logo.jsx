@@ -1,5 +1,4 @@
-import { Title } from "@components/Title/Title.styled"
-import { Text } from "@components/Text/Text.styled"
+import { Heading, Text } from "@ui"
 import { StyledLogo } from "./Logo.styled"
 
 export function Logo() {
@@ -7,9 +6,9 @@ export function Logo() {
     <StyledLogo to="/">
       <img src="pizza.png" alt="Pizza" />
       <div>
-        <Title as="h2" $size="1.5rem" $color="var(--dark)" $weight="800">
+        <Heading $size="1.5rem" $color="var(--dark)" $weight="800" $mb="0.1rem">
           React Pizza
-        </Title>
+        </Heading>
         <Text $size="md" $color="var(--gray)" $weight="400">
           the best pizza in the Universe
         </Text>

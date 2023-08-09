@@ -1,24 +1,26 @@
 import styled from "styled-components"
+import { Container } from "@ui"
+import { StyledSearch } from "@components/Search/Search.styled"
+import { StyledNav } from "@components/Nav/Nav.styled"
 
 export const StyledHeader = styled.header`
-  & > div {
-    display: flex;
+  ${Container} {
+    display: grid;
+    grid-template-columns: 1fr 30rem 1fr;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 2.5rem;
   }
 
-  a {
-    text-decoration: none;
+  ${StyledSearch} {
+    justify-self: center;
   }
-`
 
-export const HeaderLinks = styled.div`
-  display: flex;
-  gap: 0.8rem;
+  ${StyledNav} {
+    justify-self: end;
+  }
 `
 
 export const DivisionLine = styled.div`
   height: 2px;
+  margin-top: 2.5rem;
   background-color: var(--light-gray);
 `

@@ -68,15 +68,6 @@ export const GlobalStyle = createGlobalStyle`
     /* Shades */
 
     --shade-1: 0 15px 20px rgb(0 0 0 / 3%);
-
-    /* Breakpoints */
-
-    --bp-laptop: 80em; /* 1280 */
-    --bp-laptop-sm: 64em; /* 1024 */
-    --bp-tablet: 48em; /* 768 */
-    --bp-tablet-sm: 36em; /* 576 */
-    --bp-mobile: 26.25em; /* 420 */
-    --bp-mobile-sm: 23.4375em; /* 375 */
   }
 
 

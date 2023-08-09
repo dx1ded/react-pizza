@@ -1,14 +1,15 @@
 import styled from "styled-components"
+import { Icon, Text } from "@ui"
 
 export const StyledSearch = styled.div`
   position: relative;
-  flex-basis: 30rem;
+  width: 100%;
 `
 
-export const SearchInput = styled.div`
+export const SearchBar = styled.div`
   position: relative;
 
-  span {
+  ${Icon} {
     position: absolute;
     top: 50%;
     left: 0.5rem;
@@ -25,7 +26,7 @@ export const SearchInput = styled.div`
   }
 `
 
-export const SearchResultList = styled.ul`
+export const SearchResult = styled.ul`
   position: absolute;
   z-index: var(--z-search);
   display: none;
@@ -35,10 +36,14 @@ export const SearchResultList = styled.ul`
   border: 0.5px solid var(--gray);
   border-top: none;
   border-radius: 0 0 5px 5px;
+`
 
-  li {
-    padding: 1rem;
-    cursor: pointer;
-    border-bottom: 1px solid var(--light-gray);
-  }
+export const SearchItem = styled(Text).attrs({
+  as: "li",
+  $size: "md",
+  $color: "var(--dark)",
+})`
+  padding: 1rem;
+  cursor: pointer;
+  border-bottom: 1px solid var(--light-gray);
 `
