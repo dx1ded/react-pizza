@@ -1,3 +1,4 @@
+import { Heading, Button } from "@ui"
 import {
   CardDetails,
   CardImage,
@@ -5,9 +6,7 @@ import {
   CardOptions,
   CardOptionsGroup,
   StyledCard,
-} from "@components/Card/Card.styled"
-import { Title } from "@components/Title/Title.styled"
-import { Button } from "@components/Button/Button.styled"
+} from "./Card.styled"
 
 function Option({ id, children, name, isChecked }) {
   return (
@@ -27,9 +26,9 @@ export function Card({ index }) {
   return (
     <StyledCard>
       <CardImage src="/pizza-img.png" />
-      <Title as="h3" $size="md">
+      <Heading as="h3" $size="md" $mb="1.375rem">
         Cheeseburger Pizza
-      </Title>
+      </Heading>
       <CardOptions>
         <CardOptionsGroup data-group="dough">
           <Option id={index} name="option-dough" isChecked>
@@ -52,7 +51,7 @@ export function Card({ index }) {
         </CardOptionsGroup>
       </CardOptions>
       <CardDetails>
-        <Title $size="1.375rem">from 20$</Title>
+        <Heading $size="1.375rem">from 20$</Heading>
         <Button $type="primary">Add</Button>
       </CardDetails>
     </StyledCard>

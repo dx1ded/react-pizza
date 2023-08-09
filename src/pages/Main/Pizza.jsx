@@ -1,15 +1,14 @@
-import { Container } from "@components/Container/Container.styled"
-import { Title } from "@components/Title/Title.styled"
+import { Container, Heading } from "@ui"
 import { Card } from "@components/Card/Card"
-import { PizzasList, StyledPizza } from "@/pages/Main/Pizza.styled"
+import { PizzasList } from "./Pizza.styled"
 
 export function Pizza() {
   return (
-    <StyledPizza>
+    <section>
       <Container>
-        <Title as="h2" $size="lg">
+        <Heading $size="lg" $mb="2.25rem">
           All pizzas
-        </Title>
+        </Heading>
         <PizzasList>
           {Array(8)
             .fill("")
@@ -18,6 +17,6 @@ export function Pizza() {
             ))}
         </PizzasList>
       </Container>
-    </StyledPizza>
+    </section>
   )
 }

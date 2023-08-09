@@ -2,10 +2,6 @@ import styled from "styled-components"
 
 export const StyledCard = styled.article`
   text-align: center;
-
-  & > h3 {
-    margin-bottom: 1.25rem;
-  }
 `
 
 export const CardImage = styled.img`

@@ -1,10 +1,10 @@
+import { Text } from "@ui"
 import {
   SortOptions,
   SortOptionsList,
   SortTriangle,
   StyledSort,
-} from "@components/Sort/Sort.styled"
-import { Text } from "@components/Text/Text.styled"
+} from "./Sort.styled"
 
 export function Sort() {
   return (

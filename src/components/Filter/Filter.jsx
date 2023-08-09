@@ -1,10 +1,6 @@
-import {
-  StyledFilter,
-  FilterOptions,
-  StyledOption,
-} from "@components/Filter/Filter.styled"
-import { Container } from "@components/Container/Container.styled"
 import { Sort } from "@components/Sort/Sort"
+import { Container } from "@ui"
+import { StyledFilter, FilterOptions, StyledOption } from "./Filter.styled"
 
 function Option({ isChecked, children }) {
   return (

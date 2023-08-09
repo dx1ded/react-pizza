@@ -1,12 +1,14 @@
 import styled from "styled-components"
+import { Container } from "@ui"
 
 export const StyledFilter = styled.div`
-  & > div {
+  margin: 2.5rem 0 3.5rem;
+
+  ${Container} {
     display: flex;
     gap: 1.25rem;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 3rem;
   }
 `
 

@@ -13,9 +13,14 @@
       <change beforePath="$PROJECT_DIR$/.stylelintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.stylelintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/@ui/PageWrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/@ui/PageWrapper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Button/Button.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/@ui/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.styled.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Container/Container.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/@ui/Container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Filter/Filter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Filter/Filter.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Filter/Filter.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Filter/Filter.styled.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/AccountButton.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/AccountButton.styled.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/CartButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/CartButton.jsx" afterDir="false" />
@@ -28,11 +33,13 @@
       <change beforePath="$PROJECT_DIR$/src/components/Search/Seach.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.styled.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Search/Search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Sections/Sections.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/@ui/Sections.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sort/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sort/Sort.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Text/Text.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/@ui/Text.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Title/Title.styled.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Wrapper/Wrapper.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/@ui/PageWrapper.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/globalStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/globalStyle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/Main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/Pizza.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/Pizza.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Main/Pizza.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/Pizza.styled.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +115,7 @@
       <workItem from="1691100010789" duration="7375000" />
       <workItem from="1691187236209" duration="6387000" />
       <workItem from="1691358996925" duration="7970000" />
-      <workItem from="1691444250908" duration="15629000" />
+      <workItem from="1691444250908" duration="20545000" />
     </task>
     <servers />
   </component>
