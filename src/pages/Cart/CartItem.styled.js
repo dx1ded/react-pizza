@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Button } from "@ui"
 
 export const StyledCartItem = styled.li`
   display: flex;
@@ -6,23 +7,9 @@ export const StyledCartItem = styled.li`
   justify-content: space-between;
   padding-top: 1.875rem;
   border-top: 1px solid var(--light-gray);
-
-  /* Delete button */
-
-  & > button {
-    width: 2rem;
-    height: 2rem;
-    border-width: 2px;
-    transform: rotate(45deg);
-
-    span {
-      font-size: 1.5rem;
-      font-weight: 700;
-    }
-  }
 `
 
-export const CartItemWrapper = styled.div`
+export const CartItemContent = styled.div`
   display: flex;
   gap: 1.5rem;
   align-items: center;
@@ -33,18 +20,14 @@ export const CartItemImage = styled.img`
   height: 5rem;
 `
 
-export const CartItemInfo = styled.div`
-  h3 {
-    margin-bottom: 0.2rem;
-  }
-`
+export const CartItemName = styled.div``
 
 export const CartItemCounter = styled.div`
   display: flex;
   gap: 0.75rem;
   align-items: center;
 
-  button {
+  ${Button} {
     flex-shrink: 0;
     width: 2rem;
     height: 2rem;
@@ -68,5 +51,19 @@ export const CartItemCounter = styled.div`
       margin: 0;
       appearance: none;
     }
+  }
+`
+
+export const CartItemDelete = styled(Button).attrs({
+  $type: "light_gray",
+})`
+  width: 2rem;
+  height: 2rem;
+  border-width: 2px;
+  transform: rotate(45deg);
+
+  span {
+    font-size: 1.5rem;
+    font-weight: 700;
   }
 `

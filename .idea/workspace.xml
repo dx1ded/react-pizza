@@ -2,45 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab777b0c-9b7f-490d-87c0-bca3b9104be0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/@ui/Grid.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/@ui/Heading.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/@ui/_ui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/breakpoints.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Nav/Nav.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Nav/Nav.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.cjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.stylelintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.stylelintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/@ui/PageWrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/@ui/PageWrapper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/@ui/Sections.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/@ui/_ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/@ui/_ui.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/@ui/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card/Card.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/Card.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Container/Container.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/@ui/Container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Filter/Filter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Filter/Filter.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Filter/Filter.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Filter/Filter.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/AccountButton.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/AccountButton.styled.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/CartButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/CartButton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/CartButton.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/CartButton.styled.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Icon/Icon.styled.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/@ui/Icon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logo/Logo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Logo/Logo.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Logo/Logo.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Logo/Logo.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search/Seach.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Search/Search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sections/Sections.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/@ui/Sections.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sort/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sort/Sort.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Text/Text.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/@ui/Text.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Title/Title.styled.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/globalStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/globalStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/Main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Main/Pizza.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/Pizza.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Main/Pizza.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Main/Pizza.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/Cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartEmpty.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartEmpty.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartEmpty.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartEmpty.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartItem.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartItem.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartMenu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartMenu.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartMenu.styled.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +91,8 @@
       <workItem from="1691100010789" duration="7375000" />
       <workItem from="1691187236209" duration="6387000" />
       <workItem from="1691358996925" duration="7970000" />
-      <workItem from="1691444250908" duration="20545000" />
+      <workItem from="1691444250908" duration="21688000" />
+      <workItem from="1691703123116" duration="7407000" />
     </task>
     <servers />
   </component>

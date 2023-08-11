@@ -1,18 +1,14 @@
-import { Container } from "@components/Container/Container.styled"
-import { Icon } from "@components/Icon/Icon.styled"
-import { Title } from "@components/Title/Title.styled"
-import { Text } from "@components/Text/Text.styled"
-import { NavLink } from "react-router-dom"
-import { Button } from "@components/Button/Button.styled"
+import { Container, Icon, Heading, Text, Button } from "@ui"
 import {
   CartActions,
   CartClear,
   CartHeader,
-  CartHeaderName,
-  CartInfo,
-  CartItems,
+  CartLogo,
   StyledCartMenu,
-} from "@/pages/Cart/CartMenu.styled"
+  CartList,
+  CartSummary,
+  GoBack,
+} from "./CartMenu.styled"
 import { CartItem } from "./CartItem"
 
 export function CartMenu() {
@@ -20,41 +16,39 @@ export function CartMenu() {
     <StyledCartMenu>
       <Container>
         <CartHeader>
-          <CartHeaderName>
-            <Icon $name="shopping_cart" $size="2.2rem" $color="#3F3F3F" />
-            <Title as="h2" $size="2rem">
-              Cart
-            </Title>
-          </CartHeaderName>
+          <CartLogo>
+            <Icon $size="2.2rem" $color="#3F3F3F">
+              shopping_cart
+            </Icon>
+            <Heading $size="lg">Cart</Heading>
+          </CartLogo>
           <CartClear>
-            <Icon $name="delete" $size="1.25rem" $color="#B6B6B6" />
-            <Text as="span" $size="md" $color="#B6B6B6">
+            <Icon $size="1.25rem" $color="var(--secondary)">
+              delete
+            </Icon>
+            <Text as="span" $size="md" $color="var(--secondary)">
               Clear cart
             </Text>
           </CartClear>
         </CartHeader>
-        <CartItems>
+        <CartList>
           <CartItem />
           <CartItem />
           <CartItem />
-        </CartItems>
-        <CartInfo>
-          <Title as="h3" $size="md" $weight="400">
+        </CartList>
+        <CartSummary>
+          <Heading as="h3" $size="md" $weight="400">
             All pizzas: <span>3 pc.</span>
-          </Title>
-          <Title as="h3" $size="md" $weight="400">
+          </Heading>
+          <Heading as="h3" $size="md" $weight="400">
             Order sum: <span>60 $</span>
-          </Title>
-        </CartInfo>
+          </Heading>
+        </CartSummary>
         <CartActions>
-          <Button as={NavLink} $type="light_gray" to="/">
-            <Icon
-              $name="arrow_back_ios_new"
-              $size="1.1rem"
-              $color="currentColor"
-            />
+          <GoBack to="/">
+            <Icon $size="1.1rem">arrow_back_ios_new</Icon>
             Go back
-          </Button>
+          </GoBack>
           <Button $type="primary">Pay now</Button>
         </CartActions>
       </Container>

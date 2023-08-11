@@ -49,6 +49,7 @@ export const GlobalStyle = createGlobalStyle`
     --gray: #7B7B7B;
     --light-gray: #f4f4f4;
     --primary: #fe5f1e;
+    --secondary: #B6B6B6;
     --blue: #3087cf;
 
     /* Offsets */

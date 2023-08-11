@@ -6,9 +6,11 @@ import { StyledHeader, DivisionLine } from "./Header.styled"
 
 export function Header({ hasSearch }) {
   return (
-    <StyledHeader>
+    <StyledHeader $hasSearch={hasSearch}>
       <Container>
-        <Logo />
+        <div>
+          <Logo />
+        </div>
         {hasSearch && <Search />}
         <Nav />
       </Container>

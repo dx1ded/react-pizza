@@ -1,13 +1,12 @@
-import { Text } from "@components/Text/Text.styled"
-import { Button } from "@components/Button/Button.styled"
-import { Title } from "@components/Title/Title.styled"
+import { Text, Button, Heading } from "@ui"
 import {
+  CartItemContent,
   CartItemCounter,
+  CartItemDelete,
   CartItemImage,
-  CartItemInfo,
-  CartItemWrapper,
+  CartItemName,
   StyledCartItem,
-} from "@/pages/Cart/CartItem.styled"
+} from "./CartItem.styled"
 
 export function Counter() {
   return (
@@ -15,7 +14,7 @@ export function Counter() {
       <Button $type="secondary" aria-label="Subtract counter with 1">
         -
       </Button>
-      <input type="number" defaultValue="1" />
+      <input type="number" defaultValue={1} />
       <Button $type="secondary" aria-label="Add counter with 1">
         +
       </Button>
@@ -26,24 +25,24 @@ export function Counter() {
 export function CartItem() {
   return (
     <StyledCartItem>
-      <CartItemWrapper>
+      <CartItemContent>
         <CartItemImage src="/pizza-img.png" />
-        <CartItemInfo>
-          <Title as="h3" $size="md">
+        <CartItemName>
+          <Heading as="h3" $size="md" $mb="0.2rem">
             Raw chicken
-          </Title>
+          </Heading>
           <Text $size="1.125rem" $color="var(--gray)" $weight="400">
             thin dough, 26 cm.
           </Text>
-        </CartItemInfo>
-      </CartItemWrapper>
+        </CartItemName>
+      </CartItemContent>
       <Counter />
-      <Title as="h3" $size="md">
+      <Heading as="h3" $size="md">
         20 $
-      </Title>
-      <Button $type="light_gray" aria-label="Delete item from cart">
+      </Heading>
+      <CartItemDelete aria-label="Delete item from cart">
         <span aria-hidden="true">+</span>
-      </Button>
+      </CartItemDelete>
     </StyledCartItem>
   )
 }

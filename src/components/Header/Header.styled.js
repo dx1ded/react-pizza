@@ -6,7 +6,7 @@ import { StyledNav } from "@components/Nav/Nav.styled"
 export const StyledHeader = styled.header`
   ${Container} {
     display: grid;
-    grid-template-columns: 1fr 30rem 1fr;
+    grid-template-columns: 1fr ${(props) => props.$hasSearch && "30rem"} 1fr;
     align-items: center;
   }
 
