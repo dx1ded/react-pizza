@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab777b0c-9b7f-490d-87c0-bca3b9104be0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/@ui/Input.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Auth/LoginForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Auth/RegisterForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/@ui/Sections.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/@ui/_ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/@ui/_ui.js" afterDir="false" />
@@ -9,7 +12,8 @@
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Header/Header.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.styled.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Logo/Logo.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Logo/Logo.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/globalStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/globalStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Auth/Auth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Auth/Auth.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Auth/Auth.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Auth/Auth.styled.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Cart/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/Cart.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartEmpty.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartEmpty.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartEmpty.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartEmpty.styled.js" afterDir="false" />
@@ -28,6 +32,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2TBlduhlRcnVPTq7BQJOt5w5gRy" />
   <component name="ProjectLevelVcsManager">
@@ -92,7 +99,7 @@
       <workItem from="1691187236209" duration="6387000" />
       <workItem from="1691358996925" duration="7970000" />
       <workItem from="1691444250908" duration="21688000" />
-      <workItem from="1691703123116" duration="7407000" />
+      <workItem from="1691703123116" duration="14408000" />
     </task>
     <servers />
   </component>

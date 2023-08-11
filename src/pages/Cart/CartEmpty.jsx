@@ -6,8 +6,10 @@ export function CartEmpty() {
   return (
     <StyledCartEmpty>
       <Container>
-        <Heading $size="lg">Cart is empty 😕</Heading>
-        <Text $size="1.125rem" $color="#777777" $weight="400">
+        <Heading $size="lg" $mb="1rem">
+          Cart is empty 😕
+        </Heading>
+        <Text $size="1.125rem" $color="var(--gray)" $weight="400">
           Most likely you have not ordered a pizza yet. <br />
           In order to purchase, go to the main page.
         </Text>
