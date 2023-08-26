@@ -19,7 +19,7 @@ export function Nav() {
           <CartButton />
         </li>
         <li>
-          <NavLink to="/account">
+          <NavLink to="/profile">
             <Icon $size="1.5rem" $color="var(--dark)">
               person
             </Icon>

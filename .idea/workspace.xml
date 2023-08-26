@@ -2,25 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab777b0c-9b7f-490d-87c0-bca3b9104be0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/@ui/Input.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Auth/LoginForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Auth/RegisterForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Pagination/Pagination.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Pagination/Pagination.styled.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Profile/OrderHistory.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Profile/OrderHistory.styled.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/Profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.cjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/@ui/Sections.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/@ui/_ui.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/@ui/_ui.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/@ui/Container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/@ui/Container.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logo/Logo.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Logo/Logo.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Auth/Auth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Auth/Auth.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Auth/Auth.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Auth/Auth.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/Cart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartEmpty.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartEmpty.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartEmpty.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartEmpty.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartItem.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartItem.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartMenu.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Cart/CartMenu.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Cart/CartMenu.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/Nav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/Nav.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Account/Account.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Account/AccountInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile/Info.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/Account/AccountInfo.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile/Info.styled.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +53,8 @@
     &quot;node.js.selected.package.stylelint&quot;: &quot;/Users/volodymyr/WebstormProjects/react-pizza/node_modules/stylelint&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/volodymyr/WebstormProjects/react-pizza/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.JavaScript&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -99,7 +96,14 @@
       <workItem from="1691187236209" duration="6387000" />
       <workItem from="1691358996925" duration="7970000" />
       <workItem from="1691444250908" duration="21688000" />
-      <workItem from="1691703123116" duration="14408000" />
+      <workItem from="1691703123116" duration="18323000" />
+      <workItem from="1691805991274" duration="3508000" />
+      <workItem from="1691810028838" duration="45000" />
+      <workItem from="1691810080002" duration="21000" />
+      <workItem from="1691810106167" duration="14073000" />
+      <workItem from="1691968732622" duration="2758000" />
+      <workItem from="1692763239374" duration="4821000" />
+      <workItem from="1693010649308" duration="13944000" />
     </task>
     <servers />
   </component>
