@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab777b0c-9b7f-490d-87c0-bca3b9104be0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Pagination/Pagination.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Pagination/Pagination.styled.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Profile/OrderHistory.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Profile/OrderHistory.styled.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.cjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/@ui/Container.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/@ui/Container.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Nav/Nav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/Nav.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Account/Account.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Account/AccountInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile/Info.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/Account/AccountInfo.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/Profile/Info.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Nav/Nav.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav/Nav.styled.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +91,9 @@
       <workItem from="1691810106167" duration="14073000" />
       <workItem from="1691968732622" duration="2758000" />
       <workItem from="1692763239374" duration="4821000" />
-      <workItem from="1693010649308" duration="13944000" />
+      <workItem from="1693010649308" duration="16076000" />
+      <workItem from="1693205178478" duration="3000" />
+      <workItem from="1693541505268" duration="162000" />
     </task>
     <servers />
   </component>
