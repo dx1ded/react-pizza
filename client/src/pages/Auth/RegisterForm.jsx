@@ -1,5 +1,6 @@
 import { useFormik } from "formik"
 import { Heading, Text } from "@ui"
+import { registerSchema } from "./yup.schemas"
 import {
   FormChange,
   FormChangeButton,
@@ -9,16 +10,21 @@ import {
   StyledForm,
 } from "./Auth.styled"
 
+const onSubmit = () => {
+  console.log("Submitted")
+}
+
 export function RegisterForm({ setHasAccount }) {
-  const { values, handleChange, handleBlur } = useFormik({
+  const { values, handleChange, handleBlur, handleSubmit } = useFormik({
     initialValues: {
       firstName: "",
       lastName: "",
       email: "",
       username: "",
       password: "",
-      passwordConfirm: "",
+      confirmPassword: "",
     },
+    validationSchema: registerSchema,
   })
 
   return (
@@ -26,7 +32,7 @@ export function RegisterForm({ setHasAccount }) {
       <Heading $size="1.75rem" $mb="1.5rem">
         🍕 Sign up
       </Heading>
-      <form autoComplete="off">
+      <form onSubmit={handleSubmit} autoComplete="off">
         <FormLabel htmlFor="firstName">First Name</FormLabel>
         <FormInput
           type="text"
@@ -72,20 +78,20 @@ export function RegisterForm({ setHasAccount }) {
           onChange={handleChange}
           onBlur={handleBlur}
         />
-        <FormLabel htmlFor="passwordConfirm">Confirm password</FormLabel>
+        <FormLabel htmlFor="confirmPassword">Confirm password</FormLabel>
         <FormInput
           type="password"
-          id="passwordConfirm"
-          value={values.passwordConfirm}
+          id="confirmPassword"
+          value={values.confirmPassword}
           placeholder="Confirm password"
           onChange={handleChange}
           onBlur={handleBlur}
         />
-        <FormSubmit value="Sign up" />
+        <FormSubmit type="submit">Sign up</FormSubmit>
       </form>
       <FormChange>
         <Text $size="md">Already have an account?</Text>
-        <FormChangeButton onClick={() => setHasAccount(true)}>
+        <FormChangeButton as="button" onClick={() => setHasAccount(true)}>
           Sign in
         </FormChangeButton>
       </FormChange>
