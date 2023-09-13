@@ -3,7 +3,6 @@
   <component name="ProjectTasksOptions" suppressed-tasks="SCSS">
     <enabled-global>
       <option value="Stylelint fix on save (JSX)" />
-      <option value="Stylelint fix on save (JS)" />
       <option value="Stylelint fix on save (SCSS)" />
     </enabled-global>
   </component>
