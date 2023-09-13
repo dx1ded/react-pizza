@@ -41,11 +41,11 @@ export function LoginForm({ setHasAccount }) {
           onChange={handleChange}
           onBlur={handleBlur}
         />
-        <FormSubmit value="Sign in" />
+        <FormSubmit type="submit">Sign in</FormSubmit>
       </form>
       <FormChange>
         <Text $size="md">Don&apos;t have an account?</Text>
-        <FormChangeButton onClick={() => setHasAccount(false)}>
+        <FormChangeButton as="button" onClick={() => setHasAccount(false)}>
           Sign up
         </FormChangeButton>
       </FormChange>

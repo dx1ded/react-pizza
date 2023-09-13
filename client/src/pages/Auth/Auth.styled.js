@@ -39,9 +39,7 @@ export const FormInput = styled(Input).attrs({
 `
 
 export const FormSubmit = styled(Button).attrs({
-  as: "input",
   $type: "primary",
-  type: "submit",
 })`
   display: block;
   width: 100%;
@@ -57,7 +55,6 @@ export const FormChange = styled.div`
 `
 
 export const FormChangeButton = styled(Text).attrs({
-  as: "button",
   $size: "md",
   $color: "var(--blue)",
 })`
