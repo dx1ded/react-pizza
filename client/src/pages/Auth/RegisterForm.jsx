@@ -1,93 +1,175 @@
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import { useFormik } from "formik"
 import { Heading, Text } from "@ui"
-import { registerSchema } from "./yup.schemas"
+import { Loader } from "@components/Loader/Loader"
+import { SignupSchema } from "./yup.schemas"
 import {
   FormChange,
   FormChangeButton,
   FormInput,
+  FormLabelWrapper,
   FormLabel,
   FormSubmit,
   StyledForm,
 } from "./Auth.styled"
 
-const onSubmit = () => {
-  console.log("Submitted")
-}
-
 export function RegisterForm({ setHasAccount }) {
-  const { values, handleChange, handleBlur, handleSubmit } = useFormik({
-    initialValues: {
-      firstName: "",
-      lastName: "",
-      email: "",
-      username: "",
-      password: "",
-      confirmPassword: "",
-    },
-    validationSchema: registerSchema,
-  })
+  const [error, setError] = useState("")
+  const [isLoading, setIsLoading] = useState(false)
+  const navigate = useNavigate()
+  const { values, errors, touched, handleChange, handleBlur, handleSubmit } =
+    useFormik({
+      initialValues: {
+        firstName: "",
+        lastName: "",
+        email: "",
+        username: "",
+        password: "",
+        confirmPassword: "",
+      },
+      validationSchema: SignupSchema,
+      async onSubmit(data) {
+        try {
+          setIsLoading(true)
+
+          const request = await fetch("/api/auth/sign-up", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+          })
+
+          const json = await request.json()
+
+          if (!request.ok) throw json
+
+          localStorage.setItem("secret", JSON.stringify(json))
+          navigate("/")
+        } catch (e) {
+          setError(e.message)
+        }
+
+        setIsLoading(false)
+      },
+    })
+
+  const onChangeHandler = (event) => {
+    if (error) setError(false)
+    handleChange(event)
+  }
 
   return (
     <StyledForm>
       <Heading $size="1.75rem" $mb="1.5rem">
         🍕 Sign up
       </Heading>
-      <form onSubmit={handleSubmit} autoComplete="off">
-        <FormLabel htmlFor="firstName">First Name</FormLabel>
+      <form onSubmit={handleSubmit} autoComplete="off" noValidate>
+        <FormLabelWrapper>
+          <FormLabel htmlFor="firstName">First Name</FormLabel>
+          {errors.firstName && touched.firstName && (
+            <Text $size="sm" $color="var(--gray)">
+              {errors.firstName}
+            </Text>
+          )}
+        </FormLabelWrapper>
         <FormInput
           type="text"
           id="firstName"
           value={values.firstName}
           placeholder="First Name"
-          onChange={handleChange}
+          onChange={onChangeHandler}
           onBlur={handleBlur}
         />
-        <FormLabel htmlFor="lastName">Last name</FormLabel>
+        <FormLabelWrapper>
+          <FormLabel htmlFor="lastName">Last name</FormLabel>
+          {errors.lastName && touched.lastName && (
+            <Text $size="sm" $color="var(--gray)">
+              {errors.lastName}
+            </Text>
+          )}
+        </FormLabelWrapper>
         <FormInput
           type="text"
           id="lastName"
           value={values.lastName}
           placeholder="Last Name"
-          onChange={handleChange}
+          onChange={onChangeHandler}
           onBlur={handleBlur}
         />
-        <FormLabel htmlFor="email">E-mail</FormLabel>
+        <FormLabelWrapper>
+          <FormLabel htmlFor="email">E-mail</FormLabel>
+          {errors.email && touched.email && (
+            <Text $size="sm" $color="var(--gray)">
+              {errors.email}
+            </Text>
+          )}
+        </FormLabelWrapper>
         <FormInput
           type="email"
           id="email"
           value={values.email}
           placeholder="E-mail"
-          onChange={handleChange}
+          onChange={onChangeHandler}
           onBlur={handleBlur}
         />
-        <FormLabel htmlFor="username">Username</FormLabel>
+        <FormLabelWrapper>
+          <FormLabel htmlFor="username">Username</FormLabel>
+          {errors.username && touched.username && (
+            <Text $size="sm" $color="var(--gray)">
+              {errors.username}
+            </Text>
+          )}
+        </FormLabelWrapper>
         <FormInput
-          type="email"
+          type="text"
           id="username"
           value={values.username}
           placeholder="Username (without @)"
-          onChange={handleChange}
+          onChange={onChangeHandler}
           onBlur={handleBlur}
         />
-        <FormLabel htmlFor="password">Password</FormLabel>
+        <FormLabelWrapper>
+          <FormLabel htmlFor="password">Password</FormLabel>
+          {errors.password && touched.password && (
+            <Text $size="sm" $color="var(--gray)">
+              {errors.password}
+            </Text>
+          )}
+        </FormLabelWrapper>
         <FormInput
           type="password"
           id="password"
           value={values.password}
           placeholder="Password"
-          onChange={handleChange}
+          onChange={onChangeHandler}
           onBlur={handleBlur}
         />
-        <FormLabel htmlFor="confirmPassword">Confirm password</FormLabel>
+        <FormLabelWrapper>
+          <FormLabel htmlFor="confirmPassword">Confirm password</FormLabel>
+          {errors.confirmPassword && touched.confirmPassword && (
+            <Text $size="sm" $color="var(--gray)">
+              {errors.confirmPassword}
+            </Text>
+          )}
+        </FormLabelWrapper>
         <FormInput
           type="password"
           id="confirmPassword"
           value={values.confirmPassword}
           placeholder="Confirm password"
-          onChange={handleChange}
+          onChange={onChangeHandler}
           onBlur={handleBlur}
         />
-        <FormSubmit type="submit">Sign up</FormSubmit>
+        <FormSubmit type="submit" disabled={isLoading}>
+          {isLoading ? <Loader /> : "Sign up"}
+        </FormSubmit>
+        {error && (
+          <Text $size="sm" $color="red" $mt="0.7rem">
+            {error}
+          </Text>
+        )}
       </form>
       <FormChange>
         <Text $size="md">Already have an account?</Text>

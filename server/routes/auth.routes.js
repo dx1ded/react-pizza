@@ -5,6 +5,7 @@ import bcrypt from "bcrypt"
 import { User } from "../models/User.js"
 
 const router = Router()
+const emailRegexp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
 router.use(json())
 
@@ -26,7 +27,7 @@ router.post(
 
   try {
     const secret = jwt.sign({
-      exp: 60 * 60 * 24 * 7, // 7 days
+      exp: Math.floor(Date.now() / 1000) + (60 * 60 * 24 * 7), // 7 days
       data: req.body.email
     }, process.env.SECRET_TOKEN)
 
@@ -55,15 +56,15 @@ router.post(
 
 // -> /api/auth/sign-in
 router.post("/sign-in", async (req, res) => {
-  const { email, username, password } = req.body
+  const { login, password } = req.body
 
-  if (!username && !email) {
+  if (!login) {
     return res.status(400)
   }
 
-  const user = await User.findOne({
-    [email ? "email" : "username"]: email || username
-  })
+  let loginType = emailRegexp.test(login) ? "email" : "username"
+
+  const user = await User.findOne({ [loginType]: login })
 
   if (!user) {
     return res.status(400)
@@ -78,7 +79,7 @@ router.post("/sign-in", async (req, res) => {
   }
 
   const secret = jwt.sign({
-    exp: 60 * 60 * 24 * 7, // 7 days
+    exp: Math.floor(Date.now() / 1000) + (60 * 60 * 24 * 7), // 7 days
     data: user.email
   }, process.env.SECRET_TOKEN)
 

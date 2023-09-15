@@ -6,6 +6,7 @@ const sizes = {
 }
 
 export const Text = styled.p`
+  margin-top: ${(props) => props.$mt};
   margin-bottom: ${(props) => props.$mb};
   font-size: ${(props) => sizes[props.$size] || props.$size};
   font-weight: ${(props) => props.$weight || 700};

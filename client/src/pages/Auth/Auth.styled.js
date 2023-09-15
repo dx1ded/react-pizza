@@ -20,9 +20,15 @@ export const StyledForm = styled.div`
   }
 `
 
+export const FormLabelWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+`
+
 export const FormLabel = styled.label`
   display: inline-block;
-  margin-bottom: 0.3rem;
   font-weight: 700;
 `
 
@@ -41,8 +47,10 @@ export const FormInput = styled(Input).attrs({
 export const FormSubmit = styled(Button).attrs({
   $type: "primary",
 })`
+  position: relative;
   display: block;
   width: 100%;
+  height: 2.25rem;
   padding: 0.5rem;
   font-weight: 700;
   border-radius: 5px;
@@ -52,6 +60,8 @@ export const FormChange = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--light-gray);
 `
 
 export const FormChangeButton = styled(Text).attrs({
