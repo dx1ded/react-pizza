@@ -36,7 +36,8 @@ export default defineConfig(() => ({
       "@ui": path.resolve(__dirname, "src/@ui/_ui.js"),
       // For Styles
       "@mixins": path.resolve(__dirname, "src/styles/_mixins.scss"),
-      "@breakpoints": path.resolve(__dirname, "src/breakpoints.js")
+      "@breakpoints": path.resolve(__dirname, "src/breakpoints.js"),
+      "@redux": path.resolve(__dirname, "src/redux")
     }
   }
 }))

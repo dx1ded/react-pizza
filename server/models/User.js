@@ -12,4 +12,4 @@ const userSchema = new Schema({
   password: String
 })
 
-export const User = model("User", userSchema)
+export const User = model("user", userSchema)

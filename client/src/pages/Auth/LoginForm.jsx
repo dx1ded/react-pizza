@@ -1,8 +1,9 @@
 import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { useDispatch } from "react-redux"
 import { useFormik } from "formik"
 import { Heading, Text } from "@ui"
 import { Loader } from "@components/Loader/Loader"
+import { setSecret } from "@redux/secret/actions"
 import { SigninSchema } from "./yup.schemas"
 import {
   FormChange,
@@ -15,9 +16,9 @@ import {
 } from "./Auth.styled"
 
 export function LoginForm({ setHasAccount }) {
+  const dispatch = useDispatch()
   const [error, setError] = useState("")
   const [isLoading, setIsLoading] = useState(false)
-  const navigate = useNavigate()
   const { values, errors, touched, handleChange, handleBlur, handleSubmit } =
     useFormik({
       initialValues: {
@@ -41,13 +42,12 @@ export function LoginForm({ setHasAccount }) {
 
           if (!request.ok) throw json
 
-          localStorage.setItem("secret", JSON.stringify(json))
-          navigate("/")
+          dispatch(setSecret(json.secret))
+          localStorage.setItem("secret", json.secret)
         } catch (e) {
           setError(e.message)
+          setIsLoading(false)
         }
-
-        setIsLoading(false)
       },
     })
 

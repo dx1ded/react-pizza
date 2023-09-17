@@ -34,6 +34,8 @@ module.exports = {
     "import/no-extraneous-dependencies": "off",
     "react/prop-types": "off",
     "react/no-array-index-key": "off",
-    "no-return-assign": "off"
+    "no-return-assign": "off",
+    "default-param-last": "off",
+    "no-underscore-dangle": "off"
   },
 }
