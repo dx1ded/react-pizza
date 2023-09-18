@@ -1,6 +1,6 @@
-import { Sort } from "@components/Sort/Sort"
-import { Container } from "@ui"
-import { StyledFilter, FilterOptions, StyledOption } from "./Filter.styled"
+import { useState } from "react"
+import { useSearchParams } from "react-router-dom"
+import { FilterOptions, StyledOption } from "./Filter.styled"
 
 function Option({ isChecked, children }) {
   return (
@@ -10,6 +10,7 @@ function Option({ isChecked, children }) {
         defaultChecked={isChecked}
         name="filter-options"
         id={`filter-options${children}`}
+        data-value={children}
       />
       <label htmlFor={`filter-options${children}`}>{children}</label>
     </StyledOption>
@@ -17,19 +18,34 @@ function Option({ isChecked, children }) {
 }
 
 export function Filter() {
+  const [searchParams, setSearchParams] = useSearchParams()
+  const [options, setOptions] = useState([
+    "All",
+    "Meat",
+    "Vegetarian",
+    "Grill",
+    "Spicy",
+    "Closed",
+  ])
+
+  const changeHandler = (event) => {
+    const filterType = event.target.dataset.value
+
+    setSearchParams({
+      ...Object.fromEntries(searchParams),
+      filterBy: filterType,
+    })
+  }
+
+  const filterBy = searchParams.get("filterBy")
+
   return (
-    <StyledFilter>
-      <Container>
-        <FilterOptions>
-          <Option isChecked>All</Option>
-          <Option>Meat</Option>
-          <Option>Vegetarian</Option>
-          <Option>Grill</Option>
-          <Option>Spicy</Option>
-          <Option>Closed</Option>
-        </FilterOptions>
-        <Sort />
-      </Container>
-    </StyledFilter>
+    <FilterOptions onChange={changeHandler}>
+      {options.map((option, i) => (
+        <Option key={i} isChecked={filterBy ? option === filterBy : i === 0}>
+          {option}
+        </Option>
+      ))}
+    </FilterOptions>
   )
 }

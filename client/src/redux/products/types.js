@@ -1,0 +1,3 @@
+export const SET_LIST = "SET_LIST"
+export const SET_FILTERED_LIST = "SET_FILTERED_LIST"
+export const SET_LIST_IS_LOADING = "SET_LIST_IS_LOADING"

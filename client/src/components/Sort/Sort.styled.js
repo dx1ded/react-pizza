@@ -1,19 +1,15 @@
 import styled from "styled-components"
+import { Text } from "@ui"
 
-export const StyledSort = styled.div`
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-`
-
-export const SortTriangle = styled.div`
+export const Triangle = styled.div`
   border-color: transparent transparent var(--dark) transparent;
   border-style: solid;
   border-width: 0 5px 5px;
   border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
 `
 
-export const SortOptions = styled.div`
+export const SortWrapper = styled.div`
   position: relative;
 
   & > button {
@@ -26,10 +22,11 @@ export const SortOptions = styled.div`
   }
 `
 
-export const SortOptionsList = styled.ul`
+export const SortOptions = styled.ul`
   position: absolute;
   right: 0;
-  width: 8.25rem;
+  z-index: var(--z-sort-list);
+  width: 9rem;
   padding: 0.625rem 0;
   list-style: none;
   visibility: hidden;
@@ -41,10 +38,41 @@ export const SortOptionsList = styled.ul`
     opacity 0.5s ease-in-out,
     visibility 0.5s ease-in-out;
   transform: translateY(0.8rem);
+`
 
-  li {
+export const StyledOption = styled.div`
+  input {
+    display: none;
+
+    &:checked + label {
+      font-weight: 700;
+      color: var(--primary);
+    }
+  }
+
+  label {
+    display: block;
     padding: 0.625rem 0.875rem;
-    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--black);
     cursor: pointer;
+  }
+`
+
+export const StyledSort = styled.div`
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+
+  &.opened {
+    ${SortOptions} {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    ${Triangle} {
+      transform: rotate(180deg);
+    }
   }
 `

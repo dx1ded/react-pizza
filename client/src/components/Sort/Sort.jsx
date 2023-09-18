@@ -1,34 +1,88 @@
+import { useState } from "react"
+import { useSearchParams } from "react-router-dom"
 import { Text } from "@ui"
 import {
-  SortOptions,
-  SortOptionsList,
-  SortTriangle,
+  StyledOption,
+  Triangle,
   StyledSort,
+  SortWrapper,
+  SortOptions,
 } from "./Sort.styled"
 
-export function Sort() {
+function Option({ isChecked, children }) {
   return (
-    <StyledSort>
-      <SortTriangle />
+    <StyledOption>
+      <input
+        type="radio"
+        defaultChecked={isChecked}
+        name="sort-options"
+        id={`sort-options${children}`}
+        data-value={children}
+      />
+      <label htmlFor={`sort-options${children}`}>{children}</label>
+    </StyledOption>
+  )
+}
+
+export function Sort() {
+  const [searchParams, setSearchParams] = useSearchParams()
+  const [isOpened, setIsOpened] = useState(false)
+  const [options, setOptions] = useState([
+    {
+      name: "popularity",
+      type: "rating",
+    },
+    {
+      name: "price increasing",
+      type: "price_increasing",
+    },
+    {
+      name: "price decreasing",
+      type: "price_decreasing",
+    },
+  ])
+
+  const changeHandler = (event) => {
+    const option = options.find((el) => el.name === event.target.dataset.value)
+
+    setSearchParams({
+      ...Object.fromEntries(searchParams),
+      sortBy: option.type,
+    })
+
+    setIsOpened(false)
+  }
+
+  const sortBy = searchParams.get("sortBy")
+  const activeOption =
+    options.find((option) => option.type === sortBy) || options[0]
+
+  return (
+    <StyledSort className={isOpened ? "opened" : ""}>
+      <Triangle />
       <Text $size="sm" $color="var(--dark)">
         Sort by:
       </Text>
-      <SortOptions>
-        <Text as="button" $size="sm" $color="var(--primary)">
-          popularity
+      <SortWrapper>
+        <Text
+          as="button"
+          $size="sm"
+          $color="var(--primary)"
+          onClick={() => setIsOpened(!isOpened)}
+        >
+          {activeOption.name}
         </Text>
-        <SortOptionsList>
-          <Text as="li" $size="sm" $color="var(--primary)">
-            popularity
-          </Text>
-          <Text as="li" $size="sm" $color="var(--black)" $weight="400">
-            by price
-          </Text>
-          <Text as="li" $size="sm" $color="var(--black)" $weight="400">
-            by alphabet
-          </Text>
-        </SortOptionsList>
-      </SortOptions>
+        <SortOptions onChange={changeHandler}>
+          {options.map((option, i) => (
+            <Option
+              key={i}
+              isChecked={sortBy ? option.type === sortBy : i === 0}
+            >
+              {option.name}
+            </Option>
+          ))}
+        </SortOptions>
+      </SortWrapper>
     </StyledSort>
   )
 }

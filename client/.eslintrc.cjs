@@ -36,6 +36,10 @@ module.exports = {
     "react/no-array-index-key": "off",
     "no-return-assign": "off",
     "default-param-last": "off",
-    "no-underscore-dangle": "off"
+    "no-underscore-dangle": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/destructuring-assignment": "off",
+    "no-else-return": "off",
+    "no-debugger": "off"
   },
 }

@@ -22,36 +22,41 @@ function Option({ id, children, name, isChecked }) {
   )
 }
 
-export function Card({ index }) {
+export function Card(props) {
   return (
     <StyledCard>
-      <CardImage src="/pizza-img.png" />
+      <CardImage src={props.imageUrl} />
       <Heading as="h3" $size="md" $mb="1.375rem">
-        Cheeseburger Pizza
+        {props.title}
       </Heading>
       <CardOptions>
         <CardOptionsGroup data-group="dough">
-          <Option id={index} name="option-dough" isChecked>
-            thin
-          </Option>
-          <Option id={index} name="option-dough">
-            traditional
-          </Option>
+          {props.types.includes(0) && (
+            <Option id={props._id} name="option-dough" isChecked>
+              thin
+            </Option>
+          )}
+          {props.types.includes(1) && (
+            <Option id={props._id} name="option-dough">
+              traditional
+            </Option>
+          )}
         </CardOptionsGroup>
         <CardOptionsGroup data-group="size">
-          <Option id={index} name="option-size">
-            26 cm.
-          </Option>
-          <Option id={index} name="option-size" isChecked>
-            30 cm.
-          </Option>
-          <Option id={index} name="option-size">
-            40 cm.
-          </Option>
+          {props.sizes.map((size, i) => (
+            <Option
+              key={i}
+              id={props._id}
+              name="option-size"
+              isChecked={i === 0}
+            >
+              {size} cm.
+            </Option>
+          ))}
         </CardOptionsGroup>
       </CardOptions>
       <CardDetails>
-        <Heading $size="1.375rem">from 20$</Heading>
+        <Heading $size="1.375rem">from {props.price}$</Heading>
         <Button $type="primary">Add</Button>
       </CardDetails>
     </StyledCard>

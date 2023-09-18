@@ -4,7 +4,7 @@ import { StyledLogo } from "./Logo.styled"
 export function Logo() {
   return (
     <StyledLogo to="/">
-      <img src="pizza.png" alt="Pizza" />
+      <img src="pizza.png" alt="PizzaList" />
       <div>
         <Heading $size="1.5rem" $color="var(--dark)" $weight="800" $mb="0.1rem">
           React Pizza
