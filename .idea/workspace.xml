@@ -5,30 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab777b0c-9b7f-490d-87c0-bca3b9104be0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/axios.middleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/hooks/useSecuredRequest.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/redux/rootReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/redux/secret/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/redux/secret/reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/redux/secret/types.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/redux/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/models/Product.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/products.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/Main/FilterContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/Main/ProductsSkeleton.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/products/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/products/reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/products/types.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.eslintrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintrc.cjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Routes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AccessRoutes.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/Auth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/Auth.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/LoginForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/LoginForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/RegisterForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/RegisterForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Card/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Card/Card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Filter/Filter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Filter/Filter.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Filter/Filter.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Filter/Filter.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Logo/Logo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Logo/Logo.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Sort/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Sort/Sort.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Sort/Sort.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Sort/Sort.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/globalStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/globalStyle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Main/Main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/vite.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/auth.middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/auth.middleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Main/Pizza.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Main/PizzaList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Main/Pizza.styled.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/rootReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/products.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/products.routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +141,9 @@
       <workItem from="1694904956125" duration="74000" />
       <workItem from="1694905051277" duration="2945000" />
       <workItem from="1694975718825" duration="2222000" />
-      <workItem from="1694980274212" duration="4488000" />
+      <workItem from="1694980274212" duration="21639000" />
+      <workItem from="1695008586987" duration="4819000" />
+      <workItem from="1695013514912" duration="1094000" />
     </task>
     <servers />
   </component>
