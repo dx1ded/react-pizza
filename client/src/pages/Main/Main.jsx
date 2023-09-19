@@ -4,9 +4,14 @@ import { useLocation } from "react-router-dom"
 import { PageWrapper } from "@ui"
 import { Header } from "@components/Header/Header"
 import { useSecuredRequest } from "@hooks/useSecuredRequest"
-import { setProductsList, setListIsLoading } from "@redux/products/actions"
+import {
+  setProductsList,
+  setTotalCount,
+  setListLoading,
+} from "@redux/products/actions"
 import { FilterContainer } from "./FilterContainer"
 import { PizzaList } from "./PizzaList"
+import { PaginationContainer } from "./PaginationContainer"
 
 export function Main() {
   const dispatch = useDispatch()
@@ -14,12 +19,13 @@ export function Main() {
   const location = useLocation()
 
   useEffect(() => {
-    dispatch(setListIsLoading(true))
+    dispatch(setListLoading(true))
     request(`/api/products/list${location.search}`, {
       method: "POST",
     }).then((response) => {
       dispatch(setProductsList(response.products))
-      dispatch(setListIsLoading(false))
+      dispatch(setTotalCount(response.totalCount))
+      dispatch(setListLoading(false))
     })
   }, [dispatch, request, location.search])
 
@@ -28,6 +34,7 @@ export function Main() {
       <Header hasSearch />
       <FilterContainer />
       <PizzaList />
+      <PaginationContainer />
     </PageWrapper>
   )
 }

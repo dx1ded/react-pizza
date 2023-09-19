@@ -4,6 +4,10 @@ import { Container, Heading } from "@ui"
 import { Card } from "@components/Card/Card"
 import { ProductsSkeleton } from "./ProductsSkeleton"
 
+const StyledPizzaList = styled.section`
+  margin-bottom: 4rem;
+`
+
 const List = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -14,7 +18,7 @@ export function PizzaList() {
   const products = useSelector((state) => state.products)
 
   return (
-    <section>
+    <StyledPizzaList>
       <Container>
         <Heading $size="lg" $mb="2.25rem">
           All pizzas
@@ -23,12 +27,12 @@ export function PizzaList() {
           {products.isLoading ? (
             <ProductsSkeleton />
           ) : (
-            products.filteredList.map((product) => (
+            products.list.map((product) => (
               <Card key={product._id} {...product} />
             ))
           )}
         </List>
       </Container>
-    </section>
+    </StyledPizzaList>
   )
 }

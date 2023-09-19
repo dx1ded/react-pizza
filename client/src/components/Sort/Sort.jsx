@@ -48,6 +48,7 @@ export function Sort() {
     setSearchParams({
       ...Object.fromEntries(searchParams),
       sortBy: option.type,
+      page: 1,
     })
 
     setIsOpened(false)

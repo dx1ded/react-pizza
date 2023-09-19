@@ -1,20 +1,49 @@
+import { useSearchParams } from "react-router-dom"
 import { Icon } from "@ui"
-import { StyledPagination } from "./Pagination.styled"
+import { PaginationButton, StyledPagination } from "./Pagination.styled"
 
-export function Pagination() {
+export function Pagination({ count, elementsPerPage }) {
+  const [searchParams, setSearchParams] = useSearchParams()
+
+  const currentPage = +searchParams.get("page") || 1
+  const pagesCount = Math.ceil(count / elementsPerPage)
+
+  const changePage = (page) => {
+    setSearchParams({
+      ...Object.fromEntries(searchParams.entries()),
+      page,
+    })
+  }
+
   return (
     <StyledPagination>
-      <ul>
-        <li>
-          <Icon $size="1rem">arrow_back</Icon>
-        </li>
-        <li data-active="">1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>
-          <Icon $size="1rem">arrow_forward</Icon>
-        </li>
-      </ul>
+      <PaginationButton
+        disabled={currentPage <= 1}
+        onClick={() => changePage(currentPage - 1)}
+      >
+        <Icon $size="1rem">arrow_back</Icon>
+      </PaginationButton>
+      {Array(pagesCount)
+        .fill("")
+        .map((_, i) => {
+          const page = i + 1
+
+          return (
+            <PaginationButton
+              key={i}
+              className={currentPage === page ? "active" : ""}
+              onClick={() => changePage(page)}
+            >
+              {page}
+            </PaginationButton>
+          )
+        })}
+      <PaginationButton
+        disabled={currentPage >= pagesCount}
+        onClick={() => changePage(currentPage + 1)}
+      >
+        <Icon $size="1rem">arrow_forward</Icon>
+      </PaginationButton>
     </StyledPagination>
   )
 }

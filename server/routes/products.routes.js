@@ -16,24 +16,38 @@ router.use(json())
 
 // -> /api/products/list
 router.post("/list", AuthMiddleware, async (req, res) => {
-  const { page = 1, filterBy, sortBy } = req.query
+  try {
+    const { page = 1, filterBy, sortBy = "rating" } = req.query
 
-  const aggregator = [
-    { $skip: (page - 1) * PRODUCTS_PER_PAGE },
-    { $limit: PRODUCTS_PER_PAGE },
-  ]
+    const aggregator = [
+      { $skip: (page - 1) * PRODUCTS_PER_PAGE },
+      { $limit: PRODUCTS_PER_PAGE },
+    ]
 
-  if (sortBy) aggregator.unshift({
-    $sort: sortOptions[sortBy]
-  })
+    const paramsAggregator = []
 
-  if (filterBy && filterBy !== "All") aggregator.unshift({
-    $match: { category: filterOptions.indexOf(filterBy) }
-  })
+    if (filterBy && filterBy !== "All") paramsAggregator.push({
+      $match: { category: filterOptions.indexOf(filterBy) }
+    })
 
-  const products = await Product.aggregate(aggregator)
+    if (sortBy) paramsAggregator.push({
+      $sort: sortOptions[sortBy]
+    })
 
-  res.json({ products })
+    const products = await Product.aggregate([
+      ...paramsAggregator,
+      ...aggregator
+    ])
+
+    const result = await Product.aggregate([
+      ...paramsAggregator,
+      { $count: "count" }
+    ])
+
+    res.json({ products, totalCount: result[0].count })
+  } catch (e) {
+    console.error(e)
+  }
 })
 
 export default router

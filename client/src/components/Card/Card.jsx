@@ -22,6 +22,8 @@ function Option({ id, children, name, isChecked }) {
   )
 }
 
+const types = ["thin", "traditional"]
+
 export function Card(props) {
   return (
     <StyledCard>
@@ -31,16 +33,16 @@ export function Card(props) {
       </Heading>
       <CardOptions>
         <CardOptionsGroup data-group="dough">
-          {props.types.includes(0) && (
-            <Option id={props._id} name="option-dough" isChecked>
-              thin
+          {props.types.map((type, i) => (
+            <Option
+              key={props._id + type}
+              id={props._id}
+              name="option-dough"
+              isChecked={i === 0}
+            >
+              {types[type]}
             </Option>
-          )}
-          {props.types.includes(1) && (
-            <Option id={props._id} name="option-dough">
-              traditional
-            </Option>
-          )}
+          ))}
         </CardOptionsGroup>
         <CardOptionsGroup data-group="size">
           {props.sizes.map((size, i) => (

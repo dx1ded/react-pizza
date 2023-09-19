@@ -34,6 +34,7 @@ export function Filter() {
     setSearchParams({
       ...Object.fromEntries(searchParams),
       filterBy: filterType,
+      page: 1,
     })
   }
 
