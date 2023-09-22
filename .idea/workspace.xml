@@ -5,19 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab777b0c-9b7f-490d-87c0-bca3b9104be0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/pages/Main/PaginationContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Pagination/paginate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pagination.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Card/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Card/Card.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Filter/Filter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Filter/Filter.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.eslintrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintrc.cjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Pagination/Pagination.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Pagination/Pagination.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Pagination/Pagination.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Pagination/Pagination.styled.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Sort/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Sort/Sort.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Main/Main.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Main/PizzaList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Main/PizzaList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/redux/products/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/products/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/redux/products/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/products/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/redux/products/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/products/types.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/products.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/products.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Sort/Sort.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Sort/Sort.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Main/PaginationContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Main/PaginationContainer.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,11 +76,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/components/Pagination" />
       <recent name="$PROJECT_DIR$/client" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/components/Nav" />
       <recent name="$PROJECT_DIR$/src/@ui" />
-      <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -136,7 +133,9 @@
       <workItem from="1694980274212" duration="21639000" />
       <workItem from="1695008586987" duration="4819000" />
       <workItem from="1695013514912" duration="1503000" />
-      <workItem from="1695080524597" duration="9942000" />
+      <workItem from="1695080524597" duration="10675000" />
+      <workItem from="1695162744322" duration="8596000" />
+      <workItem from="1695356157856" duration="2430000" />
     </task>
     <servers />
   </component>

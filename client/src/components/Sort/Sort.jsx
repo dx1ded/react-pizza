@@ -27,7 +27,7 @@ function Option({ isChecked, children }) {
 export function Sort() {
   const [searchParams, setSearchParams] = useSearchParams()
   const [isOpened, setIsOpened] = useState(false)
-  const [options, setOptions] = useState([
+  const [options] = useState([
     {
       name: "popularity",
       type: "rating",
@@ -43,7 +43,8 @@ export function Sort() {
   ])
 
   const changeHandler = (event) => {
-    const option = options.find((el) => el.name === event.target.dataset.value)
+    const { value } = event.target.dataset
+    const option = options.find((el) => el.name === value)
 
     setSearchParams({
       ...Object.fromEntries(searchParams),

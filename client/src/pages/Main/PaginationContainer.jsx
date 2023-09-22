@@ -16,7 +16,7 @@ export function PaginationContainer() {
   return (
     <StyledPaginationContainer>
       <Container>
-        <Pagination count={totalCount} elementsPerPage={4} />
+        <Pagination elementsTotal={totalCount} elementsPerPage={4} />
       </Container>
     </StyledPaginationContainer>
   )

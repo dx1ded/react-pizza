@@ -35,8 +35,8 @@ export const SortOptions = styled.ul`
   box-shadow: var(--shade-1);
   opacity: 0;
   transition:
-    opacity 0.5s ease-in-out,
-    visibility 0.5s ease-in-out;
+    opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
   transform: translateY(0.8rem);
 `
 

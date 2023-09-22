@@ -40,6 +40,7 @@ module.exports = {
     "react/jsx-props-no-spreading": "off",
     "react/destructuring-assignment": "off",
     "no-else-return": "off",
-    "no-debugger": "off"
+    "no-debugger": "off",
+    "no-plusplus": "off"
   },
 }
