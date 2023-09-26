@@ -3,6 +3,7 @@ import { useSelector } from "react-redux"
 import { Container, Heading } from "@ui"
 import { Card } from "@components/Card/Card"
 import { ProductsSkeleton } from "./ProductsSkeleton"
+import { NotFound } from "./NotFound"
 
 const StyledPizzaList = styled.section`
   margin-bottom: 4rem;
@@ -23,15 +24,19 @@ export function PizzaList() {
         <Heading $size="lg" $mb="2.25rem">
           All pizzas
         </Heading>
-        <List>
-          {products.isLoading ? (
-            <ProductsSkeleton />
-          ) : (
-            products.list.map((product) => (
-              <Card key={product._id} {...product} />
-            ))
-          )}
-        </List>
+        {!products.loading && !products.list.length ? (
+          <NotFound />
+        ) : (
+          <List>
+            {products.isLoading ? (
+              <ProductsSkeleton />
+            ) : (
+              products.list.map((product) => (
+                <Card key={product._id} {...product} />
+              ))
+            )}
+          </List>
+        )}
       </Container>
     </StyledPizzaList>
   )

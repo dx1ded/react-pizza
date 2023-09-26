@@ -50,4 +50,14 @@ router.post("/list", AuthMiddleware, async (req, res) => {
   }
 })
 
+router.post("/find", AuthMiddleware, async (req, res) => {
+  const { search } = req.query
+
+  const searchResult = await Product.find({
+    title: { "$regex": search, "$options": "i" }
+  })
+
+  res.json({ products: searchResult, totalCount: searchResult.length })
+})
+
 export default router

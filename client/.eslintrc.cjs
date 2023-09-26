@@ -41,6 +41,7 @@ module.exports = {
     "react/destructuring-assignment": "off",
     "no-else-return": "off",
     "no-debugger": "off",
-    "no-plusplus": "off"
+    "no-plusplus": "off",
+    "no-nested-ternary": "off"
   },
 }

@@ -31,7 +31,7 @@ export function Pagination({ elementsTotal }) {
   return (
     <StyledPagination>
       <PaginationButton
-        disabled={!pagination.prev}
+        disabled={!pagination.prev || !pagination.items.length}
         onClick={() => changePage(currentPage - 1)}
       >
         <Icon $size="1rem">arrow_back</Icon>
@@ -46,7 +46,7 @@ export function Pagination({ elementsTotal }) {
         </PaginationButton>
       ))}
       <PaginationButton
-        disabled={!pagination.next}
+        disabled={!pagination.next || !pagination.items.length}
         onClick={() => changePage(currentPage + 1)}
       >
         <Icon $size="1rem">arrow_forward</Icon>

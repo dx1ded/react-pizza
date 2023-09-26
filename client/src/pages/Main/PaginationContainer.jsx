@@ -13,6 +13,8 @@ const StyledPaginationContainer = styled.div`
 export function PaginationContainer() {
   const totalCount = useSelector((state) => state.products.totalCount)
 
+  console.log(totalCount)
+
   return (
     <StyledPaginationContainer>
       <Container>

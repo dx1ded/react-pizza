@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { useDispatch } from "react-redux"
-import { useLocation } from "react-router-dom"
+import { useSearchParams } from "react-router-dom"
 import { PageWrapper } from "@ui"
 import { Header } from "@components/Header/Header"
 import { useSecuredRequest } from "@hooks/useSecuredRequest"
@@ -16,18 +16,23 @@ import { PaginationContainer } from "./PaginationContainer"
 export function Main() {
   const dispatch = useDispatch()
   const request = useSecuredRequest()
-  const location = useLocation()
+  const [searchParams, setSearchParams] = useSearchParams()
 
   useEffect(() => {
     dispatch(setListLoading(true))
-    request(`/api/products/list${location.search}`, {
-      method: "POST",
-    }).then((response) => {
+    request(
+      `api/products/${
+        searchParams.get("search") ? "find" : "list"
+      }?${searchParams.toString()}`,
+      {
+        method: "POST",
+      }
+    ).then((response) => {
       dispatch(setProductsList(response.products))
       dispatch(setTotalCount(response.totalCount))
       dispatch(setListLoading(false))
     })
-  }, [dispatch, request, location.search])
+  }, [dispatch, request, searchParams])
 
   return (
     <PageWrapper>
