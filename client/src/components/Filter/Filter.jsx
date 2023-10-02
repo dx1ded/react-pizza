@@ -31,6 +31,8 @@ export function Filter() {
   const changeHandler = (event) => {
     const filterType = event.target.dataset.value
 
+    searchParams.delete("search")
+
     setSearchParams({
       ...Object.fromEntries(searchParams),
       filterBy: filterType,

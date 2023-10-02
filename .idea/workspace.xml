@@ -5,17 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab777b0c-9b7f-490d-87c0-bca3b9104be0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/pages/Main/NotFound.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/Cart/CartItemsSkeleton.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/cart/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/cart/reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/cart/types.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/.eslintrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintrc.cjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Pagination/Pagination.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Pagination/Pagination.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Search/Search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Search/Search.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Search/Search.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Search/Search.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Card/Card.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Card/Card.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Card/Card.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Card/Card.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Filter/Filter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Filter/Filter.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Loader/Loader.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Loader/Loader.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Nav/CartButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Nav/CartButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Nav/CartButton.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Nav/CartButton.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Sort/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Sort/Sort.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/hooks/useSecuredRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/hooks/useSecuredRequest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Cart/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Cart/Cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Cart/CartItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Cart/CartItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Cart/CartItem.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Cart/CartItem.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Cart/CartMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Cart/CartMenu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Cart/CartMenu.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Cart/CartMenu.styled.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/Main/Main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Main/Main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Main/NotFound.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Main/NotFound.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/Main/PaginationContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Main/PaginationContainer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/Main/PizzaList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Main/PizzaList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/rootReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/products.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/products.routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -144,7 +157,11 @@
       <workItem from="1695695337577" duration="1000" />
       <workItem from="1695695347726" duration="2000" />
       <workItem from="1695696070608" duration="1302000" />
-      <workItem from="1695697430687" duration="4376000" />
+      <workItem from="1695697430687" duration="4526000" />
+      <workItem from="1695704018784" duration="1000" />
+      <workItem from="1696032448169" duration="1948000" />
+      <workItem from="1696121633922" duration="19087000" />
+      <workItem from="1696188714819" duration="24177000" />
     </task>
     <servers />
   </component>

@@ -8,11 +8,13 @@ export const StyledLoader = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
+  width: ${(props) => props.$size || "1rem"};
+  height: ${(props) => props.$size || "1rem"};
   transform: translate(-50%, -50%);
 
   div {
-    width: ${(props) => props.$size || "1rem"};
-    height: ${(props) => props.$size || "1rem"};
+    width: 100%;
+    height: 100%;
     border: 3px solid;
     border-color: var(--blue) transparent;
     border-radius: 100%;

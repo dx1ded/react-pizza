@@ -3,7 +3,7 @@ import { Icon, Heading, Button } from "@ui"
 import { NavLink } from "react-router-dom"
 
 export const StyledCartMenu = styled.section`
-  max-width: 51.5rem;
+  max-width: 60rem;
   margin: 5.875rem auto 0;
 `
 
@@ -60,7 +60,7 @@ export const CartActions = styled.div`
   justify-content: space-between;
 
   ${Button} {
-    padding: 1.125rem 2.5rem;
+    padding: 0.9rem 2rem;
     font-weight: 700;
   }
 `

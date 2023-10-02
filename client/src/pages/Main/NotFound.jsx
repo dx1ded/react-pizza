@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { Heading } from "@ui"
 
 const StyledNotFound = styled.div`
   text-align: center;

@@ -64,12 +64,6 @@ export const StyledCartButton = styled(Button).attrs({
     color: var(--white);
     background-color: var(--primary);
 
-    & > ${Text} {
-      position: static;
-      visibility: visible;
-      opacity: 1;
-    }
-
     ${CartIcon} {
       ${Icon} {
         font-size: 1rem;
@@ -82,6 +76,12 @@ export const StyledCartButton = styled(Button).attrs({
         font-size: 0.875rem;
         background-color: transparent;
       }
+    }
+
+    & > ${Text} {
+      position: static;
+      visibility: visible;
+      opacity: 1;
     }
   }
 `

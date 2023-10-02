@@ -1,4 +1,5 @@
 import { Router, json } from "express"
+import mongoose from "mongoose"
 import { AuthMiddleware } from "../auth.middleware.js"
 import { Product } from "../models/Product.js"
 
@@ -17,7 +18,15 @@ router.use(json())
 // -> /api/products/list
 router.post("/list", AuthMiddleware, async (req, res) => {
   try {
-    const { page = 1, filterBy, sortBy = "rating" } = req.query
+    const { page = 1, search = "", filterBy, sortBy = "rating" } = req.query
+
+    if (search) {
+      const searchResult = await Product.find({
+        title: { "$regex": search, "$options": "i" }
+      })
+
+      return res.json({ products: searchResult, totalCount: searchResult.length })
+    }
 
     const aggregator = [
       { $skip: (page - 1) * PRODUCTS_PER_PAGE },
@@ -50,14 +59,56 @@ router.post("/list", AuthMiddleware, async (req, res) => {
   }
 })
 
-router.post("/find", AuthMiddleware, async (req, res) => {
-  const { search } = req.query
+router.post("/listByIds", AuthMiddleware, async (req, res) => {
+  const ids = req.body.ids
+    .map((id) => new mongoose.Types.ObjectId(id.split("_")[0]))
 
-  const searchResult = await Product.find({
-    title: { "$regex": search, "$options": "i" }
-  })
+  const items = await Promise.all(ids.map((id) =>
+    Product.findOne({ _id: id }).exec()
+  ))
 
-  res.json({ products: searchResult, totalCount: searchResult.length })
+  const itemsWithInitialIds = items.map((item, index) => ({
+    ...item._doc,
+    _id: req.body.ids[index]
+  }))
+
+  res.json({ items: itemsWithInitialIds })
+})
+
+router.post("/totalPrice", AuthMiddleware, async (req, res) => {
+  const products = Object
+    .entries(req.body.products)
+    .reduce((acc, [id, value]) => {
+      const separatedId = id.split("_")[0]
+
+      if (acc[separatedId] !== undefined) {
+        acc[separatedId] += value
+      } else {
+        acc[separatedId] = value
+      }
+
+      return acc
+    }, {})
+
+  const ids = Object
+    .keys(products)
+    .map((id) => new mongoose.Types.ObjectId(id))
+
+  const items = await Product.aggregate([
+    {
+      $match: { _id: { $in: ids } },
+    },
+    {
+      $project: { _id: 1, price: 1 }
+    }
+  ])
+
+  const totalPrice = items.reduce(
+    (acc, item) => (acc += item.price * products[item._id]),
+    0
+  )
+
+  res.json({ totalPrice })
 })
 
 export default router

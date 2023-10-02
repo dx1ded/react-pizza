@@ -24,7 +24,7 @@ export function PizzaList() {
         <Heading $size="lg" $mb="2.25rem">
           All pizzas
         </Heading>
-        {!products.loading && !products.list.length ? (
+        {!products.isLoading && !products.list.length ? (
           <NotFound />
         ) : (
           <List>

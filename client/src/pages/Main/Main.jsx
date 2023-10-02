@@ -16,18 +16,13 @@ import { PaginationContainer } from "./PaginationContainer"
 export function Main() {
   const dispatch = useDispatch()
   const request = useSecuredRequest()
-  const [searchParams, setSearchParams] = useSearchParams()
+  const [searchParams] = useSearchParams()
 
   useEffect(() => {
     dispatch(setListLoading(true))
-    request(
-      `api/products/${
-        searchParams.get("search") ? "find" : "list"
-      }?${searchParams.toString()}`,
-      {
-        method: "POST",
-      }
-    ).then((response) => {
+    request(`api/products/list?${searchParams.toString()}`, {
+      method: "POST",
+    }).then((response) => {
       dispatch(setProductsList(response.products))
       dispatch(setTotalCount(response.totalCount))
       dispatch(setListLoading(false))

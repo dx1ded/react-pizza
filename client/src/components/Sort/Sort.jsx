@@ -46,6 +46,8 @@ export function Sort() {
     const { value } = event.target.dataset
     const option = options.find((el) => el.name === value)
 
+    searchParams.delete("search")
+
     setSearchParams({
       ...Object.fromEntries(searchParams),
       sortBy: option.type,

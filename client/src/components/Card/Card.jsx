@@ -1,4 +1,7 @@
+import { useState } from "react"
+import { useDispatch, useSelector } from "react-redux"
 import { Heading, Button } from "@ui"
+import { addToCart } from "@redux/cart/actions"
 import {
   CardDetails,
   CardImage,
@@ -8,48 +11,67 @@ import {
   StyledCard,
 } from "./Card.styled"
 
-function Option({ id, children, name, isChecked }) {
+function Option({ id, name, value, isChecked, children }) {
+  const optionId = `${id}_${name}_${value}`
+
   return (
     <CardOption>
       <input
         type="radio"
-        name={id + name}
+        name={`${id}_${name}`}
+        value={value}
         defaultChecked={isChecked}
-        id={id + children}
+        id={optionId}
       />
-      <label htmlFor={id + children}>{children}</label>
+      <label htmlFor={optionId}>{children}</label>
     </CardOption>
   )
 }
 
-const types = ["thin", "traditional"]
+export function Card(item) {
+  const [elementId, setElementId] = useState(
+    `${item._id}_${item.types[0]}_${item.sizes[0]}`
+  )
+  const countInCart = useSelector((state) => state.cart.list[elementId])
+  const dispatch = useDispatch()
 
-export function Card(props) {
+  const changeHandler = (event) => {
+    const formData = new FormData(event.target.form)
+    const newElementId = [...formData.values()].reduce(
+      (acc, value) => `${acc}_${value}`,
+      item._id
+    )
+
+    setElementId(newElementId)
+  }
+
   return (
     <StyledCard>
-      <CardImage src={props.imageUrl} />
+      <CardImage src={item.imageUrl} />
       <Heading as="h3" $size="md" $mb="1.375rem">
-        {props.title}
+        {item.title}
       </Heading>
-      <CardOptions>
+      <CardOptions onChange={changeHandler}>
         <CardOptionsGroup data-group="dough">
-          {props.types.map((type, i) => (
+          {item.types.map((type, i) => (
             <Option
-              key={props._id + type}
-              id={props._id}
-              name="option-dough"
+              key={item._id + type}
+              id={item._id}
+              name="type"
+              value={type}
               isChecked={i === 0}
             >
-              {types[type]}
+              {["thin", "traditional"][type]}
             </Option>
           ))}
         </CardOptionsGroup>
         <CardOptionsGroup data-group="size">
-          {props.sizes.map((size, i) => (
+          {item.sizes.map((size, i) => (
             <Option
               key={i}
-              id={props._id}
-              name="option-size"
+              id={item._id}
+              name="size"
+              value={size}
               isChecked={i === 0}
             >
               {size} cm.
@@ -58,8 +80,14 @@ export function Card(props) {
         </CardOptionsGroup>
       </CardOptions>
       <CardDetails>
-        <Heading $size="1.375rem">from {props.price}$</Heading>
-        <Button $type="primary">Add</Button>
+        <Heading $size="1.375rem">from {item.price}$</Heading>
+        <Button
+          $type={countInCart ? "secondary" : "primary"}
+          onClick={() => dispatch(addToCart(elementId))}
+        >
+          Add
+          {countInCart > 1 && <span>{countInCart}</span>}
+        </Button>
       </CardDetails>
     </StyledCard>
   )

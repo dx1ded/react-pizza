@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Button } from "@ui"
 
 export const StyledCard = styled.article`
   text-align: center;
@@ -10,7 +11,7 @@ export const CardImage = styled.img`
   margin-bottom: 0.625rem;
 `
 
-export const CardOptions = styled.div`
+export const CardOptions = styled.form`
   padding: 0.5rem 0.375rem;
   margin-bottom: 1.125rem;
   background-color: var(--light-gray);
@@ -54,13 +55,28 @@ export const CardDetails = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  button {
-    padding: 0.75rem 1.125rem;
+  ${Button} {
+    height: 2.5rem;
+    padding: 0.5rem 1.125rem;
     font-weight: 700;
 
     &::before {
       margin-right: 0.5rem;
       content: "+";
+    }
+
+    span {
+      display: inline-block;
+      width: 1.375rem;
+      height: 1.375rem;
+      margin-left: 0.5rem;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      line-height: 1.375rem;
+      color: var(--white);
+      text-align: center;
+      background-color: var(--primary);
+      border-radius: 100%;
     }
   }
 `

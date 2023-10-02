@@ -42,6 +42,9 @@ module.exports = {
     "no-else-return": "off",
     "no-debugger": "off",
     "no-plusplus": "off",
-    "no-nested-ternary": "off"
+    "no-nested-ternary": "off",
+    "no-restricted-syntax": "off",
+    "no-continue": "off",
+    "no-param-reassign": "off"
   },
 }

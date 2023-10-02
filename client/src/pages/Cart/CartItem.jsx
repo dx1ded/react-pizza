@@ -1,4 +1,7 @@
+import { useDispatch } from "react-redux"
 import { Text, Button, Heading } from "@ui"
+import { changeInCartBy, removeFromCart } from "@redux/cart/actions"
+import { useRef } from "react"
 import {
   CartItemContent,
   CartItemCounter,
@@ -8,39 +11,72 @@ import {
   StyledCartItem,
 } from "./CartItem.styled"
 
-export function Counter() {
+export function Counter({ id, count }) {
+  const dispatch = useDispatch()
+  const counterRef = useRef(null)
+
+  const changeHandler = (event) => {
+    event.preventDefault()
+    dispatch(
+      changeInCartBy({
+        productId: id,
+        value: +counterRef.current.value,
+      })
+    )
+  }
+
   return (
-    <CartItemCounter>
-      <Button $type="secondary" aria-label="Subtract counter with 1">
+    <CartItemCounter onSubmit={changeHandler}>
+      <Button
+        $type="secondary"
+        aria-label="Subtract counter with 1"
+        onClick={() => counterRef.current.stepDown()}
+      >
         -
       </Button>
-      <input type="number" defaultValue={1} />
-      <Button $type="secondary" aria-label="Add counter with 1">
+      <input
+        type="number"
+        defaultValue={count}
+        min={1}
+        max={9}
+        ref={counterRef}
+      />
+      <Button
+        $type="secondary"
+        aria-label="Add counter with 1"
+        onClick={() => counterRef.current.stepUp()}
+      >
         +
       </Button>
     </CartItemCounter>
   )
 }
 
-export function CartItem() {
+export function CartItem({ product }) {
+  const dispatch = useDispatch()
+  const [_, type, size] = product._id.split("_")
+
   return (
     <StyledCartItem>
       <CartItemContent>
-        <CartItemImage src="/pizza-img.png" />
+        <CartItemImage src={product.imageUrl} />
         <CartItemName>
           <Heading as="h3" $size="md" $mb="0.2rem">
-            Raw chicken
+            {product.title}
           </Heading>
           <Text $size="1.125rem" $color="var(--gray)" $weight="400">
-            thin dough, 26 cm.
+            {["thin", "traditional"][type]} dough, {size} cm.
           </Text>
         </CartItemName>
       </CartItemContent>
-      <Counter />
+      <Counter id={product._id} count={product.count} />
       <Heading as="h3" $size="md">
-        20 $
+        {product.price * product.count} $
       </Heading>
-      <CartItemDelete aria-label="Delete item from cart">
+      <CartItemDelete
+        aria-label="Delete item from cart"
+        onClick={() => dispatch(removeFromCart(product._id))}
+      >
         <span aria-hidden="true">+</span>
       </CartItemDelete>
     </StyledCartItem>
