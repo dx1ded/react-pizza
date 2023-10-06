@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { useSelector } from "react-redux"
 import { Container, Heading } from "@ui"
 import { Card } from "@components/Card/Card"
-import { ProductsSkeleton } from "./ProductsSkeleton"
+import { ProductsSkeleton } from "./Skeleton"
 import { NotFound } from "./NotFound"
 
 const StyledPizzaList = styled.section`

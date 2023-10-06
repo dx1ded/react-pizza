@@ -45,6 +45,7 @@ module.exports = {
     "no-nested-ternary": "off",
     "no-restricted-syntax": "off",
     "no-continue": "off",
-    "no-param-reassign": "off"
+    "no-param-reassign": "off",
+    "no-shadow": "off"
   },
 }

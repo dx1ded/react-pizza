@@ -5,6 +5,13 @@ const passwordTest = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,128}$/
 export const SignupSchema = yup.object().shape({
   firstName: yup.string().required("Required"),
   lastName: yup.string().required("Required"),
+  dateOfBirth: yup
+    .date()
+    .max(
+      new Date(Date.now() - 504576000000),
+      "You must be at least 16 years old"
+    )
+    .required("Required"),
   email: yup.string().email("Please enter a valid e-mail").required("Required"),
   username: yup.string().min(3).max(16).required("Required"),
   password: yup

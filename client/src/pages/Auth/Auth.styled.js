@@ -18,6 +18,11 @@ export const StyledForm = styled.div`
   form {
     margin-bottom: 1.3rem;
   }
+
+  .react-datepicker-wrapper {
+    display: block;
+    margin-bottom: 1rem;
+  }
 `
 
 export const FormLabelWrapper = styled.div`

@@ -8,7 +8,7 @@ export const StyledInfo = styled.section`
     display: flex;
     gap: 3rem;
     padding-bottom: 3rem;
-    border-bottom: 1px solid var(--gray);
+    border-bottom: 2px solid var(--light-gray);
   }
 
   img {
@@ -16,6 +16,33 @@ export const StyledInfo = styled.section`
     height: 12.5rem;
     border-radius: 100%;
     object-fit: cover;
+  }
+
+  section {
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+
+    .swiper-slide {
+      height: 5.75rem;
+      padding: 1rem 0.5rem;
+      cursor: pointer;
+      background-color: var(--light-gray);
+      border-radius: 10px;
+
+      ${Icon} {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-weight: 700;
+        color: var(--primary);
+        transform: translate(-50%, -50%);
+      }
+
+      ${Text} {
+        font-style: normal;
+      }
+    }
   }
 `
 
@@ -29,33 +56,6 @@ export const InfoDate = styled(Text).attrs({
 
   &:not(:last-child) {
     margin-bottom: 0.4rem;
-  }
-`
-
-export const InfoSection = styled.section`
-  &:not(:last-child) {
-    margin-bottom: 1.5rem;
-  }
-
-  .swiper-slide {
-    height: 5.75rem;
-    padding: 1rem 0.5rem;
-    cursor: pointer;
-    background-color: var(--light-gray);
-    border-radius: 10px;
-
-    ${Icon} {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      font-weight: 700;
-      color: var(--primary);
-      transform: translate(-50%, -50%);
-    }
-
-    ${Text} {
-      font-style: normal;
-    }
   }
 `
 

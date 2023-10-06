@@ -1,7 +1,6 @@
 import styled from "styled-components"
-import { Container } from "@ui"
 
-export const FilterOptions = styled.form`
+export const FilterOptions = styled.div`
   display: flex;
   gap: 0.5625rem;
   align-items: center;

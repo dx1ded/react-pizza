@@ -1,41 +1,33 @@
-import { useState } from "react"
 import { useSearchParams } from "react-router-dom"
 import { FilterOptions, StyledOption } from "./Filter.styled"
 
-function Option({ isChecked, children }) {
+function Option({ value, isChecked, onClick }) {
   return (
     <StyledOption>
       <input
         type="radio"
         defaultChecked={isChecked}
         name="filter-options"
-        id={`filter-options${children}`}
-        data-value={children}
+        id={`filter-option-${value}`}
+        value={value}
+        onClick={() => onClick(value)}
       />
-      <label htmlFor={`filter-options${children}`}>{children}</label>
+      <label htmlFor={`filter-option-${value}`}>{value}</label>
     </StyledOption>
   )
 }
 
+const options = ["All", "Meat", "Vegetarian", "Grill", "Spicy", "Closed"]
+
 export function Filter() {
   const [searchParams, setSearchParams] = useSearchParams()
-  const [options, setOptions] = useState([
-    "All",
-    "Meat",
-    "Vegetarian",
-    "Grill",
-    "Spicy",
-    "Closed",
-  ])
 
-  const changeHandler = (event) => {
-    const filterType = event.target.dataset.value
-
+  const clickHandler = (option) => {
     searchParams.delete("search")
 
     setSearchParams({
       ...Object.fromEntries(searchParams),
-      filterBy: filterType,
+      filterBy: option,
       page: 1,
     })
   }
@@ -43,11 +35,14 @@ export function Filter() {
   const filterBy = searchParams.get("filterBy")
 
   return (
-    <FilterOptions onChange={changeHandler}>
+    <FilterOptions>
       {options.map((option, i) => (
-        <Option key={i} isChecked={filterBy ? option === filterBy : i === 0}>
-          {option}
-        </Option>
+        <Option
+          key={i}
+          value={option}
+          isChecked={filterBy ? option === filterBy : i === 0}
+          onClick={clickHandler}
+        />
       ))}
     </FilterOptions>
   )

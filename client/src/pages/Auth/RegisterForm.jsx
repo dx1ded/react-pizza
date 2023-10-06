@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useDispatch } from "react-redux"
 import { useFormik } from "formik"
+import DatePicker from "react-datepicker"
 import { Heading, Text } from "@ui"
 import { Loader } from "@components/Loader/Loader"
 import { setSecret } from "@redux/secret/actions"
@@ -15,45 +16,55 @@ import {
   StyledForm,
 } from "./Auth.styled"
 
+import "react-datepicker/dist/react-datepicker.css"
+
 export function RegisterForm({ setHasAccount }) {
   const dispatch = useDispatch()
   const [error, setError] = useState("")
   const [isLoading, setIsLoading] = useState(false)
-  const { values, errors, touched, handleChange, handleBlur, handleSubmit } =
-    useFormik({
-      initialValues: {
-        firstName: "",
-        lastName: "",
-        email: "",
-        username: "",
-        password: "",
-        confirmPassword: "",
-      },
-      validationSchema: SignupSchema,
-      async onSubmit(data) {
-        try {
-          setIsLoading(true)
+  const {
+    values,
+    errors,
+    touched,
+    handleChange,
+    setFieldValue,
+    handleBlur,
+    handleSubmit,
+  } = useFormik({
+    initialValues: {
+      firstName: "",
+      lastName: "",
+      dateOfBirth: new Date(),
+      email: "",
+      username: "",
+      password: "",
+      confirmPassword: "",
+    },
+    validationSchema: SignupSchema,
+    async onSubmit(data) {
+      try {
+        setIsLoading(true)
 
-          const request = await fetch("/api/auth/sign-up", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(data),
-          })
+        const request = await fetch("/api/auth/sign-up", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        })
 
-          const json = await request.json()
+        const json = await request.json()
 
-          if (!request.ok) throw json
+        if (!request.ok) throw json
 
-          dispatch(setSecret(json.secret))
-          localStorage.setItem("secret", json.secret)
-        } catch (e) {
-          setError(e.message)
-          setIsLoading(false)
-        }
-      },
-    })
+        dispatch(setSecret(json.secret))
+        localStorage.setItem("secret", json.secret)
+      } catch (e) {
+        setError(e.message)
+        setIsLoading(false)
+      }
+    },
+  })
 
   const onChangeHandler = (event) => {
     if (error) setError(false)
@@ -97,6 +108,21 @@ export function RegisterForm({ setHasAccount }) {
           placeholder="Last Name"
           onChange={onChangeHandler}
           onBlur={handleBlur}
+        />
+        <FormLabelWrapper>
+          <FormLabel htmlFor="dateOfBirth">Date of birth</FormLabel>
+          {errors.dateOfBirth && touched.dateOfBirth && (
+            <Text $size="sm" $color="var(--gray)">
+              {errors.dateOfBirth}
+            </Text>
+          )}
+        </FormLabelWrapper>
+        <FormInput
+          as={DatePicker}
+          showYearDropdown
+          showMonthDropdown
+          selected={values.dateOfBirth}
+          onChange={(date) => setFieldValue("dateOfBirth", date)}
         />
         <FormLabelWrapper>
           <FormLabel htmlFor="email">E-mail</FormLabel>
