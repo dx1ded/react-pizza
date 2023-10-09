@@ -1,7 +1,7 @@
+import { useRef } from "react"
 import { useDispatch } from "react-redux"
 import { Text, Button, Heading } from "@ui"
 import { changeInCartBy, removeFromCart } from "@redux/cart/actions"
-import { useRef } from "react"
 import {
   CartItemContent,
   CartItemCounter,
@@ -10,6 +10,7 @@ import {
   CartItemName,
   StyledCartItem,
 } from "./CartItem.styled"
+import { types } from "../../utils"
 
 export function Counter({ id, count }) {
   const dispatch = useDispatch()
@@ -65,7 +66,7 @@ export function CartItem({ product }) {
             {product.title}
           </Heading>
           <Text $size="1.125rem" $color="var(--gray)" $weight="400">
-            {["thin", "traditional"][type]} dough, {size} cm.
+            {types[type]} dough, {size} cm.
           </Text>
         </CartItemName>
       </CartItemContent>

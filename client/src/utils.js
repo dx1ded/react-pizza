@@ -23,6 +23,11 @@ export const postalCodeHandler = (event, cb) => {
   cb(newStr)
 }
 
+export const calculateTotal = (items) =>
+  items.reduce((acc, item) => (acc += item.price * item.count), 0)
+
+export const types = ["thin", "traditional"]
+
 export const provincesList = [
   "NL",
   "PE",

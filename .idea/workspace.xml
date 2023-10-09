@@ -5,43 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab777b0c-9b7f-490d-87c0-bca3b9104be0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/Modal/Modal.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Modal/Modal.styled.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Modal/useModal.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Select/Select.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Select/Select.styled.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Select/useSelect.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/Profile/AddressForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/Profile/AddressSlider.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/Profile/Skeletons.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/Profile/yup.schemas.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/redux/profile/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/redux/profile/reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/redux/profile/types.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/models/Address.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/models/Order.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/account.routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/card.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/coupon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/no-address-sketch.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/order-done-sketch.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/paypal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Strategy/Strategy.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Strategy/Strategy.styled.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/Checkout/Address.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/Checkout/Address.styled.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/Checkout/Checkout.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/Checkout/Checkout.styled.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/Checkout/PayMethod.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/Checkout/PayMethod.styled.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/Checkout/Poster.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/Checkout/Review.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/Checkout/Review.styled.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.eslintrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintrc.cjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.stylelintrc" beforeDir="false" afterPath="$PROJECT_DIR$/client/.stylelintrc.cjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Filter/Filter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Filter/Filter.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Filter/Filter.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Filter/Filter.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Sort/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Sort/Sort.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Sort/Sort.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Sort/Sort.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/globalStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/globalStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/Auth.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/Auth.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/RegisterForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/RegisterForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/yup.schemas.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/yup.schemas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Main/PizzaList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Main/PizzaList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Main/ProductsSkeleton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Main/Skeleton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Profile/Info.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Profile/Info.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Profile/Info.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Profile/Info.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/redux/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/rootReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/@ui/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/@ui/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Modal/Modal.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Modal/Modal.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Cart/CartItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Cart/CartItem.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Cart/CartMenu.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Cart/CartMenu.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Cart/CartMenu.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Cart/CartMenu.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Profile/AddressSlider.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Profile/AddressSlider.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/auth.middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/auth.middleware.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/Order.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/Order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/account.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/account.routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +80,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/volodymyr/WebstormProjects/react-pizza/client/stylelintrc.js&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -103,11 +101,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/public" />
       <recent name="$PROJECT_DIR$/client/src/components/Pagination" />
       <recent name="$PROJECT_DIR$/client" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/components/Nav" />
-      <recent name="$PROJECT_DIR$/src/@ui" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -179,7 +177,15 @@
       <workItem from="1696310658432" duration="1000" />
       <workItem from="1696384552939" duration="16878000" />
       <workItem from="1696459570450" duration="22454000" />
-      <workItem from="1696531749384" duration="15546000" />
+      <workItem from="1696531749384" duration="16294000" />
+      <workItem from="1696652298960" duration="652000" />
+      <workItem from="1696712847281" duration="2000" />
+      <workItem from="1696720970852" duration="17717000" />
+      <workItem from="1696746359957" duration="120000" />
+      <workItem from="1696746735326" duration="26000" />
+      <workItem from="1696746767725" duration="125000" />
+      <workItem from="1696746897562" duration="66000" />
+      <workItem from="1696808491899" duration="14820000" />
     </task>
     <servers />
   </component>

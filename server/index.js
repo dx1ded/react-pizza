@@ -17,5 +17,5 @@ app.listen(process.env.PORT, (err) => {
   console.log(`Server is listening port ${process.env.PORT}`)
 
   mongoose.connect(process.env.MONGO_URL)
-    .then(() => console.log("Server is connected to the MongoDB Cluster"))
+    .then((res) => console.log("Server is connected to the MongoDB Cluster"))
 })

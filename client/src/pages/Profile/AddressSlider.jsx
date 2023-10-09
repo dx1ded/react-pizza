@@ -106,7 +106,7 @@ export function AddressSlider({ userId, addresses }) {
             </Text>
           </SwiperSlide>
         ))}
-        <SwiperSlide onClick={apiOne.open}>
+        <SwiperSlide onClick={() => apiOne.open()}>
           <Icon>add</Icon>
         </SwiperSlide>
       </Swiper>

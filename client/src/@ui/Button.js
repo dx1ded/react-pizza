@@ -37,4 +37,8 @@ export const Button = styled.button`
   border: 1px solid
     ${(props) => variants[props.$type].borderColor || variants[props.$type].bg};
   border-radius: 30px;
+
+  &:disabled {
+    opacity: 0.7;
+  }
 `

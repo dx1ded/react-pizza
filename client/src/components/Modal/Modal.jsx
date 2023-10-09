@@ -40,7 +40,6 @@ export function Modal({
           {hasRemoveButton && (
             <ModalRemoveButton
               aria-label="Remove the address"
-              style={{ opacity: areButtonsDisabled ? "0.5" : "1" }}
               disabled={areButtonsDisabled}
               onClick={() => onRemove(data)}
             >
@@ -57,7 +56,7 @@ export function Modal({
           {hasApplyButton && (
             <Button
               $type="primary"
-              style={{ opacity: areButtonsDisabled ? "0.5" : "1" }}
+              type="button"
               disabled={areButtonsDisabled}
               onClick={() => formRef.current.requestSubmit()}
             >

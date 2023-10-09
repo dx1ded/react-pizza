@@ -3,8 +3,7 @@ import { Icon, Heading, Button } from "@ui"
 import { NavLink } from "react-router-dom"
 
 export const StyledCartMenu = styled.section`
-  max-width: 60rem;
-  margin: 5.875rem auto 0;
+  margin-top: 5.875rem;
 `
 
 export const CartHeader = styled.div`

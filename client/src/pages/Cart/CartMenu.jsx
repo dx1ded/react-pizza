@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react"
+import { useNavigate } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { Container, Icon, Heading, Text, Button } from "@ui"
 import { useSecuredRequest } from "@hooks/useSecuredRequest"
 import { clearCart, setCartProducts } from "@redux/cart/actions"
 import { CartItem } from "./CartItem"
+import { CartItemsSkeleton } from "./CartItemsSkeleton"
 import {
   CartActions,
   CartClear,
@@ -14,11 +16,12 @@ import {
   CartSummary,
   GoBack,
 } from "./CartMenu.styled"
-import { CartItemsSkeleton } from "./CartItemsSkeleton"
+import { calculateTotal } from "../../utils"
 
 export function CartMenu() {
-  const request = useSecuredRequest()
   const dispatch = useDispatch()
+  const request = useSecuredRequest()
+  const navigate = useNavigate()
   const cartProducts = useSelector((state) => state.cart.products)
   const [isLoading, setIsLoading] = useState(true)
 
@@ -32,14 +35,9 @@ export function CartMenu() {
     })
   }, [request, dispatch])
 
-  const totalPrice = cartProducts.reduce(
-    (acc, el) => (acc += el.price * el.count),
-    0
-  )
-
   return (
     <StyledCartMenu>
-      <Container>
+      <Container $mw="60rem">
         <CartHeader>
           <CartLogo>
             <Icon $size="2.2rem" $color="#3F3F3F">
@@ -70,7 +68,7 @@ export function CartMenu() {
             All pizzas: <span>{cartProducts.length} pc.</span>
           </Heading>
           <Heading as="h3" $size="md" $weight="400">
-            Order sum: <span>{totalPrice} $</span>
+            Order sum: <span>{calculateTotal(cartProducts)} $</span>
           </Heading>
         </CartSummary>
         <CartActions>
@@ -78,7 +76,9 @@ export function CartMenu() {
             <Icon $size="1.1rem">arrow_back_ios_new</Icon>
             Go back
           </GoBack>
-          <Button $type="primary">Pay now</Button>
+          <Button $type="primary" onClick={() => navigate("/checkout")}>
+            Pay now
+          </Button>
         </CartActions>
       </Container>
     </StyledCartMenu>
