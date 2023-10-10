@@ -36,11 +36,14 @@ export const StyledOrderHistory = styled.section`
   }
 
   tr {
+    display: flex;
+    align-items: center;
     background-color: var(--light-gray);
   }
 
   th,
   td {
+    flex: 1;
     padding: 1.2rem;
   }
 
@@ -53,30 +56,34 @@ export const StyledOrderHistory = styled.section`
   td {
     font-size: 0.9375rem;
 
+    button {
+      width: 1.8rem;
+      height: 1.8rem;
+      color: var(--primary);
+      cursor: pointer;
+      border: 1px solid currentcolor;
+      border-radius: 100%;
+
+      ${Icon} {
+        vertical-align: middle;
+      }
+    }
+
     &:nth-child(3) {
-      max-width: 22rem;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
   }
 
+  th:nth-child(3),
+  td:nth-child(3) {
+    flex: 15rem;
+  }
+
   th:nth-child(5),
   td:nth-child(5) {
     text-align: center;
-  }
-
-  button {
-    width: 1.8rem;
-    height: 1.8rem;
-    color: var(--primary);
-    cursor: pointer;
-    border: 1px solid currentcolor;
-    border-radius: 100%;
-
-    ${Icon} {
-      vertical-align: middle;
-    }
   }
 
   ${StyledPagination} {

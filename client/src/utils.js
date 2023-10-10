@@ -23,6 +23,16 @@ export const postalCodeHandler = (event, cb) => {
   cb(newStr)
 }
 
+export const getAddressString = (address) => `
+  ${
+    address.unit
+      ? `${address.unit}-${address.streetNumber}`
+      : address.streetNumber
+  } ${address.streetName}, ${address.city}, ${address.province}, ${
+    address.postalCode
+  }
+`
+
 export const calculateTotal = (items) =>
   items.reduce((acc, item) => (acc += item.price * item.count), 0)
 

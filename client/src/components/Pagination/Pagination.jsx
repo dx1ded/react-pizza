@@ -1,38 +1,28 @@
 import { useMemo } from "react"
-import { useSearchParams } from "react-router-dom"
 import { Icon } from "@ui"
-import { paginate } from "./paginate"
 import { PaginationButton, StyledPagination } from "./Pagination.styled"
+import { paginate } from "./paginate"
 
-const ELEMENTS_PER_PAGE = 4
-
-export function Pagination({ elementsTotal }) {
-  const [searchParams, setSearchParams] = useSearchParams()
-
-  const currentPage = +searchParams.get("page") || 1
-  const pagesTotal = Math.ceil(elementsTotal / ELEMENTS_PER_PAGE)
-
-  const changePage = (page) => {
-    setSearchParams({
-      ...Object.fromEntries(searchParams.entries()),
-      page,
-    })
-  }
-
+export function Pagination({
+  currentPage,
+  totalElements,
+  elementsPerPage,
+  onChange,
+}) {
   const pagination = useMemo(
     () =>
       paginate({
-        current: currentPage,
-        pagesTotal,
+        currentPage,
+        pagesTotal: Math.ceil(totalElements / elementsPerPage),
       }),
-    [currentPage, pagesTotal]
+    [currentPage, totalElements, elementsPerPage]
   )
 
   return (
     <StyledPagination>
       <PaginationButton
         disabled={!pagination.prev || !pagination.items.length}
-        onClick={() => changePage(currentPage - 1)}
+        onClick={() => onChange(currentPage - 1)}
       >
         <Icon $size="1rem">arrow_back</Icon>
       </PaginationButton>
@@ -40,14 +30,14 @@ export function Pagination({ elementsTotal }) {
         <PaginationButton
           key={page}
           className={currentPage === page ? "active" : ""}
-          onClick={() => changePage(page)}
+          onClick={() => onChange(page)}
         >
           {page}
         </PaginationButton>
       ))}
       <PaginationButton
         disabled={!pagination.next || !pagination.items.length}
-        onClick={() => changePage(currentPage + 1)}
+        onClick={() => onChange(currentPage + 1)}
       >
         <Icon $size="1rem">arrow_forward</Icon>
       </PaginationButton>

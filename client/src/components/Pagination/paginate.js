@@ -1,4 +1,4 @@
-export const paginate = ({ current: c, pagesTotal }) => {
+export const paginate = ({ currentPage: c, pagesTotal }) => {
   const r = c < 3 || c >= pagesTotal - 1 ? 1 : 2
   let r1 = c === 1 ? c : c - r
   const r2 = c === pagesTotal ? pagesTotal : c + r

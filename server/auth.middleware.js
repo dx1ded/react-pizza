@@ -6,7 +6,7 @@ export const AuthMiddleware = (req, res, next) => {
       return res.status(401).json({ message: "Unauthorized" })
     }
 
-    res.locals.email = decoded.data
+    res.locals._id = decoded.data
 
     next()
   })

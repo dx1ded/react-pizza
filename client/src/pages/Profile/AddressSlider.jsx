@@ -29,7 +29,7 @@ export function AddressSlider({ userId, addresses }) {
       }
 
       setIsLoading(true)
-      request("/api/account/addAddress", {
+      request("/api/address/add", {
         method: "POST",
         data,
       }).then((response) => {
@@ -49,7 +49,7 @@ export function AddressSlider({ userId, addresses }) {
     areButtonsDisabled: isLoading,
     onApply(address) {
       setIsLoading(true)
-      request("/api/account/editAddress", {
+      request("/api/address/edit", {
         method: "POST",
         data: { address },
       }).then(() => {
@@ -60,7 +60,7 @@ export function AddressSlider({ userId, addresses }) {
     },
     onRemove(address) {
       setIsLoading(true)
-      request("/api/account/removeAddress", {
+      request("/api/address/remove", {
         method: "POST",
         data: { id: address._id },
       }).then(() => {

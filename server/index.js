@@ -5,12 +5,16 @@ import mongoose from "mongoose"
 import AuthRouter from "./routes/auth.routes.js"
 import ProductsRouter from "./routes/products.routes.js"
 import AccountRouter from "./routes/account.routes.js"
+import AddressRouter from "./routes/address.routes.js"
+import OrderRouter from "./routes/order.routes.js"
 
 const app = express()
 
 app.use("/api/auth", AuthRouter)
 app.use("/api/products", ProductsRouter)
 app.use("/api/account", AccountRouter)
+app.use("/api/address", AddressRouter)
+app.use("/api/order", OrderRouter)
 
 app.listen(process.env.PORT, (err) => {
   if (err) throw err

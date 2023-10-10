@@ -1,24 +1,22 @@
 import { Router, json } from "express"
-import mongoose from "mongoose"
+import { Types } from "mongoose"
 import { AuthMiddleware } from "../auth.middleware.js"
 import { Product } from "../models/Product.js"
+import { PRODUCTS_PER_PAGE, filterOptions, sortOptions } from "../utils.js"
 
 const router = Router()
-
-const PRODUCTS_PER_PAGE = 4
-const filterOptions = ["Meat", "Vegetarian", "Grill", "Spicy", "Closed"]
-const sortOptions = {
-  rating: { rating: -1 },
-  price_increasing: { price: 1 },
-  price_decreasing: { price: -1 }
-}
 
 router.use(json())
 
 // -> /api/products/list
 router.post("/list", AuthMiddleware, async (req, res) => {
   try {
-    const { page = 1, search = "", filterBy, sortBy = "rating" } = req.query
+    const {
+      page = 1,
+      search = "",
+      filterBy,
+      sortBy = "rating"
+    } = req.query
 
     if (search) {
       const searchResult = await Product.find({
@@ -28,25 +26,20 @@ router.post("/list", AuthMiddleware, async (req, res) => {
       return res.json({ products: searchResult, totalCount: searchResult.length })
     }
 
-    const aggregator = [
+    const paramsAggregator = [
       { $skip: (page - 1) * PRODUCTS_PER_PAGE },
       { $limit: PRODUCTS_PER_PAGE },
     ]
 
-    const paramsAggregator = []
-
-    if (filterBy && filterBy !== "All") paramsAggregator.push({
+    if (filterBy && filterBy !== "All") paramsAggregator.unshift({
       $match: { category: filterOptions.indexOf(filterBy) }
     })
 
-    if (sortBy) paramsAggregator.push({
+    if (sortBy) paramsAggregator.unshift({
       $sort: sortOptions[sortBy]
     })
 
-    const products = await Product.aggregate([
-      ...paramsAggregator,
-      ...aggregator
-    ])
+    const products = await Product.aggregate(paramsAggregator)
 
     const result = await Product.aggregate([
       ...paramsAggregator,
@@ -61,7 +54,7 @@ router.post("/list", AuthMiddleware, async (req, res) => {
 
 router.post("/listByIds", AuthMiddleware, async (req, res) => {
   const ids = req.body.ids
-    .map((id) => new mongoose.Types.ObjectId(id.split("_")[0]))
+    .map((id) => new Types.ObjectId(id.split("_")[0]))
 
   const items = await Promise.all(ids.map((id) =>
     Product.findOne({ _id: id }).exec()
@@ -92,7 +85,7 @@ router.post("/totalPrice", AuthMiddleware, async (req, res) => {
 
   const ids = Object
     .keys(products)
-    .map((id) => new mongoose.Types.ObjectId(id))
+    .map((id) => new Types.ObjectId(id))
 
   const items = await Product.aggregate([
     {

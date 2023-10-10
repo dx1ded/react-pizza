@@ -40,6 +40,7 @@ export const ModalHeader = styled.header`
   align-items: center;
   justify-content: space-between;
   padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
   border-bottom: 1px solid var(--light-gray);
 `
 
@@ -56,16 +57,13 @@ export const ModalClose = styled.button`
   }
 `
 
-export const ModalBody = styled.div`
-  padding: 1.5rem 0;
-`
-
 export const ModalFooter = styled.footer`
   display: flex;
   gap: 0.5rem;
   align-items: center;
   justify-content: flex-end;
   padding-top: 1rem;
+  margin-top: 1.5rem;
   border-top: 1px solid var(--light-gray);
 
   ${Button} {

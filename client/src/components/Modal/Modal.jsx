@@ -5,7 +5,6 @@ import {
   ModalContainer,
   ModalHeader,
   ModalClose,
-  ModalBody,
   ModalFooter,
   ModalRemoveButton,
 } from "./Modal.styled"
@@ -33,9 +32,11 @@ export function Modal({
             <Icon aria-hidden="true">close</Icon>
           </ModalClose>
         </ModalHeader>
-        <ModalBody>
-          <Component ref={formRef} data={data} onApply={onApply} />
-        </ModalBody>
+        <Component
+          data={data}
+          onApply={onApply}
+          {...(hasApplyButton ? { ref: formRef } : {})}
+        />
         <ModalFooter>
           {hasRemoveButton && (
             <ModalRemoveButton

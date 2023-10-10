@@ -5,7 +5,7 @@ import { clearCart } from "@redux/cart/actions"
 import { useSecuredRequest } from "@hooks/useSecuredRequest"
 import { Button, Heading, Text } from "@ui"
 import { ReviewSection, StyledReview, StyledTableItem } from "./Review.styled"
-import { calculateTotal, types } from "../../utils"
+import { calculateTotal, getAddressString, types } from "../../utils"
 
 function TableItemSkeleton() {
   return (
@@ -26,7 +26,6 @@ function TableItemSkeleton() {
 
 function TableItem({ item }) {
   const [_, type, size] = item._id.split("_")
-  const quantity = JSON.parse(localStorage.getItem("cart"))[item._id]
 
   return (
     <StyledTableItem>
@@ -37,7 +36,7 @@ function TableItem({ item }) {
       <td>{types[type]}</td>
       <td>{size}</td>
       <td>{item.count}</td>
-      <td>{item.price * quantity} $</td>
+      <td>{item.price * item.count} $</td>
     </StyledTableItem>
   )
 }
@@ -66,17 +65,15 @@ export function Review({ data, setIsDone }) {
 
   const clickHandler = () => {
     setIsPending(true)
-    request("/api/account/placeOrder", {
+    request("/api/order/place", {
       method: "POST",
-      data: { items },
+      data: { items, address: data.address, payMethod: data.payMethod },
     }).then(() => {
       dispatch(clearCart())
       setIsDone(true)
       setIsPending(false)
     })
   }
-
-  const { address } = data
 
   return (
     <StyledReview>
@@ -124,13 +121,7 @@ export function Review({ data, setIsDone }) {
         <Heading $size="md">
           Address
           <span />
-          <Text $size="md">
-            {address.unit
-              ? `${address.unit}-${address.streetNumber}`
-              : address.streetNumber}{" "}
-            {address.streetName}, {address.city}, {address.province},{" "}
-            {address.postalCode}
-          </Text>
+          <Text $size="md">{getAddressString(data.address)}</Text>
         </Heading>
       </ReviewSection>
       <Button $type="primary" disabled={isPending} onClick={clickHandler}>

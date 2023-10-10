@@ -26,17 +26,17 @@ router.post(
   }
 
   try {
-    const secret = jwt.sign({
-      exp: Math.floor(Date.now() / 1000) + (60 * 60 * 24 * 7), // 7 days
-      data: req.body.email
-    }, process.env.SECRET_TOKEN)
-
     const hashedPassword = await bcrypt.hash(req.body.password, +process.env.SALT_ROUNDS)
 
     const user = new User({
       ...req.body,
       password: hashedPassword
     })
+
+    const secret = jwt.sign({
+      exp: Math.floor(Date.now() / 1000) + (60 * 60 * 24 * 7), // 7 days
+      data: user._id
+    }, process.env.SECRET_TOKEN)
 
     await user.save()
 
@@ -80,7 +80,7 @@ router.post("/sign-in", async (req, res) => {
 
   const secret = jwt.sign({
     exp: Math.floor(Date.now() / 1000) + (60 * 60 * 24 * 7), // 7 days
-    data: user.email
+    data: user._id
   }, process.env.SECRET_TOKEN)
 
   res.json({ secret })

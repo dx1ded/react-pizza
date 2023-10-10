@@ -14,7 +14,7 @@ export const useSecuredRequest = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          ...options.data,
+          ...(options.data || {}),
           token,
         }),
       })
