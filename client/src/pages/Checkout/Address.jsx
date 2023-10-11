@@ -3,6 +3,7 @@ import ContentLoader from "react-content-loader"
 import { useSecuredRequest } from "@hooks/useSecuredRequest"
 import { Heading, Text } from "@ui"
 import { Poster } from "./Poster"
+import { getAddressString } from "../../utils"
 import { AddressList } from "./Address.styled"
 
 function AddressSkeleton() {
@@ -33,8 +34,8 @@ export function Address({ setNextStage, addData }) {
   useEffect(() => {
     request("/api/account/info", {
       method: "POST",
-    }).then((response) => {
-      setAddresses(response.addresses)
+    }).then((data) => {
+      setAddresses(data.addresses)
       setIsLoading(false)
     })
   }, [request])
@@ -70,11 +71,7 @@ export function Address({ setNextStage, addData }) {
               {address.title}
             </Heading>
             <Text as="span" $size="sm" $color="var(--gray)">
-              {address.unit
-                ? `${address.unit}-${address.streetNumber}`
-                : address.streetNumber}{" "}
-              {address.streetName}, {address.city}, {address.province},{" "}
-              {address.postalCode}
+              {getAddressString(address)}
             </Text>
           </button>
         ))

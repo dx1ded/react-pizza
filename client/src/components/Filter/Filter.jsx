@@ -1,19 +1,20 @@
 import { useSearchParams } from "react-router-dom"
-import { FilterOptions, StyledOption } from "./Filter.styled"
+import { FilterOptions, StyledFilterOption } from "./Filter.styled"
 
-function Option({ value, isChecked, onClick }) {
+function FilterOption({ value, isChecked, onClick }) {
   return (
-    <StyledOption>
+    <StyledFilterOption>
       <input
         type="radio"
-        defaultChecked={isChecked}
         name="filter-options"
         id={`filter-option-${value}`}
-        value={value}
+        readOnly
+        checked={isChecked}
+        defaultValue={value}
         onClick={() => onClick(value)}
       />
       <label htmlFor={`filter-option-${value}`}>{value}</label>
-    </StyledOption>
+    </StyledFilterOption>
   )
 }
 
@@ -37,7 +38,7 @@ export function Filter() {
   return (
     <FilterOptions>
       {options.map((option, i) => (
-        <Option
+        <FilterOption
           key={i}
           value={option}
           isChecked={filterBy ? option === filterBy : i === 0}

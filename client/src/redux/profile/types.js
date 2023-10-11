@@ -1,6 +1,6 @@
-export const SET_PROFILE_INFO = "SET_PROFILE_INFO"
+export const SET_USER = "SET_USER"
 export const SET_ADDRESSES = "SET_ADDRESSES"
-export const IS_LOADING = "IS_LOADING"
+export const SET_IS_LOADING = "SET_IS_LOADING"
 export const ADD_ADDRESS = "ADD_ADDRESS"
 export const EDIT_ADDRESS = "EDIT_ADDRESS"
 export const REMOVE_ADDRESS = "REMOVE_ADDRESS"

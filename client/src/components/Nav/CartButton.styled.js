@@ -1,71 +1,98 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import { Button, Text, Icon } from "@ui"
 import { NavLink } from "react-router-dom"
+import { StyledLoader } from "../Loader/Loader.styled"
+
+const fadeIn = keyframes`
+  from { opacity: 0; }
+  to { opacity: 1; }
+`
 
 export const CartIcon = styled.div`
   position: relative;
-  display: flex;
-  gap: 0.3rem;
-  align-items: center;
 
   ${Text} {
     position: absolute;
-    right: -6px;
-    bottom: -1px;
-    width: 1rem;
-    height: 1rem;
-    line-height: 1rem;
+    right: -0.2rem;
+    bottom: 0;
+    width: 0.9rem;
+    height: 0.9rem;
+    line-height: 0.9rem;
     text-align: center;
-    background-color: red;
+    pointer-events: none;
+    background-color: var(--primary);
     border-radius: 100%;
   }
 `
 
-export const StyledCartButton = styled(Button).attrs({
-  as: NavLink,
-  $type: "primary",
-})`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 0.2rem;
-  color: var(--dark);
-  text-align: center;
+export const CartPrice = styled(Text)`
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+`
+
+export const StyledCartButton = styled(Button).attrs({ as: NavLink })`
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--black);
   text-decoration: none;
   background-color: transparent;
-  border: none;
-  transition:
-    padding 0.3s ease-in-out,
-    background-color 0.3s ease-in-out,
-    color 0.3s ease-in-out;
+  border: 0;
+  transition: width 0.3s ease-in-out;
 
-  & > ${Text} {
-    position: absolute;
-    top: -999999px;
+  ${StyledLoader} {
     visibility: hidden;
-    opacity: 0;
-    transition:
-      opacity 0.3s ease-in-out 0.3s,
-      visibility 0.3s ease-in-out 0.3s;
-
-    &::after {
-      display: inline-block;
-      width: 1px;
-      height: 1.2rem;
-      margin: 0 0.8rem;
-      vertical-align: middle;
-      content: "";
-      background-color: var(--white);
-    }
+    transform: none;
   }
 
   &:hover {
-    padding: 1rem 1.25rem 1rem 1.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 8rem;
+    height: 3rem;
+    padding: 0 1.2rem;
     color: var(--white);
     background-color: var(--primary);
 
+    ${StyledLoader} {
+      position: static;
+      visibility: visible;
+      animation: ${fadeIn};
+      animation-duration: 0.3s;
+      animation-delay: 0.3s;
+      animation-fill-mode: both;
+    }
+
+    ${CartPrice} {
+      position: static;
+      visibility: visible;
+      animation: ${fadeIn};
+      animation-duration: 0.3s;
+      animation-delay: 0.3s;
+      animation-fill-mode: both;
+    }
+
     ${CartIcon} {
+      display: flex;
+      align-items: center;
+      animation: ${fadeIn};
+      animation-duration: 0.3s;
+      animation-delay: 0.3s;
+      animation-fill-mode: both;
+
+      &::before {
+        position: absolute;
+        left: -0.8rem;
+        display: block;
+        width: 1px;
+        height: 100%;
+        content: "";
+        background-color: var(--white);
+      }
+
       ${Icon} {
+        margin-right: 0.3rem;
         font-size: 1rem;
       }
 
@@ -73,15 +100,8 @@ export const StyledCartButton = styled(Button).attrs({
         position: static;
         width: auto;
         height: auto;
-        font-size: 0.875rem;
-        background-color: transparent;
+        font-size: 0.9rem;
       }
-    }
-
-    & > ${Text} {
-      position: static;
-      visibility: visible;
-      opacity: 1;
     }
   }
 `

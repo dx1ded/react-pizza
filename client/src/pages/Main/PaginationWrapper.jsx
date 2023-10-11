@@ -4,16 +4,16 @@ import styled from "styled-components"
 import { Container } from "@ui"
 import { Pagination } from "@components/Pagination/Pagination"
 
-const StyledPaginationContainer = styled.div`
+const StyledPaginationWrapper = styled.div`
   ${Container} {
     display: flex;
     justify-content: center;
   }
 `
 
-export function PaginationContainer() {
+export function PaginationWrapper() {
   const [searchParams, setSearchParams] = useSearchParams()
-  const totalCount = useSelector((state) => state.products.totalCount)
+  const count = useSelector((state) => state.products.count)
 
   const currentPage = +searchParams.get("page") || 1
   const changePage = (page) => {
@@ -24,15 +24,15 @@ export function PaginationContainer() {
   }
 
   return (
-    <StyledPaginationContainer>
+    <StyledPaginationWrapper>
       <Container>
         <Pagination
           currentPage={currentPage}
-          totalElements={totalCount}
+          totalElements={count}
           elementsPerPage={4}
           onChange={changePage}
         />
       </Container>
-    </StyledPaginationContainer>
+    </StyledPaginationWrapper>
   )
 }

@@ -1,24 +1,23 @@
 import { useSelector } from "react-redux"
 import { Container, Heading, Text, Icon } from "@ui"
-import { StyledInfo, InfoDate } from "./Info.styled"
-import { AdressesSkeleton, BasicInfoSkeleton, NameSkeleton } from "./Skeletons"
-import { AddressSlider } from "./AddressSlider"
+import { Addresses } from "./Addresses"
+import {
+  AdressesSkeleton,
+  BasicInfoSkeleton,
+  NameSkeleton,
+} from "./Info.skeletons"
 import { formatDate } from "../../utils"
+import { StyledInfo, InfoDate, InfoWrapper } from "./Info.styled"
 
 export function Info() {
-  const profile = useSelector((state) => state.profile)
-
-  const user = profile.info
+  const { user, addresses, isLoading } = useSelector((state) => state.profile)
 
   return (
     <StyledInfo>
       <Container $mw="58rem">
-        <img
-          src="https://static.wixstatic.com/media/8b5c7c_08163db9119c45da8d492974b9c862b2~mv2.png/v1/fill/w_560,h_564,al_c,lg_1,q_85,enc_auto/8b5c7c_08163db9119c45da8d492974b9c862b2~mv2.png"
-          alt="Profile"
-        />
-        <div style={{ minWidth: 0, width: "100%" }}>
-          {profile.isLoading ? (
+        <img src="profile-picture.webp" alt="Man eating pizza" />
+        <InfoWrapper>
+          {isLoading ? (
             <NameSkeleton />
           ) : (
             <>
@@ -34,7 +33,7 @@ export function Info() {
             <Heading $size="md" $mb="0.9rem">
               Basic information
             </Heading>
-            {profile.isLoading ? (
+            {isLoading ? (
               <BasicInfoSkeleton />
             ) : (
               <>
@@ -53,13 +52,13 @@ export function Info() {
             <Heading $size="md" $mb="0.9rem">
               Addresses
             </Heading>
-            {profile.isLoading ? (
+            {isLoading ? (
               <AdressesSkeleton />
             ) : (
-              <AddressSlider userId={user._id} addresses={profile.addresses} />
+              <Addresses userId={user._id} addresses={addresses} />
             )}
           </section>
-        </div>
+        </InfoWrapper>
       </Container>
     </StyledInfo>
   )

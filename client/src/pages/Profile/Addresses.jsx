@@ -1,17 +1,18 @@
 import { useState } from "react"
 import { useDispatch } from "react-redux"
-import { useSecuredRequest } from "@hooks/useSecuredRequest"
-import { useModal } from "@components/Modal/useModal"
-import { addAddress, editAddress, removeAddress } from "@redux/profile/actions"
-import { Heading, Icon, Text } from "@ui"
-import { Swiper, SwiperSlide } from "swiper/react"
 import { Navigation } from "swiper"
-import { SliderNav, SliderNavNext, SliderNavPrev } from "./Info.styled"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { addAddress, editAddress, removeAddress } from "@redux/profile/actions"
+import { useSecuredRequest } from "@hooks/useSecuredRequest"
+import { Heading, Icon, Text } from "@ui"
+import { useModal } from "@components/Modal/useModal"
 import { AddressForm } from "./AddressForm"
+import { getAddressString } from "../../utils"
+import { SliderNav, SliderNavNext, SliderNavPrev } from "./Info.styled"
 
 import "swiper/swiper.min.css"
 
-export function AddressSlider({ userId, addresses }) {
+export function Addresses({ userId, addresses }) {
   const dispatch = useDispatch()
   const request = useSecuredRequest()
   const [isLoading, setIsLoading] = useState(false)
@@ -23,17 +24,12 @@ export function AddressSlider({ userId, addresses }) {
     hasApplyButton: true,
     areButtonsDisabled: isLoading,
     onApply(address) {
-      const data = {
-        userId,
-        address,
-      }
-
       setIsLoading(true)
       request("/api/address/add", {
         method: "POST",
-        data,
-      }).then((response) => {
-        dispatch(addAddress(response.address))
+        data: { userId, address },
+      }).then((data) => {
+        dispatch(addAddress(data.address))
         setIsLoading(false)
         apiOne.close()
       })
@@ -98,11 +94,7 @@ export function AddressSlider({ userId, addresses }) {
               {address.title}
             </Heading>
             <Text as="address" $size="sm" $color="var(--gray)">
-              {address.unit
-                ? `${address.unit}-${address.streetNumber}`
-                : address.streetNumber}{" "}
-              {address.streetName}, {address.city}, {address.province},{" "}
-              {address.postalCode}
+              {getAddressString(address)}
             </Text>
           </SwiperSlide>
         ))}

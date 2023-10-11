@@ -1,6 +1,6 @@
-import { Heading, Text, Button, Container } from "@ui"
 import { NavLink } from "react-router-dom"
-import { StyledCartEmpty } from "@/pages/Cart/CartEmpty.styled"
+import { Heading, Text, Button, Container } from "@ui"
+import { StyledCartEmpty } from "./CartEmpty.styled"
 
 export function CartEmpty() {
   return (
@@ -9,7 +9,7 @@ export function CartEmpty() {
         <Heading $size="lg" $mb="1rem">
           Cart is empty 😕
         </Heading>
-        <Text $size="1.125rem" $color="var(--gray)" $weight="400">
+        <Text $size="md" $color="var(--gray)" $weight="400">
           Most likely you have not ordered a pizza yet. <br />
           In order to purchase, go to the main page.
         </Text>

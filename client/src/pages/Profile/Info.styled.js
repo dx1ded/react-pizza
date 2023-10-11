@@ -17,6 +17,11 @@ export const StyledInfo = styled.section`
     border-radius: 100%;
     object-fit: cover;
   }
+`
+
+export const InfoWrapper = styled.div`
+  width: 100%;
+  min-width: 0;
 
   section {
     &:not(:last-child) {

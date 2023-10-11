@@ -3,31 +3,31 @@ import { Text } from "@ui"
 import { useSelect } from "../Select/useSelect"
 import { StyledSort, Triangle } from "./Sort.styled"
 
-const types = {
+const sort = {
   rating: "popularity",
   price_increasing: "price increasing",
   price_decreasing: "price decreasing",
 }
 
-const list = Object.values(types)
+const list = Object.values(sort)
 
-const findTypeIndex = (searchParams) =>
-  list.findIndex((option) => option === types[searchParams.get("sortBy")])
+const findOptionIndex = (queryOption) =>
+  list.findIndex((option) => option === (sort[queryOption] || queryOption))
 
 export function Sort() {
   const [searchParams, setSearchParams] = useSearchParams()
+  const sortBy = searchParams.get("sortBy")
   const select = useSelect({
     list,
-    activeIndex:
-      findTypeIndex(searchParams) === -1 ? 0 : findTypeIndex(searchParams),
+    activeIndex: findOptionIndex(sortBy) === -1 ? 0 : findOptionIndex(sortBy),
     onChange(option) {
-      const type = Object.keys(types)[list.findIndex((item) => item === option)]
+      const serializedOption = Object.keys(sort)[findOptionIndex(option)]
 
       searchParams.delete("search")
 
       setSearchParams({
         ...Object.fromEntries(searchParams),
-        sortBy: type,
+        sortBy: serializedOption,
         page: 1,
       })
     },

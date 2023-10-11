@@ -1,26 +1,22 @@
 import { useEffect } from "react"
 import { useDispatch } from "react-redux"
-import {
-  setAddresses,
-  setIsLoading,
-  setProfileInfo,
-} from "@redux/profile/actions"
+import { setUser, setAddresses, setIsLoading } from "@redux/profile/actions"
 import { useSecuredRequest } from "@hooks/useSecuredRequest"
 import { PageWrapper } from "@ui"
 import { Header } from "@components/Header/Header"
-import { OrderHistory } from "./OrderHistory"
+import { Orders } from "./Orders"
 import { Info } from "./Info"
 
 export function Profile() {
-  const request = useSecuredRequest()
   const dispatch = useDispatch()
+  const request = useSecuredRequest()
 
   useEffect(() => {
     request("/api/account/info", {
       method: "POST",
-    }).then((response) => {
-      dispatch(setProfileInfo(response.user))
-      dispatch(setAddresses(response.addresses))
+    }).then((data) => {
+      dispatch(setUser(data.user))
+      dispatch(setAddresses(data.addresses))
       dispatch(setIsLoading(false))
     })
   }, [request, dispatch])
@@ -29,7 +25,7 @@ export function Profile() {
     <PageWrapper $pb="8rem">
       <Header />
       <Info />
-      <OrderHistory />
+      <Orders />
     </PageWrapper>
   )
 }

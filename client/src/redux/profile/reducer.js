@@ -1,31 +1,31 @@
 import {
   ADD_ADDRESS,
   EDIT_ADDRESS,
-  IS_LOADING,
+  SET_IS_LOADING,
   REMOVE_ADDRESS,
   SET_ADDRESSES,
-  SET_PROFILE_INFO,
+  SET_USER,
 } from "./types"
 
 const initialState = {
-  info: {},
+  user: {},
   addresses: [],
   isLoading: true,
 }
 
 export const profileReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_PROFILE_INFO:
+    case SET_USER:
       return {
         ...state,
-        info: action.payload,
+        user: action.payload,
       }
     case SET_ADDRESSES:
       return {
         ...state,
         addresses: action.payload,
       }
-    case IS_LOADING:
+    case SET_IS_LOADING:
       return {
         ...state,
         isLoading: action.payload,

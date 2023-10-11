@@ -8,9 +8,7 @@ export function Header({ hasSearch }) {
   return (
     <StyledHeader $hasSearch={hasSearch}>
       <Container>
-        <div>
-          <Logo />
-        </div>
+        <Logo />
         {hasSearch && <Search />}
         <Nav />
       </Container>

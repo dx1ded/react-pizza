@@ -22,7 +22,7 @@ export const StyledSelect = styled.div`
   transform: translateY(calc(100% + 0.8rem));
 `
 
-export const Option = styled.div`
+export const StyledSelectOption = styled.div`
   input {
     display: none;
 

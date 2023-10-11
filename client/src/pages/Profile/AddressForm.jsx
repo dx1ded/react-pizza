@@ -10,7 +10,7 @@ import {
 } from "@components/Modal/Modal.styled"
 import { useSelect } from "@components/Select/useSelect"
 import { AddressSchema } from "./yup.schemas"
-import { provincesList, postalCodeHandler } from "../../utils"
+import { provincesList } from "../../utils"
 
 const StyledAddressForm = styled.form`
   ${ModalInput}[type="number"] {
@@ -23,6 +23,21 @@ const StyledAddressForm = styled.form`
     }
   }
 `
+
+const postalCodeHandler = (event, cb) => {
+  const value = event.target.value.toUpperCase()
+  const [partOne, partTwo] = value.split(" ")
+  let newStr = value
+
+  if (event.key === "Backspace" && newStr.length === 4 && !partTwo) {
+    newStr = partOne
+  } else if (partOne.length === 4 && !partTwo) {
+    newStr = `${partOne.substring(0, 3)} ${partOne[3]}`
+  }
+
+  event.target.value = newStr
+  cb(newStr)
+}
 
 export const AddressForm = forwardRef(function AddressForm(
   { data, onApply },
@@ -148,6 +163,7 @@ export const AddressForm = forwardRef(function AddressForm(
             name="province"
             placeholder="Province"
             readOnly
+            style={{ cursor: "pointer" }}
             defaultValue={values.province}
             onClick={select.toggle}
           />

@@ -1,49 +1,45 @@
-import { useState, useEffect, useMemo } from "react"
-import { useLocation } from "react-router-dom"
+import { useState, useMemo } from "react"
 import { useSelector } from "react-redux"
 import { useSecuredRequest } from "@hooks/useSecuredRequest"
 import { Text, Icon } from "@ui"
-import { StyledCartButton, CartIcon } from "./CartButton.styled"
+import { StyledCartButton, CartIcon, CartPrice } from "./CartButton.styled"
+import { Loader } from "../Loader/Loader"
 
 export function CartButton() {
   const request = useSecuredRequest()
   const cartList = useSelector((state) => state.cart.list)
-  const cartProducts = useSelector((state) => state.cart.products)
-  const [totalPrice, setTotalPrice] = useState(0)
-  const location = useLocation()
+  const [price, setPrice] = useState(0)
+  const [isLoading, setIsLoading] = useState(true)
 
-  const totalCount = useMemo(
+  const getPrice = () => {
+    setIsLoading(true)
+    request("/api/cart/getPrice", {
+      method: "POST",
+      data: { cart: cartList },
+    }).then((data) => {
+      setPrice(data.price)
+      setIsLoading(false)
+    })
+  }
+
+  const count = useMemo(
     () => Object.values(cartList).reduce((acc, num) => (acc += num), 0),
     [cartList]
   )
 
-  useEffect(() => {
-    if (location.pathname !== "/cart") {
-      request("/api/products/totalPrice", {
-        method: "POST",
-        data: { products: cartList },
-      }).then((response) => {
-        setTotalPrice(response.totalPrice)
-      })
-    } else {
-      setTotalPrice(
-        cartProducts.reduce(
-          (acc, product) => (acc += product.price * product.count),
-          0
-        )
-      )
-    }
-  }, [cartList, cartProducts, request, location])
-
   return (
-    <StyledCartButton to="/cart">
-      <Text $size="md" $color="var(--white)">
-        {totalPrice} $
-      </Text>
+    <StyledCartButton $type="primary" to="/cart" onMouseEnter={getPrice}>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <CartPrice $size="md" $color="var(--white)">
+          {price} $
+        </CartPrice>
+      )}
       <CartIcon>
         <Icon $size="1.4rem">shopping_cart</Icon>
         <Text $size="0.625rem" $color="var(--white)">
-          {totalCount}
+          {count}
         </Text>
       </CartIcon>
     </StyledCartButton>

@@ -1,24 +1,24 @@
 import {
   ADD_ADDRESS,
   EDIT_ADDRESS,
-  IS_LOADING,
+  SET_IS_LOADING,
   REMOVE_ADDRESS,
   SET_ADDRESSES,
-  SET_PROFILE_INFO,
+  SET_USER,
 } from "./types"
 
-export const setProfileInfo = (data) => ({
-  type: SET_PROFILE_INFO,
-  payload: data,
+export const setUser = (user) => ({
+  type: SET_USER,
+  payload: user,
 })
 
-export const setAddresses = (data) => ({
+export const setAddresses = (addresses) => ({
   type: SET_ADDRESSES,
-  payload: data,
+  payload: addresses,
 })
 
 export const setIsLoading = (boolean) => ({
-  type: IS_LOADING,
+  type: SET_IS_LOADING,
   payload: boolean,
 })
 

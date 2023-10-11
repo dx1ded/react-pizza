@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
-import { Container, Icon, Heading, Text, Button } from "@ui"
-import { useSecuredRequest } from "@hooks/useSecuredRequest"
 import { clearCart, setCartProducts } from "@redux/cart/actions"
+import { useSecuredRequest } from "@hooks/useSecuredRequest"
+import { Container, Icon, Heading, Text, Button } from "@ui"
 import { CartItem } from "./CartItem"
-import { CartItemsSkeleton } from "./CartItemsSkeleton"
+import { CartItemSkeleton } from "./CartItem.skeleton"
+import { calculateTotal } from "../../utils"
 import {
   CartActions,
   CartClear,
@@ -16,7 +17,6 @@ import {
   CartSummary,
   GoBack,
 } from "./CartMenu.styled"
-import { calculateTotal } from "../../utils"
 
 export function CartMenu() {
   const dispatch = useDispatch()
@@ -29,8 +29,8 @@ export function CartMenu() {
     request("/api/products/listByIds", {
       method: "POST",
       data: { ids: Object.keys(JSON.parse(localStorage.getItem("cart"))) },
-    }).then((response) => {
-      dispatch(setCartProducts(response.items))
+    }).then((data) => {
+      dispatch(setCartProducts(data.items))
       setIsLoading(false)
     })
   }, [request, dispatch])
@@ -56,7 +56,11 @@ export function CartMenu() {
         </CartHeader>
         <CartList>
           {isLoading ? (
-            <CartItemsSkeleton />
+            <>
+              <CartItemSkeleton />
+              <CartItemSkeleton />
+              <CartItemSkeleton />
+            </>
           ) : (
             cartProducts.map((product) => (
               <CartItem key={product._id} product={product} />
@@ -72,7 +76,7 @@ export function CartMenu() {
           </Heading>
         </CartSummary>
         <CartActions>
-          <GoBack to="/">
+          <GoBack $type="light_gray" to="/">
             <Icon $size="1.1rem">arrow_back_ios_new</Icon>
             Go back
           </GoBack>

@@ -6,9 +6,7 @@ import { StyledSearch, SearchBar } from "./Search.styled"
 export function Search() {
   const [searchParams, setSearchParams] = useSearchParams()
   const changeHandler = useDebouncedCallback((event) => {
-    setSearchParams({
-      search: event.target.value,
-    })
+    setSearchParams({ search: event.target.value })
   }, 1000)
 
   return (
@@ -26,6 +24,7 @@ export function Search() {
           type="text"
           placeholder="Search pizza..."
           id="search-input"
+          autoComplete="off"
           defaultValue={searchParams.get("search")}
           onChange={changeHandler}
         />

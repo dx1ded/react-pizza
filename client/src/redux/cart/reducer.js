@@ -1,6 +1,6 @@
 import {
   ADD_TO_CART,
-  CHANGE_IN_CART_BY,
+  CHANGE_CART_BY,
   CLEAR_CART,
   REMOVE_FROM_CART,
   SET_CART_PRODUCTS,
@@ -31,10 +31,10 @@ export const cartReducer = (state = initialState, action) => {
       }
 
       break
-    case CHANGE_IN_CART_BY:
+    case CHANGE_CART_BY:
       newList = {
         ...newList,
-        [action.payload.productId]: action.payload.value,
+        [action.payload.id]: action.payload.value,
       }
       break
     case REMOVE_FROM_CART:

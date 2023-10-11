@@ -16,7 +16,7 @@ export const StyledLoader = styled.div`
     width: 100%;
     height: 100%;
     border: 3px solid;
-    border-color: var(--blue) transparent;
+    border-color: var(--white) transparent;
     border-radius: 100%;
     animation: ${spin} 1s infinite;
   }

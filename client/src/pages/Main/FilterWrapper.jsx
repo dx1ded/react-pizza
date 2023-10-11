@@ -3,7 +3,7 @@ import { Container } from "@ui"
 import { Filter } from "@components/Filter/Filter"
 import { Sort } from "@components/Sort/Sort"
 
-const StyledFilterContainer = styled.div`
+const StyledFilterWrapper = styled.div`
   margin: 2.5rem 0 3.5rem;
 
   ${Container} {
@@ -14,13 +14,13 @@ const StyledFilterContainer = styled.div`
   }
 `
 
-export function FilterContainer() {
+export function FilterWrapper() {
   return (
-    <StyledFilterContainer>
+    <StyledFilterWrapper>
       <Container>
         <Filter />
         <Sort />
       </Container>
-    </StyledFilterContainer>
+    </StyledFilterWrapper>
   )
 }

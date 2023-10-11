@@ -1,8 +1,8 @@
-import styled from "styled-components"
 import { useSelector } from "react-redux"
+import styled from "styled-components"
 import { Container, Heading } from "@ui"
 import { Card } from "@components/Card/Card"
-import { ProductsSkeleton } from "./Skeleton"
+import { ProductSkeleton } from "./Product.skeleton"
 import { NotFound } from "./NotFound"
 
 const StyledPizzaList = styled.section`
@@ -16,7 +16,7 @@ const List = styled.div`
 `
 
 export function PizzaList() {
-  const products = useSelector((state) => state.products)
+  const { isLoading, list } = useSelector((state) => state.products)
 
   return (
     <StyledPizzaList>
@@ -24,16 +24,19 @@ export function PizzaList() {
         <Heading $size="lg" $mb="2.25rem">
           All pizzas
         </Heading>
-        {!products.isLoading && !products.list.length ? (
+        {!isLoading && !list.length ? (
           <NotFound />
         ) : (
           <List>
-            {products.isLoading ? (
-              <ProductsSkeleton />
+            {isLoading ? (
+              <>
+                <ProductSkeleton />
+                <ProductSkeleton />
+                <ProductSkeleton />
+                <ProductSkeleton />
+              </>
             ) : (
-              products.list.map((product) => (
-                <Card key={product._id} {...product} />
-              ))
+              list.map((product) => <Card key={product._id} {...product} />)
             )}
           </List>
         )}

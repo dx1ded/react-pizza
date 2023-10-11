@@ -1,12 +1,12 @@
 import { useState, useEffect, useCallback } from "react"
 import ContentLoader from "react-content-loader"
 import { useSecuredRequest } from "@hooks/useSecuredRequest"
-import { Pagination } from "@components/Pagination/Pagination"
 import { Container, Heading, Icon } from "@ui"
+import { Pagination } from "@components/Pagination/Pagination"
 import { useModal } from "@components/Modal/useModal"
-import { StyledOrderHistory } from "./OrderHistory.styled"
-import { calculateTotal, formatDate } from "../../utils"
 import { OrderDetails } from "./OrderDetails"
+import { calculateTotal, formatDate } from "../../utils"
+import { StyledOrders } from "./Orders.styled"
 
 function Order({ data, api }) {
   const itemsTitles = data.items.reduce(
@@ -61,7 +61,7 @@ function NoOrders() {
   )
 }
 
-export function OrderHistory() {
+export function Orders() {
   const request = useSecuredRequest()
   const [currentPage, setCurrentPage] = useState(1)
   const [count, setCount] = useState(0)
@@ -75,12 +75,14 @@ export function OrderHistory() {
 
   const getOrders = useCallback(
     (page = 1) => {
+      setCurrentPage(page)
       setIsLoading(true)
       request(`/api/order/list/${page}`, {
         method: "POST",
-      }).then((response) => {
-        setOrders(response.orders)
-        setCount(response.count)
+        data: { ordersPerPage: 5 },
+      }).then((data) => {
+        setOrders(data.orders)
+        setCount(data.count)
         setIsLoading(false)
       })
     },
@@ -90,7 +92,7 @@ export function OrderHistory() {
   useEffect(getOrders, [getOrders])
 
   return (
-    <StyledOrderHistory>
+    <StyledOrders>
       {contentHolder}
       <Container $mw="58rem">
         <Heading $size="1.5rem" $mb="1.5rem">
@@ -125,6 +127,6 @@ export function OrderHistory() {
           onChange={getOrders}
         />
       </Container>
-    </StyledOrderHistory>
+    </StyledOrders>
   )
 }

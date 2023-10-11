@@ -27,7 +27,7 @@ export const CardOptionsGroup = styled.div`
   }
 `
 
-export const CardOption = styled.div`
+export const StyledCardOption = styled.div`
   flex: 1;
 
   input {

@@ -1,24 +1,24 @@
-import { SET_LIST, SET_TOTAL_COUNT, SET_LIST_LOADING } from "./types"
+import { SET_PRODUCTS, SET_PRODUCTS_COUNT, SET_PRODUCTS_LOADING } from "./types"
 
 const initialState = {
   list: [],
-  totalCount: 0,
+  count: 0,
   isLoading: true,
 }
 
 export const productsReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_LIST:
+    case SET_PRODUCTS:
       return {
         ...state,
         list: action.payload,
       }
-    case SET_TOTAL_COUNT:
+    case SET_PRODUCTS_COUNT:
       return {
         ...state,
-        totalCount: action.payload,
+        count: action.payload,
       }
-    case SET_LIST_LOADING:
+    case SET_PRODUCTS_LOADING:
       return {
         ...state,
         isLoading: action.payload,

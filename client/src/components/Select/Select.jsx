@@ -1,5 +1,22 @@
 import { useEffect, useRef, useId } from "react"
-import { Option, StyledSelect } from "./Select.styled"
+import { StyledSelectOption, StyledSelect } from "./Select.styled"
+
+function SelectOption({ name, index, isChecked, value, onClick }) {
+  return (
+    <StyledSelectOption>
+      <input
+        type="radio"
+        name={name}
+        id={`${name}-${index}`}
+        readOnly
+        checked={isChecked}
+        defaultValue={value}
+        onClick={onClick}
+      />
+      <label htmlFor={`${name}-${index}`}>{value}</label>
+    </StyledSelectOption>
+  )
+}
 
 export function Select({
   isOpened,
@@ -36,17 +53,14 @@ export function Select({
   return (
     <StyledSelect $isOpened={isOpened} ref={selectRef}>
       {list.map((option, i) => (
-        <Option key={i}>
-          <input
-            type="radio"
-            name={name}
-            id={`${name}-${i}`}
-            defaultChecked={active === option}
-            value={option}
-            onClick={clickHandler}
-          />
-          <label htmlFor={`${name}-${i}`}>{option}</label>
-        </Option>
+        <SelectOption
+          key={i}
+          index={i}
+          name={name}
+          isChecked={active === option}
+          value={option}
+          onClick={clickHandler}
+        />
       ))}
     </StyledSelect>
   )

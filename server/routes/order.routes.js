@@ -2,7 +2,6 @@ import { Router, json } from "express"
 import { Types } from "mongoose"
 import { AuthMiddleware } from "../auth.middleware.js"
 import { Order } from "../models/Order.js"
-import { ORDERS_PER_PAGE } from "../utils.js"
 
 const router = Router()
 
@@ -27,13 +26,14 @@ router.post("/place", AuthMiddleware, async (req, res) => {
 
 // -> /api/order/list
 router.post("/list/:page", AuthMiddleware, async (req, res) => {
+  const ordersPerPage = req.body.ordersPerPage
   const page = req.params.page
   const userId = res.locals._id
 
   const orders = await Order.aggregate([
     { $match: { userId: new Types.ObjectId(userId) } },
-    { $skip: (page - 1) * ORDERS_PER_PAGE },
-    { $limit: ORDERS_PER_PAGE }
+    { $skip: (page - 1) * ordersPerPage },
+    { $limit: ordersPerPage }
   ])
 
   const count = await Order.countDocuments({ userId })

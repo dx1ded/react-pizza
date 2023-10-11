@@ -7,8 +7,4 @@ export const StyledNav = styled.nav`
     align-items: center;
     list-style: none;
   }
-
-  a {
-    position: relative;
-  }
 `

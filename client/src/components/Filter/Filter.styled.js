@@ -6,11 +6,12 @@ export const FilterOptions = styled.div`
   align-items: center;
 `
 
-export const StyledOption = styled.div`
+export const StyledFilterOption = styled.div`
   input {
     display: none;
 
     &:checked + label {
+      display: block;
       color: var(--white);
       background-color: var(--dark);
     }

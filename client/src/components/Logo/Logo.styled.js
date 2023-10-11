@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom"
 import { Heading } from "@ui"
 
 export const StyledLogo = styled(NavLink)`
-  display: inline-flex;
+  display: flex;
   gap: 1.125rem;
   align-items: flex-start;
   text-decoration: none;

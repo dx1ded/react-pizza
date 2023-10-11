@@ -1,7 +1,8 @@
 import { useRef } from "react"
 import { useDispatch } from "react-redux"
+import { changeCartBy, removeFromCart } from "@redux/cart/actions"
 import { Text, Button, Heading } from "@ui"
-import { changeInCartBy, removeFromCart } from "@redux/cart/actions"
+import { types } from "../../utils"
 import {
   CartItemContent,
   CartItemCounter,
@@ -10,7 +11,6 @@ import {
   CartItemName,
   StyledCartItem,
 } from "./CartItem.styled"
-import { types } from "../../utils"
 
 export function Counter({ id, count }) {
   const dispatch = useDispatch()
@@ -19,8 +19,8 @@ export function Counter({ id, count }) {
   const changeHandler = (event) => {
     event.preventDefault()
     dispatch(
-      changeInCartBy({
-        productId: id,
+      changeCartBy({
+        id,
         value: +counterRef.current.value,
       })
     )

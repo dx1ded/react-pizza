@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Icon } from "@ui"
 import { StyledPagination } from "@components/Pagination/Pagination.styled"
 
-export const StyledOrderHistory = styled.section`
+export const StyledOrders = styled.section`
   table {
     --table-radius: 6px;
 
@@ -37,13 +37,13 @@ export const StyledOrderHistory = styled.section`
 
   tr {
     display: flex;
-    align-items: center;
-    background-color: var(--light-gray);
   }
 
   th,
   td {
+    display: flex;
     flex: 1;
+    align-items: center;
     padding: 1.2rem;
   }
 
@@ -55,6 +55,7 @@ export const StyledOrderHistory = styled.section`
 
   td {
     font-size: 0.9375rem;
+    background-color: var(--light-gray);
 
     button {
       width: 1.8rem;
@@ -83,7 +84,7 @@ export const StyledOrderHistory = styled.section`
 
   th:nth-child(5),
   td:nth-child(5) {
-    text-align: center;
+    justify-content: center;
   }
 
   ${StyledPagination} {

@@ -1,15 +1,15 @@
 import { Heading, Text } from "@ui"
 import {
-  StyledOrderDetails,
-  OrderDetailsHeader,
-  OrderDetailsTable,
-} from "./OrderDetails.styled"
-import {
   calculateTotal,
   formatDate,
   getAddressString,
   types,
 } from "../../utils"
+import {
+  StyledOrderDetails,
+  OrderDetailsHeader,
+  OrderDetailsTable,
+} from "./OrderDetails.styled"
 
 function OrderItem({ item }) {
   const [_, type, size] = item._id.split("_")
@@ -55,17 +55,14 @@ export function OrderDetails({ data }) {
       </OrderDetailsTable>
       <Text $size="md">
         Total price
-        <span />
         <span>{calculateTotal(data.items)} $</span>
       </Text>
       <Text $size="md">
         Address
-        <span />
         <span>{getAddressString(data.address)}</span>
       </Text>
       <Text $size="md">
         Pay Method
-        <span />
         <span>{data.payMethod}</span>
       </Text>
     </StyledOrderDetails>

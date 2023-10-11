@@ -46,6 +46,7 @@ module.exports = {
     "no-restricted-syntax": "off",
     "no-continue": "off",
     "no-param-reassign": "off",
-    "no-shadow": "off"
+    "no-shadow": "off",
+    "consistent-return": "off"
   },
 }

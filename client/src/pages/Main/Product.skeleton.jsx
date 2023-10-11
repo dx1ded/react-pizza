@@ -18,15 +18,3 @@ export function ProductSkeleton() {
     </ContentLoader>
   )
 }
-
-// Row of 4
-export function ProductsSkeleton() {
-  return (
-    <>
-      <ProductSkeleton />
-      <ProductSkeleton />
-      <ProductSkeleton />
-      <ProductSkeleton />
-    </>
-  )
-}

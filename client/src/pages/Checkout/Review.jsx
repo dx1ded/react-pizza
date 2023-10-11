@@ -46,16 +46,17 @@ export function Review({ data, setIsDone }) {
   const request = useSecuredRequest()
   const [items, setItems] = useState([])
   const [isLoading, setIsLoading] = useState(true)
-  const [isPending, setIsPending] = useState(false)
 
   useEffect(() => {
+    const cartList = JSON.parse(localStorage.getItem("cart"))
+
     request("/api/products/listByIds", {
       method: "POST",
-      data: { ids: Object.keys(JSON.parse(localStorage.getItem("cart"))) },
-    }).then((response) => {
-      const itemsWithCount = response.items.map((item) => ({
+      data: { ids: Object.keys(cartList) },
+    }).then((data) => {
+      const itemsWithCount = data.items.map((item) => ({
         ...item,
-        count: JSON.parse(localStorage.getItem("cart"))[item._id],
+        count: cartList[item._id],
       }))
 
       setItems(itemsWithCount)
@@ -64,14 +65,14 @@ export function Review({ data, setIsDone }) {
   }, [request])
 
   const clickHandler = () => {
-    setIsPending(true)
+    setIsLoading(true)
     request("/api/order/place", {
       method: "POST",
       data: { items, address: data.address, payMethod: data.payMethod },
     }).then(() => {
       dispatch(clearCart())
+      setIsLoading(false)
       setIsDone(true)
-      setIsPending(false)
     })
   }
 
@@ -92,8 +93,8 @@ export function Review({ data, setIsDone }) {
               <th>Price</th>
             </tr>
           </thead>
-          <tbody className={isLoading ? "no-padding" : ""}>
-            {isLoading ? (
+          <tbody className={isLoading && !items.length ? "no-padding" : ""}>
+            {isLoading && !items.length ? (
               <tr>
                 <TableItemSkeleton />
               </tr>
@@ -124,7 +125,7 @@ export function Review({ data, setIsDone }) {
           <Text $size="md">{getAddressString(data.address)}</Text>
         </Heading>
       </ReviewSection>
-      <Button $type="primary" disabled={isPending} onClick={clickHandler}>
+      <Button $type="primary" disabled={isLoading} onClick={clickHandler}>
         Order Now
       </Button>
     </StyledReview>

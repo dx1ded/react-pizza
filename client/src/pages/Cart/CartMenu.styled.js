@@ -43,12 +43,11 @@ export const CartSummary = styled.div`
   justify-content: space-between;
   margin-bottom: 2.5rem;
 
-  ${Heading}:nth-child(1) span {
+  ${Heading} span {
     font-weight: 700;
   }
 
   ${Heading}:nth-child(2) span {
-    font-weight: 700;
     color: var(--primary);
   }
 `
@@ -66,15 +65,15 @@ export const CartActions = styled.div`
 
 export const GoBack = styled(Button).attrs({
   as: NavLink,
-  $type: "light_gray",
 })`
-  font-weight: 400;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
   text-decoration: none;
 
   ${Icon} {
-    margin: -0.25rem 0.5rem 0 0;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: inherit;
     color: currentcolor;
-    vertical-align: middle;
   }
 `

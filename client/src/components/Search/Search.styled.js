@@ -20,7 +20,7 @@ export const SearchBar = styled.div`
     padding: 0.6rem 0.6rem 0.6rem 2.4rem;
     color: var(--dark);
     border: 0.5px solid var(--gray);
-    border-radius: 5px;
+    border-radius: 10px;
     outline: none;
   }
 `
