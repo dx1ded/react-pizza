@@ -1,4 +1,5 @@
 import { useEffect, useRef, useId } from "react"
+import { useOutsideClick } from "@hooks/useOutsideClick"
 import { StyledSelectOption, StyledSelect } from "./Select.styled"
 
 function SelectOption({ name, index, isChecked, value, onClick }) {
@@ -37,18 +38,7 @@ export function Select({
     toggle()
   }
 
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (!selectRef.current.contains(event.target) && isOpened) {
-        toggle()
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside)
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside)
-    }
-  }, [toggle, isOpened])
+  useOutsideClick(selectRef, isOpened, toggle)
 
   return (
     <StyledSelect $isOpened={isOpened} ref={selectRef}>

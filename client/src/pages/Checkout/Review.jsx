@@ -46,6 +46,7 @@ export function Review({ data, setIsDone }) {
   const request = useSecuredRequest()
   const [items, setItems] = useState([])
   const [isLoading, setIsLoading] = useState(true)
+  const [isDisabled, setIsDisabled] = useState(false)
 
   useEffect(() => {
     const cartList = JSON.parse(localStorage.getItem("cart"))
@@ -65,13 +66,13 @@ export function Review({ data, setIsDone }) {
   }, [request])
 
   const clickHandler = () => {
-    setIsLoading(true)
+    setIsDisabled(true)
     request("/api/order/place", {
       method: "POST",
       data: { items, address: data.address, payMethod: data.payMethod },
     }).then(() => {
       dispatch(clearCart())
-      setIsLoading(false)
+      setIsDisabled(false)
       setIsDone(true)
     })
   }
@@ -93,8 +94,8 @@ export function Review({ data, setIsDone }) {
               <th>Price</th>
             </tr>
           </thead>
-          <tbody className={isLoading && !items.length ? "no-padding" : ""}>
-            {isLoading && !items.length ? (
+          <tbody className={isLoading ? "no-padding" : ""}>
+            {isLoading ? (
               <tr>
                 <TableItemSkeleton />
               </tr>
@@ -125,7 +126,7 @@ export function Review({ data, setIsDone }) {
           <Text $size="md">{getAddressString(data.address)}</Text>
         </Heading>
       </ReviewSection>
-      <Button $type="primary" disabled={isLoading} onClick={clickHandler}>
+      <Button $type="primary" disabled={isDisabled} onClick={clickHandler}>
         Order Now
       </Button>
     </StyledReview>

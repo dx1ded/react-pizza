@@ -66,6 +66,7 @@ export const GlobalStyle = createGlobalStyle`
 
     --z-search: 1000;
     --z-select: 2000;
+    --z-dropdown: 3000;
     --z-modal: 10000;
 
     /* Shades */
