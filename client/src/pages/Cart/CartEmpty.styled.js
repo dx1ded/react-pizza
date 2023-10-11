@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Text, Button } from "@ui"
 
 export const StyledCartEmpty = styled.div`
-  margin-top: 8rem;
+  margin-top: 6rem;
   text-align: center;
 
   ${Text} {

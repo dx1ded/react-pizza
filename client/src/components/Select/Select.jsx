@@ -1,5 +1,5 @@
-import { useEffect, useRef, useId } from "react"
-import { useOutsideClick } from "@hooks/useOutsideClick"
+import { useId } from "react"
+import { useGlobalClick } from "@hooks/useGlobalClick"
 import { StyledSelectOption, StyledSelect } from "./Select.styled"
 
 function SelectOption({ name, index, isChecked, value, onClick }) {
@@ -28,20 +28,18 @@ export function Select({
   onChange,
 }) {
   const name = useId()
-  const selectRef = useRef(null)
+
+  useGlobalClick(toggle, isOpened)
 
   const clickHandler = (event) => {
     const option = event.target.value
 
     setActive(option)
     onChange(option)
-    toggle()
   }
 
-  useOutsideClick(selectRef, isOpened, toggle)
-
   return (
-    <StyledSelect $isOpened={isOpened} ref={selectRef}>
+    <StyledSelect $isOpened={isOpened}>
       {list.map((option, i) => (
         <SelectOption
           key={i}

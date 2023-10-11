@@ -1,15 +1,8 @@
-import { useRef } from "react"
-import { useOutsideClick } from "@hooks/useOutsideClick"
+import { useGlobalClick } from "@hooks/useGlobalClick"
 import { StyledDropdown } from "./Dropdown.styled"
 
 export function Dropdown({ isOpened, api, children }) {
-  const dropdownRef = useRef(null)
+  useGlobalClick(api.close, isOpened)
 
-  useOutsideClick(dropdownRef, isOpened, api.close)
-
-  return (
-    <StyledDropdown ref={dropdownRef} $isOpened={isOpened} onClick={api.close}>
-      {children}
-    </StyledDropdown>
-  )
+  return <StyledDropdown $isOpened={isOpened}>{children}</StyledDropdown>
 }

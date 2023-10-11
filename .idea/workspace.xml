@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab777b0c-9b7f-490d-87c0-bca3b9104be0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/Dropdown/Dropdown.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Dropdown/Dropdown.styled.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Dropdown/useDropdown.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/hooks/useOutsideClick.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Nav/Nav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Nav/Nav.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Nav/Nav.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Nav/Nav.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Dropdown/Dropdown.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Dropdown/Dropdown.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Select/Select.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Select/Select.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/globalStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/globalStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/hooks/useOutsideClick.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/hooks/useGlobalClick.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Cart/CartEmpty.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Cart/CartEmpty.styled.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/Checkout/Checkout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Checkout/Checkout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Checkout/Review.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Checkout/Review.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +159,9 @@
       <workItem from="1696746897562" duration="66000" />
       <workItem from="1696808491899" duration="17769000" />
       <workItem from="1696887154599" duration="26189000" />
-      <workItem from="1696976605920" duration="23821000" />
+      <workItem from="1696976605920" duration="24588000" />
+      <workItem from="1697052743912" duration="1288000" />
+      <workItem from="1697057439724" duration="370000" />
     </task>
     <servers />
   </component>
