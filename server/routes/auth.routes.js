@@ -86,4 +86,22 @@ router.post("/sign-in", async (req, res) => {
   res.json({ secret })
 })
 
+// -> /api/auth/isEmailTaken
+router.post("/isEmailTaken", async (req, res) => {
+  const email = req.body.email
+
+  const user = await User.findOne({ email })
+
+  res.json({ isTaken: !!user })
+})
+
+// -> api/auth/isUsernameTaken
+router.post("/isUsernameTaken", async (req, res) => {
+  const username = req.body.username
+
+  const user = await User.findOne({ username })
+
+  res.json({ isTaken: !!user })
+})
+
 export default router

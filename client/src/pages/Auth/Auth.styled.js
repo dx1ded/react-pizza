@@ -1,80 +1,86 @@
 import styled from "styled-components"
-import { Button, Input, Text } from "@ui"
+import { Button, Container, Input, Text } from "@ui"
 
 export const StyledAuth = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 28rem;
-  transform: translate(-50%, -50%);
-`
-
-export const StyledForm = styled.div`
-  padding: 2rem 1.5rem;
-  background-color: var(--white);
-  border-radius: 10px;
-  box-shadow: var(--shade-1);
-
-  form {
-    margin-bottom: 1.3rem;
-  }
-
-  .react-datepicker-wrapper {
-    display: block;
-    margin-bottom: 1rem;
-  }
-`
-
-export const FormLabelWrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0.3rem;
+  justify-content: center;
+  height: 100vh;
+
+  ${Container} {
+    width: 100%;
+    padding: 3.5rem 2rem 2rem;
+    background-color: var(--white);
+    border-radius: 20px;
+  }
 `
 
-export const FormLabel = styled.label`
-  display: inline-block;
-  font-weight: 700;
-`
-
-export const FormInput = styled(Input).attrs({
-  $type: "primary",
-})`
-  display: block;
+export const ValidationResult = styled.p`
+  position: absolute;
+  top: 50%;
+  right: -1rem;
   width: 100%;
-  padding: 0.6rem 0.8rem;
+  max-width: 14rem;
+  padding: 0.7rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: red;
+  visibility: ${(props) => (props.$hasError ? "visible" : "hidden")};
+  background-color: var(--white);
+  border-radius: 4px;
+  box-shadow: var(--shade-1);
+  opacity: ${(props) => (props.$hasError ? 1 : 0)};
+  transition:
+    opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
+  transform: translate(100%, -50%);
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    content: "";
+    border-color: transparent red transparent transparent;
+    border-style: solid;
+    border-width: 0.4rem 0.4rem 0.4rem 0;
+    transform: translate(-100%, -50%);
+  }
+`
+
+export const InputWrapper = styled.div`
+  position: relative;
 
   &:not(:last-child) {
     margin-bottom: 1rem;
   }
+
+  ${Input} {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+  }
 `
 
-export const FormSubmit = styled(Button).attrs({
-  $type: "primary",
-})`
+export const LabelledInput = styled.div`
   position: relative;
-  display: block;
-  width: 100%;
-  height: 2.25rem;
-  padding: 0.5rem;
-  font-weight: 700;
-  border-radius: 5px;
-`
 
-export const FormChange = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 1rem;
-  border-top: 1px solid var(--light-gray);
-`
+  label {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 100%;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--white);
+    background-color: var(--primary);
+    border-radius: 30px 0 0 30px;
+  }
 
-export const FormChangeButton = styled(Text).attrs({
-  $size: "md",
-  $color: "var(--blue)",
-})`
-  margin-left: 0.4rem;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
+  ${Input} {
+    padding-left: 3.7rem;
+  }
 `

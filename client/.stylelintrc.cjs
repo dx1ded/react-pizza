@@ -12,6 +12,7 @@ module.exports = {
     "value-no-vendor-prefix": null,
     "scss/operator-no-unspaced": null,
     "scss/operator-no-newline-after": null,
+    "selector-class-pattern": null,
     "order/order": [
       [
         "custom-properties",

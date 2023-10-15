@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux"
 import { removeSecret } from "@redux/secret/actions"
 
 export const useSecuredRequest = () => {
-  const token = useSelector((state) => state.secret.token)
   const dispatch = useDispatch()
+  const token = useSelector((state) => state.secret.token)
 
   return useCallback(
     (url, options) =>

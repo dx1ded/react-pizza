@@ -30,7 +30,7 @@ export function Checkout() {
                 to="/"
               />
             ) : (
-              <Strategy>
+              <Strategy hasProgress>
                 <PayMethod title="Pay Method" />
                 <Address title="Choose Address" />
                 <Review title="Review" setIsDone={setIsDone} />

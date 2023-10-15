@@ -47,6 +47,8 @@ module.exports = {
     "no-continue": "off",
     "no-param-reassign": "off",
     "no-shadow": "off",
-    "consistent-return": "off"
+    "consistent-return": "off",
+    "no-sequences": "off",
+    "jsx-a11y/label-has-associated-control": "off"
   },
 }

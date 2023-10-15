@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components"
-import { Heading } from "@ui"
+import { Button, Heading, Icon } from "@ui"
 
 const fadeInLeft = keyframes`
   from {
@@ -13,11 +13,15 @@ const fadeInLeft = keyframes`
   }
 `
 
-export const StyledStrategy = styled.div``
+export const StyledStrategy = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 18rem;
+`
 
 export const StrategyProgress = styled.div`
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   align-items: center;
   margin-bottom: 2rem;
 
@@ -36,10 +40,35 @@ export const StrategyProgress = styled.div`
 `
 
 export const StrategyTitle = styled(Heading)`
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+`
 
-  & + * {
+export const StrategyWrapper = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  & > * {
+    margin: auto 0;
     animation: ${fadeInLeft};
     animation-duration: 0.5s;
+  }
+`
+
+export const StrategyNav = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  margin-top: auto;
+
+  ${Button} {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-width: 1.5px;
+    border-radius: 100%;
+
+    ${Icon} {
+      line-height: 3.5rem;
+    }
   }
 `
