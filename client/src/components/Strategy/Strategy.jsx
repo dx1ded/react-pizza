@@ -1,5 +1,5 @@
-import { useState, Children, cloneElement, useRef, useEffect } from "react"
-import { Button, Heading, Icon } from "@ui"
+import { useState, Children, cloneElement, useRef } from "react"
+import { Button, Icon } from "@ui"
 import {
   StrategyNav,
   StrategyProgress,
@@ -20,10 +20,6 @@ export function Strategy({
   const [data, setData] = useState({})
   const [buttonsDisabled, setButtonsDisabled] = useState(false)
   const elementRef = useRef(null)
-
-  useEffect(() => {
-    console.log(stage)
-  }, [stage])
 
   const changeStage = (i) => {
     if (i > stage) return

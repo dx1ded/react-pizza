@@ -5,32 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab777b0c-9b7f-490d-87c0-bca3b9104be0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/public/sign-in.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/sign-up.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Strategy/MergeStrategies.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/Auth/AuthMethod.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/Auth/AuthMethod.styled.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignIn/SignInForm.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/Credentials.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/DateOfBirth.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/FullName.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/Username.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.eslintrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintrc.cjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.stylelintrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/client/.stylelintrc.cjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/@ui/Heading.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/@ui/Heading.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/breakpoints.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/breakpoints.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Strategy/Strategy.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Strategy/Strategy.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Strategy/Strategy.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Strategy/Strategy.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/hooks/useSecuredRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/hooks/useSecuredRequest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/Auth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/Auth.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/globalStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/globalStyle.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/Auth.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/Auth.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/LoginForm.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/RegisterForm.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/yup.schemas.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/yup.schemas.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Checkout/Checkout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Checkout/Checkout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/auth.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/auth.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/AuthMethod.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/AuthMethod.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/DateOfBirth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/DateOfBirth.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,35 +45,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "NewWatcherDialog.advanced.open": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "ignore_missing_gitignore": "true",
-    "last_opened_file_path": "/Users/volodymyr/WebstormProjects/react-pizza/client/stylelintrc.js",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.stylelint": "/Users/volodymyr/WebstormProjects/react-pizza/client/node_modules/stylelint",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/Users/volodymyr/WebstormProjects/react-pizza/node_modules/prettier",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;NewWatcherDialog.advanced.open&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/volodymyr/WebstormProjects/react-pizza/client/stylelintrc.js&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;/Users/volodymyr/WebstormProjects/react-pizza/client/node_modules/stylelint&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/volodymyr/WebstormProjects/react-pizza/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "PLAIN_TEXT"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;PLAIN_TEXT&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/public" />
@@ -184,7 +167,9 @@
       <workItem from="1697057439724" duration="20974000" />
       <workItem from="1697164402669" duration="7168000" />
       <workItem from="1697239023191" duration="15108000" />
-      <workItem from="1697315589602" duration="16611000" />
+      <workItem from="1697315589602" duration="17456000" />
+      <workItem from="1697404231074" duration="4009000" />
+      <workItem from="1697508604560" duration="3655000" />
     </task>
     <servers />
   </component>

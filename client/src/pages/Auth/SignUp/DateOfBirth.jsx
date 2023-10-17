@@ -5,16 +5,33 @@ import styled from "styled-components"
 import { useDispatch } from "react-redux"
 import { setSecret } from "@redux/secret/actions"
 import { Icon, Input } from "@ui"
+import breakpoints from "@breakpoints"
 import { DateOfBirthSchema } from "../yup.schemas"
 import { formatDate } from "../../../utils"
-import { InputWrapper, LabelledInput, ValidationResult } from "../Auth.styled"
 
+import { InputWrapper, LabelledInput, ValidationResult } from "../Auth.styled"
 import "@taak/react-modern-calendar-datepicker/lib/DatePicker.css"
 
 const StyledDateOfBirth = styled.div`
   .DatePicker {
     position: static;
     display: block;
+  }
+
+  .responsive-calendar {
+    font-size: 0.55rem;
+
+    @media ${breakpoints.device.xl} {
+      font-size: 0.5rem;
+    }
+
+    @media ${breakpoints.device.lg} {
+      font-size: 0.45rem;
+    }
+
+    @media ${breakpoints.device.xs} {
+      font-size: 0.4rem;
+    }
   }
 `
 
@@ -75,6 +92,7 @@ export const DateOfBirth = forwardRef(function DateOfBirth(
           <DatePicker
             colorPrimary="#fe5f1e"
             renderInput={renderCustomInput}
+            calendarClassName="responsive-calendar"
             onChange={(date) =>
               setFieldValue(
                 "dateOfBirth",

@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components"
 import normalize from "normalize.css/normalize.css?inline"
+import breakpoints from "@breakpoints"
 
 export const GlobalStyle = createGlobalStyle`
   ${normalize}
@@ -67,11 +68,22 @@ export const GlobalStyle = createGlobalStyle`
     --z-search: 1000;
     --z-select: 2000;
     --z-dropdown: 3000;
+    --z-validation-message: 5000;
     --z-modal: 10000;
 
     /* Shades */
 
     --shade-1: 0 15px 20px rgb(0 0 0 / 3%);
+    
+    @media ${breakpoints.device.xl} {
+      --container-h-offset: 2.5em;
+      --container-v-offset: 2.5em;
+    }
+    
+    @media ${breakpoints.device.md} {
+      --container-h-offset: 2em;
+      --container-v-offset: 2em;
+    }
   }
 
 

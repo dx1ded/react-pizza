@@ -1,5 +1,6 @@
 import styled, { keyframes } from "styled-components"
 import { Button, Heading, Icon } from "@ui"
+import breakpoints from "@breakpoints"
 
 const fadeInLeft = keyframes`
   from {
@@ -16,7 +17,6 @@ const fadeInLeft = keyframes`
 export const StyledStrategy = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 18rem;
 `
 
 export const StrategyProgress = styled.div`
@@ -36,6 +36,15 @@ export const StrategyProgress = styled.div`
     &.active {
       background-color: var(--primary);
     }
+
+    @media ${breakpoints.device.sm} {
+      height: 0.2rem;
+    }
+  }
+
+  @media ${breakpoints.device.sm} {
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
   }
 `
 
@@ -69,6 +78,25 @@ export const StrategyNav = styled.div`
 
     ${Icon} {
       line-height: 3.5rem;
+
+      @media ${breakpoints.device.xl} {
+        font-size: 1.5rem;
+        line-height: 2.6rem;
+      }
+
+      @media ${breakpoints.device.sm} {
+        line-height: 2.3rem;
+      }
+    }
+
+    @media ${breakpoints.device.xl} {
+      width: 2.6rem;
+      height: 2.6rem;
+    }
+
+    @media ${breakpoints.device.sm} {
+      width: 2.3rem;
+      height: 2.3rem;
     }
   }
 `
