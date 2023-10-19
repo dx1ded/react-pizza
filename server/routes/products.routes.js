@@ -47,9 +47,7 @@ router.post("/list", AuthMiddleware, async (req, res) => {
       { $count: "count" }
     ])
 
-    setTimeout(() => {
-      res.json({ products, count: count[0].count })
-    }, 4000)
+    res.json({ products, count: count[0].count })
   } catch (e) {
     console.error(e)
   }

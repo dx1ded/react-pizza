@@ -1,9 +1,18 @@
 import styled from "styled-components"
 import { Icon, Heading, Button } from "@ui"
 import { NavLink } from "react-router-dom"
+import breakpoints from "@breakpoints"
 
 export const StyledCartMenu = styled.section`
   margin-top: 5.875rem;
+
+  @media ${breakpoints.device.xl} {
+    margin-top: 4rem;
+  }
+
+  @media ${breakpoints.device.md} {
+    margin-top: 2rem;
+  }
 `
 
 export const CartHeader = styled.div`
@@ -11,12 +20,30 @@ export const CartHeader = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 2rem;
+
+  @media ${breakpoints.device.xl} {
+    margin-bottom: 1.2rem;
+  }
 `
 
 export const CartLogo = styled.div`
   display: flex;
   gap: 1rem;
   align-items: center;
+
+  ${Icon} {
+    @media ${breakpoints.device.xl} {
+      font-size: 1.8rem;
+    }
+
+    @media ${breakpoints.device.md} {
+      font-size: 1.4rem;
+    }
+  }
+
+  @media ${breakpoints.device.xl} {
+    gap: 0.6rem;
+  }
 `
 
 export const CartClear = styled.button`
@@ -35,6 +62,10 @@ export const CartList = styled.ul`
   display: grid;
   gap: 1.875rem;
   margin-bottom: 2.5rem;
+
+  @media ${breakpoints.device.lg} {
+    gap: 1.4rem;
+  }
 `
 
 export const CartSummary = styled.div`
@@ -43,12 +74,26 @@ export const CartSummary = styled.div`
   justify-content: space-between;
   margin-bottom: 2.5rem;
 
-  ${Heading} span {
-    font-weight: 700;
+  ${Heading} {
+    span {
+      font-weight: 700;
+    }
+
+    &:nth-child(2) span {
+      color: var(--primary);
+    }
+
+    @media ${breakpoints.device.md} {
+      font-size: 1rem;
+    }
   }
 
-  ${Heading}:nth-child(2) span {
-    color: var(--primary);
+  @media ${breakpoints.device.lg} {
+    margin-bottom: 1.5rem;
+  }
+
+  @media ${breakpoints.device.xs} {
+    margin-bottom: 1rem;
   }
 `
 
@@ -60,6 +105,16 @@ export const CartActions = styled.div`
   ${Button} {
     padding: 0.9rem 2rem;
     font-weight: 700;
+
+    @media ${breakpoints.device.lg} {
+      padding: 0.8rem 1.5rem;
+      font-size: 0.875rem;
+    }
+
+    @media ${breakpoints.device.md} {
+      padding: 0.7rem 1.4rem;
+      font-size: 0.8rem;
+    }
   }
 `
 

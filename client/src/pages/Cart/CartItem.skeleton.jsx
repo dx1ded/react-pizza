@@ -4,7 +4,7 @@ export function CartItemSkeleton() {
   return (
     <ContentLoader
       speed={2}
-      width={810}
+      width="100%"
       height={111}
       viewBox="0 0 810 111"
       backgroundColor="#f3f3f3"

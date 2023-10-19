@@ -1,5 +1,6 @@
 import styled from "styled-components"
-import { Button } from "@ui"
+import { Button, Heading, Text } from "@ui"
+import breakpoints from "@breakpoints"
 
 export const StyledCartItem = styled.li`
   display: flex;
@@ -7,6 +8,16 @@ export const StyledCartItem = styled.li`
   justify-content: space-between;
   padding-top: 1.875rem;
   border-top: 1px solid var(--light-gray);
+
+  & > ${Heading} {
+    @media ${breakpoints.device.md} {
+      font-size: 1rem;
+    }
+  }
+
+  @media ${breakpoints.device.lg} {
+    padding-top: 1.4rem;
+  }
 `
 
 export const CartItemContent = styled.div`
@@ -14,14 +25,55 @@ export const CartItemContent = styled.div`
   flex-basis: 18.75rem;
   gap: 1.5rem;
   align-items: center;
+
+  @media ${breakpoints.device.xl} {
+    flex-basis: 16rem;
+    gap: 1rem;
+  }
+
+  @media ${breakpoints.device.md} {
+    flex-basis: 13rem;
+    gap: 0.75rem;
+  }
+
+  @media (width <= 25em) {
+    flex-basis: 10rem;
+  }
 `
 
 export const CartItemImage = styled.img`
-  width: 5rem;
-  height: 5rem;
+  max-width: 5rem;
+
+  @media ${breakpoints.device.xl} {
+    max-width: 4rem;
+  }
+
+  @media ${breakpoints.device.md} {
+    max-width: 2.5rem;
+  }
+
+  @media (width <= 25em) {
+    display: none;
+  }
 `
 
-export const CartItemName = styled.div``
+export const CartItemName = styled.div`
+  ${Heading} {
+    @media ${breakpoints.device.md} {
+      font-size: 1rem;
+    }
+  }
+
+  ${Text} {
+    @media ${breakpoints.device.xl} {
+      font-size: 1rem;
+    }
+
+    @media ${breakpoints.device.md} {
+      font-size: 0.875rem;
+    }
+  }
+`
 
 export const CartItemCounter = styled.form`
   display: flex;
@@ -36,6 +88,18 @@ export const CartItemCounter = styled.form`
     font-weight: 700;
     border-width: 1.5px;
     border-radius: 100%;
+
+    @media ${breakpoints.device.lg} {
+      width: 1.5rem;
+      height: 1.5rem;
+      font-size: 1rem;
+    }
+
+    @media ${breakpoints.device.md} {
+      width: 1.25rem;
+      height: 1.25rem;
+      font-size: 0.875rem;
+    }
   }
 
   input {
@@ -52,6 +116,22 @@ export const CartItemCounter = styled.form`
       margin: 0;
       appearance: none;
     }
+
+    @media ${breakpoints.device.lg} {
+      font-size: 1.2rem;
+    }
+
+    @media ${breakpoints.device.md} {
+      font-size: 1rem;
+    }
+  }
+
+  @media ${breakpoints.device.lg} {
+    gap: 0.5rem;
+  }
+
+  @media ${breakpoints.device.md} {
+    gap: 0.25rem;
   }
 `
 
@@ -66,5 +146,23 @@ export const CartItemDelete = styled(Button).attrs({
   span {
     font-size: 1.5rem;
     font-weight: 700;
+
+    @media ${breakpoints.device.lg} {
+      font-size: 1.2rem;
+    }
+
+    @media ${breakpoints.device.md} {
+      font-size: 1rem;
+    }
+  }
+
+  @media ${breakpoints.device.lg} {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  @media ${breakpoints.device.md} {
+    width: 1.25rem;
+    height: 1.25rem;
   }
 `
