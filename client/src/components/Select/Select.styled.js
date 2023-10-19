@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import breakpoints from "@breakpoints"
 
 export const StyledSelect = styled.div`
   position: absolute;
@@ -39,5 +40,10 @@ export const StyledSelectOption = styled.div`
     font-weight: 400;
     color: var(--black);
     cursor: pointer;
+
+    @media ${breakpoints.device.xl} {
+      padding: 0.5rem 0.7rem;
+      font-size: 0.8rem;
+    }
   }
 `

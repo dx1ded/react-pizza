@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Icon } from "@ui"
+import breakpoints from "@breakpoints"
 
 export const StyledPagination = styled.nav`
   display: flex;
@@ -24,5 +25,14 @@ export const PaginationButton = styled.button`
   &.active {
     color: var(--white);
     background-color: var(--primary);
+  }
+
+  @media ${breakpoints.device.xl} {
+    font-size: 0.8rem;
+  }
+
+  @media ${breakpoints.device.md} {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.75rem;
   }
 `

@@ -1,4 +1,5 @@
 import { useSearchParams } from "react-router-dom"
+import { options } from "../../utils"
 import { FilterOptions, StyledFilterOption } from "./Filter.styled"
 
 function FilterOption({ value, isChecked, onClick }) {
@@ -17,8 +18,6 @@ function FilterOption({ value, isChecked, onClick }) {
     </StyledFilterOption>
   )
 }
-
-const options = ["All", "Meat", "Vegetarian", "Grill", "Spicy", "Closed"]
 
 export function Filter() {
   const [searchParams, setSearchParams] = useSearchParams()

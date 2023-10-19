@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components"
 import { Button, Text, Icon } from "@ui"
 import { NavLink } from "react-router-dom"
+import breakpoints from "@breakpoints"
 import { StyledLoader } from "../Loader/Loader.styled"
 
 const fadeIn = keyframes`
@@ -22,6 +23,16 @@ export const CartIcon = styled.div`
     pointer-events: none;
     background-color: var(--primary);
     border-radius: 100%;
+
+    @media ${breakpoints.device.xl} {
+      right: -0.1rem;
+    }
+  }
+
+  ${Icon} {
+    @media ${breakpoints.device.xl} {
+      font-size: 1.2rem;
+    }
   }
 `
 
@@ -71,6 +82,10 @@ export const StyledCartButton = styled(Button).attrs({ as: NavLink })`
       animation-duration: 0.3s;
       animation-delay: 0.3s;
       animation-fill-mode: both;
+
+      @media ${breakpoints.device.xl} {
+        font-size: 0.7rem;
+      }
     }
 
     ${CartIcon} {
@@ -94,6 +109,10 @@ export const StyledCartButton = styled(Button).attrs({ as: NavLink })`
       ${Icon} {
         margin-right: 0.3rem;
         font-size: 1rem;
+
+        @media ${breakpoints.device.xl} {
+          font-size: 0.9rem;
+        }
       }
 
       ${Text} {
@@ -101,7 +120,26 @@ export const StyledCartButton = styled(Button).attrs({ as: NavLink })`
         width: auto;
         height: auto;
         font-size: 0.9rem;
+
+        @media ${breakpoints.device.xl} {
+          font-size: 0.8rem;
+        }
+
+        @media ${breakpoints.device.xl} {
+          font-size: 0.7rem;
+        }
       }
+    }
+
+    @media ${breakpoints.device.xl} {
+      width: 7rem;
+      height: 2.5rem;
+    }
+
+    @media ${breakpoints.device.lg} {
+      width: 6rem;
+      height: 1.6rem;
+      padding: 0 0.8rem;
     }
   }
 `

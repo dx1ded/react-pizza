@@ -21,6 +21,8 @@ export const getAddressString = (address) => `
 export const calculateTotal = (items) =>
   items.reduce((acc, item) => (acc += item.price * item.count), 0)
 
+export const options = ["All", "Meat", "Vegetarian", "Grill", "Spicy", "Closed"]
+
 export const types = ["thin", "traditional"]
 
 export const provincesList = [

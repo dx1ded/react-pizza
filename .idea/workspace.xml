@@ -5,15 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab777b0c-9b7f-490d-87c0-bca3b9104be0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/components/Burger/Burger.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/Burger/Burger.styled.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/burger/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/burger/reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/redux/burger/types.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/@ui/Heading.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/@ui/Heading.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/breakpoints.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/breakpoints.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Strategy/Strategy.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Strategy/Strategy.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Strategy/Strategy.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Strategy/Strategy.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/@ui/PageWrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/@ui/PageWrapper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/@ui/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/@ui/Text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Card/Card.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Card/Card.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Dropdown/Dropdown.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Dropdown/Dropdown.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Filter/Filter.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Filter/Filter.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Filter/Filter.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Filter/Filter.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Header/Header.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header/Header.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Logo/Logo.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Logo/Logo.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Nav/CartButton.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Nav/CartButton.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Nav/Nav.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Nav/Nav.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Pagination/Pagination.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Pagination/Pagination.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Search/Search.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Search/Search.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Select/Select.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Select/Select.styled.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/globalStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/globalStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/Auth.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/Auth.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/AuthMethod.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/AuthMethod.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/DateOfBirth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/DateOfBirth.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Main/FilterWrapper.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Main/FilterWrapper.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Main/PizzaList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Main/PizzaList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Main/Product.skeleton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Main/Product.skeleton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/redux/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/rootReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/products.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/products.routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +187,9 @@
       <workItem from="1697239023191" duration="15108000" />
       <workItem from="1697315589602" duration="17456000" />
       <workItem from="1697404231074" duration="4009000" />
-      <workItem from="1697508604560" duration="3655000" />
+      <workItem from="1697508604560" duration="5694000" />
+      <workItem from="1697594147825" duration="6360000" />
+      <workItem from="1697683593600" duration="3506000" />
     </task>
     <servers />
   </component>

@@ -70,19 +70,19 @@ export const GlobalStyle = createGlobalStyle`
     --z-dropdown: 3000;
     --z-validation-message: 5000;
     --z-modal: 10000;
+    --z-burger: 20000;
 
     /* Shades */
 
     --shade-1: 0 15px 20px rgb(0 0 0 / 3%);
     
     @media ${breakpoints.device.xl} {
-      --container-h-offset: 2.5em;
-      --container-v-offset: 2.5em;
+      --container-h-offset: 1.5em;
+      --container-v-offset: 2em;
     }
     
-    @media ${breakpoints.device.md} {
-      --container-h-offset: 2em;
-      --container-v-offset: 2em;
+    @media ${breakpoints.device.lg} {
+      --container-h-offset: 1em;
     }
   }
 

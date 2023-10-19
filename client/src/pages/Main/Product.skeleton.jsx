@@ -4,7 +4,7 @@ export function ProductSkeleton() {
   return (
     <ContentLoader
       speed={2}
-      width={260}
+      width="100%"
       height={450}
       viewBox="0 0 260 450"
       backgroundColor="#f3f3f3"

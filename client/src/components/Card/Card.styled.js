@@ -1,14 +1,25 @@
 import styled from "styled-components"
-import { Button } from "@ui"
+import { Button, Heading } from "@ui"
+import breakpoints from "@breakpoints"
 
 export const StyledCard = styled.article`
   text-align: center;
+
+  @media ${breakpoints.device.xl} {
+    & > ${Heading} {
+      margin-bottom: 1rem;
+    }
+  }
 `
 
 export const CardImage = styled.img`
-  width: 16.25rem;
-  height: 16.25rem;
+  max-width: 16.25rem;
   margin-bottom: 0.625rem;
+
+  @media ${breakpoints.device.xl} {
+    max-width: 12rem;
+    margin-bottom: 0.2rem;
+  }
 `
 
 export const CardOptions = styled.form`
@@ -16,6 +27,10 @@ export const CardOptions = styled.form`
   margin-bottom: 1.125rem;
   background-color: var(--light-gray);
   border-radius: 10px;
+
+  @media ${breakpoints.device.xl} {
+    margin-bottom: 0.8rem;
+  }
 `
 
 export const CardOptionsGroup = styled.div`
@@ -24,6 +39,14 @@ export const CardOptionsGroup = styled.div`
 
   &:not(:last-child) {
     margin-bottom: 0.5rem;
+
+    @media ${breakpoints.device.xl} {
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  @media ${breakpoints.device.xl} {
+    gap: 0.3rem;
   }
 `
 
@@ -47,6 +70,10 @@ export const StyledCardOption = styled.div`
     font-weight: 700;
     cursor: pointer;
     border-radius: 5px;
+
+    @media ${breakpoints.device.xl} {
+      font-size: 0.75rem;
+    }
   }
 `
 
@@ -54,6 +81,12 @@ export const CardDetails = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  ${Heading} {
+    @media ${breakpoints.device.xl} {
+      font-size: 1.2rem;
+    }
+  }
 
   ${Button} {
     height: 2.5rem;
@@ -77,6 +110,10 @@ export const CardDetails = styled.div`
       text-align: center;
       background-color: var(--primary);
       border-radius: 100%;
+    }
+
+    @media ${breakpoints.device.xl} {
+      font-size: 0.875rem;
     }
   }
 `
