@@ -9,6 +9,10 @@ const sizes = {
       md: "0.875rem",
       sm: "0.8125rem",
     },
+    [breakpoints.size.lg]: {
+      md: "0.8rem",
+      sm: "0.75rem",
+    },
   },
 }
 
@@ -22,5 +26,10 @@ export const Text = styled.p`
   @media ${breakpoints.device.xl} {
     font-size: ${(props) =>
       sizes.adaptive[breakpoints.size.xl][props.$size] || props.$size};
+  }
+
+  @media ${breakpoints.device.lg} {
+    font-size: ${(props) =>
+      sizes.adaptive[breakpoints.size.lg][props.$size] || props.$size};
   }
 `

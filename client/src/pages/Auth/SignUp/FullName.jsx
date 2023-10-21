@@ -35,6 +35,7 @@ export const FullName = forwardRef(function FullName(
           type="text"
           id="firstName"
           placeholder="First Name"
+          autoComplete="off"
           defaultValue={values.firstName}
           onChange={handleChange}
         />
@@ -48,6 +49,7 @@ export const FullName = forwardRef(function FullName(
           type="text"
           id="lastName"
           placeholder="Last Name"
+          autoComplete="off"
           defaultValue={values.lastName}
           onChange={handleChange}
         />

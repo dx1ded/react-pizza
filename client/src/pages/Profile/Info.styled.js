@@ -1,5 +1,6 @@
 import styled from "styled-components"
-import { Container, Text, Icon } from "@ui"
+import { Container, Text, Heading, Icon } from "@ui"
+import breakpoints from "@breakpoints"
 
 export const StyledInfo = styled.section`
   margin: 4rem 0 3rem;
@@ -9,19 +10,51 @@ export const StyledInfo = styled.section`
     gap: 3rem;
     padding-bottom: 3rem;
     border-bottom: 2px solid var(--light-gray);
+
+    @media ${breakpoints.device.lg} {
+      gap: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    @media ${breakpoints.device.md} {
+      flex-direction: column;
+      gap: 1rem;
+    }
   }
 
   img {
-    width: 12.5rem;
-    height: 12.5rem;
+    display: inline-block;
+    flex-shrink: 0;
+    max-width: 12.5rem;
+    max-height: 12.5rem;
     border-radius: 100%;
-    object-fit: cover;
+
+    @media ${breakpoints.device.lg} {
+      max-width: 10rem;
+      max-height: 10rem;
+    }
+  }
+
+  @media ${breakpoints.device.lg} {
+    margin: 2rem 0;
   }
 `
 
 export const InfoWrapper = styled.div`
   width: 100%;
   min-width: 0;
+
+  & > ${Heading} {
+    @media ${breakpoints.device.lg} {
+      font-size: 1.5rem;
+    }
+  }
+
+  & > ${Text} {
+    @media ${breakpoints.device.lg} {
+      margin-bottom: 1.5rem;
+    }
+  }
 
   section {
     &:not(:last-child) {
@@ -84,10 +117,20 @@ const SliderNavButton = styled.button`
   ${Icon} {
     line-height: 1.5rem;
     vertical-align: middle;
+
+    @media ${breakpoints.device.lg} {
+      font-size: 1rem;
+      line-height: 1.25rem;
+    }
   }
 
   &.swiper-button-disabled {
     opacity: 0.6;
+  }
+
+  @media ${breakpoints.device.lg} {
+    width: 1.25rem;
+    height: 1.25rem;
   }
 `
 

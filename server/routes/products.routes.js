@@ -54,19 +54,23 @@ router.post("/list", AuthMiddleware, async (req, res) => {
 })
 
 router.post("/listByIds", AuthMiddleware, async (req, res) => {
-  const ids = req.body.ids
-    .map((id) => new Types.ObjectId(id.split("_")[0]))
+  try {
+    const ids = req.body.ids
+      .map((id) => new Types.ObjectId(id.split("_")[0]))
 
-  const items = await Promise.all(ids.map((id) =>
-    Product.findOne({ _id: id }).exec()
-  ))
+    const items = await Promise.all(ids.map((id) =>
+      Product.findOne({ _id: id }).exec()
+    ))
 
-  const itemsWithInitialIds = items.map((item, index) => ({
-    ...item._doc,
-    _id: req.body.ids[index]
-  }))
+    const itemsWithInitialIds = items.map((item, index) => ({
+      ...item._doc,
+      _id: req.body.ids[index]
+    }))
 
-  res.json({ items: itemsWithInitialIds })
+    res.json({ items: itemsWithInitialIds })
+  } catch (e) {
+    console.log(e)
+  }
 })
 
 export default router

@@ -17,7 +17,7 @@ export const SignInForm = forwardRef(function SignInForm(
       password: "",
     },
     validationSchema: SignInSchema,
-    async onSubmit(values) {
+    async onSubmit(values, { setErrors }) {
       setButtonsDisabled(true)
 
       const { secret } = await fetch("/api/auth/sign-in", {
@@ -29,6 +29,10 @@ export const SignInForm = forwardRef(function SignInForm(
       }).then((response) => response.json())
 
       setButtonsDisabled(false)
+
+      if (!secret) {
+        return setErrors({ login: "User not found" })
+      }
       dispatch(setSecret(secret))
       localStorage.setItem("secret", secret)
     },
@@ -49,6 +53,7 @@ export const SignInForm = forwardRef(function SignInForm(
           type="text"
           id="login"
           placeholder="E-mail or username"
+          autoComplete="off"
           defaultValue={values.login}
           onChange={handleChange}
         />
@@ -62,6 +67,7 @@ export const SignInForm = forwardRef(function SignInForm(
           type="password"
           id="password"
           placeholder="Password"
+          autoComplete="off"
           defaultValue={values.password}
           onChange={handleChange}
         />

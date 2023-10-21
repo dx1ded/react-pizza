@@ -10,7 +10,7 @@ function AddressSkeleton() {
   return (
     <ContentLoader
       speed={2}
-      width={218}
+      width="100%"
       height={106}
       viewBox="0 0 218 106"
       backgroundColor="#f3f3f3"

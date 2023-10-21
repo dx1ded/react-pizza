@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom"
 import { useDispatch } from "react-redux"
 import { removeSecret } from "@redux/secret/actions"
+import { clearCart } from "@redux/cart/actions"
 import { Icon } from "@ui"
 import { useDropdown } from "../Dropdown/useDropdown"
 import { CartButton } from "./CartButton"
@@ -10,8 +11,9 @@ export function Nav() {
   const dispatch = useDispatch()
 
   const quit = () => {
-    localStorage.removeItem("secret")
+    localStorage.clear()
     dispatch(removeSecret())
+    dispatch(clearCart())
   }
 
   const [api, contextHolder] = useDropdown({

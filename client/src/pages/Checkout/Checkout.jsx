@@ -8,37 +8,39 @@ import { PayMethod } from "./PayMethod"
 import { Address } from "./Address"
 import { Review } from "./Review"
 import { CartEmpty } from "../Cart/CartEmpty"
-import { StyledCheckout } from "./Checkout.styled"
+import { StyledCheckout, CheckoutContent } from "./Checkout.styled"
 
 export function Checkout() {
   const [isDone, setIsDone] = useState(false)
   const cartList = useSelector((state) => state.cart.list)
 
   return (
-    <PageWrapper $pb="11rem">
-      <Header />
-      {!Object.keys(cartList).length && !isDone ? (
-        <CartEmpty />
-      ) : (
-        <StyledCheckout>
-          <Container $mw="50rem">
-            {isDone ? (
-              <Poster
-                image="order-done-sketch.svg"
-                title="🎉 Thank you for ordering!"
-                buttonText="Go to main page"
-                to="/"
-              />
-            ) : (
-              <Strategy hasProgress>
-                <PayMethod title="Pay Method" />
-                <Address title="Choose Address" />
-                <Review title="Review" setIsDone={setIsDone} />
-              </Strategy>
-            )}
-          </Container>
-        </StyledCheckout>
-      )}
-    </PageWrapper>
+    <StyledCheckout>
+      <PageWrapper $pb="11rem">
+        <Header />
+        {!Object.keys(cartList).length && !isDone ? (
+          <CartEmpty />
+        ) : (
+          <CheckoutContent>
+            <Container $mw="50rem">
+              {isDone ? (
+                <Poster
+                  image="order-done-sketch.svg"
+                  title="🎉 Thank you for ordering!"
+                  buttonText="Go to main page"
+                  to="/"
+                />
+              ) : (
+                <Strategy hasProgress>
+                  <PayMethod title="Pay Method" />
+                  <Address title="Choose Address" />
+                  <Review title="Review" setIsDone={setIsDone} />
+                </Strategy>
+              )}
+            </Container>
+          </CheckoutContent>
+        )}
+      </PageWrapper>
+    </StyledCheckout>
   )
 }

@@ -8,10 +8,14 @@ const router = Router()
 router.use(json())
 
 router.post("/info", AuthMiddleware, async (req, res) => {
-  const user = await User.findOne({ _id: res.locals._id })
-  const addresses = await Address.find({ userId: user._id })
+  try {
+    const user = await User.findOne({ _id: res.locals._id })
+    const addresses = await Address.find({ userId: user._id })
 
-  res.json({ user, addresses })
+    res.json({ user, addresses })
+  } catch (e) {
+    console.log(e)
+  }
 })
 
 export default router

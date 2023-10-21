@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { Text } from "@ui"
+import breakpoints from "@breakpoints"
 
 export const StyledOrderDetails = styled.div`
   & > ${Text} {
@@ -15,6 +16,14 @@ export const StyledOrderDetails = styled.div`
     span {
       font-size: 0.875rem;
       font-weight: 400;
+
+      @media ${breakpoints.device.lg} {
+        font-size: 0.75rem;
+      }
+
+      @media ${breakpoints.device.xs} {
+        font-size: 0.65rem;
+      }
     }
   }
 `
@@ -34,6 +43,10 @@ export const OrderDetailsTable = styled.div`
     font-size: 0.875rem;
     text-align: left;
     border-collapse: collapse;
+
+    @media (width <= 26.25em) {
+      font-size: 0.75rem;
+    }
   }
 
   thead {
@@ -48,6 +61,10 @@ export const OrderDetailsTable = styled.div`
     &:nth-child(4),
     &:nth-child(5) {
       text-align: center;
+    }
+
+    @media ${breakpoints.device.xs} {
+      padding: 0.8rem 0.4rem;
     }
   }
 

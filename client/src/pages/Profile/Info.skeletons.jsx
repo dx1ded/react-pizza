@@ -4,7 +4,7 @@ export function NameSkeleton() {
   return (
     <ContentLoader
       speed={2}
-      width={580}
+      width="100%"
       height={50}
       viewBox="0 0 580 50"
       backgroundColor="#f3f3f3"
@@ -20,7 +20,7 @@ export function BasicInfoSkeleton() {
   return (
     <ContentLoader
       speed={2}
-      width={580}
+      width="100%"
       height={50}
       viewBox="0 0 580 50"
       backgroundColor="#f3f3f3"
@@ -36,7 +36,7 @@ export function AdressesSkeleton() {
   return (
     <ContentLoader
       speed={2}
-      width={580}
+      width="100%"
       height={92}
       viewBox="0 0 580 92"
       backgroundColor="#f3f3f3"

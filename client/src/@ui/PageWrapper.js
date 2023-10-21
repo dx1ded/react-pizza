@@ -11,8 +11,10 @@ export const PageWrapper = styled.div`
   box-shadow: var(--shade-1);
 
   @media ${breakpoints.device.xl} {
+    height: 100vh;
     padding-bottom: ${(props) => props.$pb || "3rem"};
     margin: 0 auto;
+    overflow-y: auto;
     border-radius: 0;
   }
 `

@@ -1,8 +1,18 @@
 import styled from "styled-components"
-import { Icon } from "@ui"
+import { Container, Heading, Icon } from "@ui"
 import { StyledPagination } from "@components/Pagination/Pagination.styled"
+import breakpoints from "@breakpoints"
 
 export const StyledOrders = styled.section`
+  ${Container} {
+    & > ${Heading} {
+      @media ${breakpoints.device.md} {
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+      }
+    }
+  }
+
   table {
     --table-radius: 6px;
 
@@ -36,15 +46,41 @@ export const StyledOrders = styled.section`
   }
 
   tr {
-    display: flex;
+    width: 100%;
+
+    @media ${breakpoints.device.lg} {
+      font-size: 0.875rem;
+    }
+
+    @media ${breakpoints.device.md} {
+      font-size: 0.75rem;
+    }
   }
 
   th,
   td {
-    display: flex;
-    flex: 1;
-    align-items: center;
     padding: 1.2rem;
+    font-size: 0.9375rem;
+
+    @media ${breakpoints.device.lg} {
+      padding: 1rem;
+    }
+
+    @media ${breakpoints.device.md} {
+      padding: 0.8rem;
+    }
+
+    @media (width <= 28.75em) {
+      padding: 0.8rem 0.5rem;
+    }
+
+    @media ${breakpoints.device.md} {
+      font-size: 0.75rem;
+    }
+
+    @media ${breakpoints.device.sm} {
+      font-size: 0.65rem;
+    }
   }
 
   th {
@@ -54,7 +90,6 @@ export const StyledOrders = styled.section`
   }
 
   td {
-    font-size: 0.9375rem;
     background-color: var(--light-gray);
 
     button {
@@ -67,19 +102,44 @@ export const StyledOrders = styled.section`
 
       ${Icon} {
         vertical-align: middle;
+
+        @media ${breakpoints.device.lg} {
+          font-size: 1.1rem;
+        }
+
+        @media ${breakpoints.device.md} {
+          font-size: 0.9rem;
+        }
+      }
+
+      @media ${breakpoints.device.lg} {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+
+      @media ${breakpoints.device.md} {
+        width: 1.2rem;
+        height: 1.2rem;
       }
     }
 
     &:nth-child(3) {
+      max-width: 10rem;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
+
+      @media ${breakpoints.device.sm} {
+        max-width: 7rem;
+      }
     }
   }
 
-  th:nth-child(3),
-  td:nth-child(3) {
-    flex: 15rem;
+  th:nth-child(2),
+  td:nth-child(2) {
+    @media (width <= 28.75em) {
+      display: none;
+    }
   }
 
   th:nth-child(5),
@@ -91,5 +151,9 @@ export const StyledOrders = styled.section`
     display: flex;
     justify-content: center;
     margin-top: 2.5rem;
+
+    @media ${breakpoints.device.lg} {
+      margin-top: 1.5rem;
+    }
   }
 `

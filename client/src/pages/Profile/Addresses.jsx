@@ -82,10 +82,15 @@ export function Addresses({ userId, addresses }) {
       <Swiper
         modules={[Navigation]}
         spaceBetween={15}
-        slidesPerView={3}
+        slidesPerView={2}
         navigation={{
           prevEl: ".slider-nav-prev",
           nextEl: ".slider-nav-next",
+        }}
+        breakpoints={{
+          768: {
+            slidesPerView: 3,
+          },
         }}
       >
         {addresses.map((address, i) => (

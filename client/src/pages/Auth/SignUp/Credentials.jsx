@@ -52,6 +52,7 @@ export const Credentials = forwardRef(function Credentials(
           type="email"
           id="email"
           placeholder="E-mail"
+          autoComplete="off"
           defaultValue={values.email}
           onChange={handleChange}
         />
@@ -65,6 +66,7 @@ export const Credentials = forwardRef(function Credentials(
           type="password"
           id="password"
           placeholder="Password"
+          autoComplete="off"
           defaultValue={values.password}
           onChange={handleChange}
         />
@@ -80,6 +82,7 @@ export const Credentials = forwardRef(function Credentials(
           type="password"
           id="confirmPassword"
           placeholder="Confirm password"
+          autoComplete="off"
           defaultValue={values.confirmPassword}
           onChange={handleChange}
         />

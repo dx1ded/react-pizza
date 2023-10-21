@@ -51,6 +51,7 @@ export const Username = forwardRef(function Username(
           type="text"
           id="username"
           placeholder="Username"
+          autoComplete="off"
           defaultValue={values.username}
           onChange={handleChange}
         />

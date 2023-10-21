@@ -6,11 +6,35 @@
   <component name="ChangeListManager">
     <list default="true" id="ab777b0c-9b7f-490d-87c0-bca3b9104be0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Cart/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Cart/Cart.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Cart/CartEmpty.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Cart/CartEmpty.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Cart/CartItem.skeleton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Cart/CartItem.skeleton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Cart/CartItem.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Cart/CartItem.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Cart/CartMenu.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Cart/CartMenu.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/@ui/PageWrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/@ui/PageWrapper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/@ui/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/@ui/Text.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Modal/Modal.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Modal/Modal.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Nav/Nav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Nav/Nav.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/SignIn/SignInForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignIn/SignInForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/Credentials.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/Credentials.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/FullName.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/FullName.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/Username.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/Username.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Checkout/Address.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Checkout/Address.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Checkout/Address.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Checkout/Address.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Checkout/Checkout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Checkout/Checkout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Checkout/Checkout.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Checkout/Checkout.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Checkout/PayMethod.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Checkout/PayMethod.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Checkout/Poster.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Checkout/Poster.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Checkout/Review.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Checkout/Review.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Checkout/Review.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Checkout/Review.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Profile/Addresses.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Profile/Addresses.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Profile/Info.skeletons.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Profile/Info.skeletons.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Profile/Info.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Profile/Info.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Profile/OrderDetails.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Profile/OrderDetails.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Profile/Orders.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Profile/Orders.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Profile/Orders.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Profile/Orders.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Profile/Profile.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/account.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/account.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/address.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/address.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/auth.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/auth.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/cart.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/cart.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/order.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/order.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/products.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/products.routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +192,8 @@
       <workItem from="1697404231074" duration="4009000" />
       <workItem from="1697508604560" duration="5694000" />
       <workItem from="1697594147825" duration="6360000" />
-      <workItem from="1697683593600" duration="8601000" />
+      <workItem from="1697683593600" duration="13906000" />
+      <workItem from="1697834413527" duration="9354000" />
     </task>
     <servers />
   </component>

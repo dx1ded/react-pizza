@@ -12,7 +12,7 @@ function TableItemSkeleton() {
     <td>
       <ContentLoader
         speed={2}
-        width={696}
+        width="100%"
         height={102}
         viewBox="0 0 696 102"
         backgroundColor="#f3f3f3"
