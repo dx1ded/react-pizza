@@ -24,9 +24,10 @@ export const SearchBar = styled.div`
     width: 100%;
     padding: 0.6rem 0.6rem 0.6rem 2.4rem;
     color: var(--dark);
-    border: 0.5px solid var(--gray);
+    border: 0.5px solid lightgray;
     border-radius: 10px;
     outline: none;
+    box-shadow: 0 0 2px rgb(0 0 0 / 20%);
 
     @media ${breakpoints.device.xl} {
       padding: 0.5rem 0.5rem 0.5rem 2rem;

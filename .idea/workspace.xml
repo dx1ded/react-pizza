@@ -6,35 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ab777b0c-9b7f-490d-87c0-bca3b9104be0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/@ui/PageWrapper.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/@ui/PageWrapper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/@ui/Text.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/@ui/Text.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Modal/Modal.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Modal/Modal.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Nav/Nav.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Nav/Nav.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/SignIn/SignInForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignIn/SignInForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/Credentials.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/Credentials.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/FullName.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/FullName.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/Username.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/Username.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Checkout/Address.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Checkout/Address.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Checkout/Address.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Checkout/Address.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Checkout/Checkout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Checkout/Checkout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Checkout/Checkout.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Checkout/Checkout.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Checkout/PayMethod.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Checkout/PayMethod.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Checkout/Poster.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Checkout/Poster.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Checkout/Review.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Checkout/Review.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Checkout/Review.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Checkout/Review.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Profile/Addresses.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Profile/Addresses.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Profile/Info.skeletons.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Profile/Info.skeletons.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Profile/Info.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Profile/Info.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Profile/OrderDetails.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Profile/OrderDetails.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Profile/Orders.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Profile/Orders.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Profile/Orders.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Profile/Orders.styled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Profile/Profile.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Profile/Profile.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/account.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/account.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/address.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/address.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/auth.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/auth.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/cart.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/cart.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/order.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/order.routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/products.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/products.routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Search/Search.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Search/Search.styled.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +21,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "dx1ded"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/dx1ded/react-pizza.git",
+    "accountId": "0cf5c871-5c13-41ba-9117-5f8de7458dbc"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -66,35 +50,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;NewWatcherDialog.advanced.open&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/volodymyr/WebstormProjects/react-pizza/client/stylelintrc.js&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;/Users/volodymyr/WebstormProjects/react-pizza/client/node_modules/stylelint&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/volodymyr/WebstormProjects/react-pizza/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "NewWatcherDialog.advanced.open": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore_missing_gitignore": "true",
+    "last_opened_file_path": "/Users/volodymyr/WebstormProjects/react-pizza",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "/Users/volodymyr/WebstormProjects/react-pizza/client/node_modules/stylelint",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/volodymyr/WebstormProjects/react-pizza/node_modules/prettier",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors",
+    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;PLAIN_TEXT&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "PLAIN_TEXT"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/client/public" />
@@ -103,6 +88,13 @@
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/components/Nav" />
     </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.19072.23" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -193,7 +185,11 @@
       <workItem from="1697508604560" duration="5694000" />
       <workItem from="1697594147825" duration="6360000" />
       <workItem from="1697683593600" duration="13906000" />
-      <workItem from="1697834413527" duration="9354000" />
+      <workItem from="1697834413527" duration="9451000" />
+      <workItem from="1697847699497" duration="15000" />
+      <workItem from="1698812582842" duration="184000" />
+      <workItem from="1698813682147" duration="694000" />
+      <workItem from="1730505593308" duration="4292000" />
     </task>
     <servers />
   </component>
