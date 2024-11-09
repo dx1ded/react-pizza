@@ -30,6 +30,7 @@ module.exports = {
     "comma-dangle": "off",
     "import/prefer-default-export": "off",
     "import/no-unresolved": "off",
+    "import/extensions": "off",
     "no-unused-vars": "off",
     "import/no-extraneous-dependencies": "off",
     "react/prop-types": "off",

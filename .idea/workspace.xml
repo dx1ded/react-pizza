@@ -5,8 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab777b0c-9b7f-490d-87c0-bca3b9104be0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/client/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Search/Search.styled.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Search/Search.styled.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.eslintrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintrc.cjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/ProximaNova-Bold.woff" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/assets/ProximaNova-Bold.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/ProximaNova-Bold.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/assets/ProximaNova-Bold.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/ProximaNova-Extrabld.woff" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/assets/ProximaNova-Extrabld.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/ProximaNova-Extrabld.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/assets/ProximaNova-Extrabld.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/ProximaNova-Regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/assets/ProximaNova-Regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/ProximaNova-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/assets/ProximaNova-Regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/AccessRoutes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AccessRoutes.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/globalStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/globalStyle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/hooks/useSecuredRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/hooks/useSecuredRequest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/SignIn/SignInForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignIn/SignInForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/Credentials.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/Credentials.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/DateOfBirth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/DateOfBirth.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/Username.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/Username.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/server/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,18 +47,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "dx1ded"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;dx1ded&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/dx1ded/react-pizza.git",
-    "accountId": "0cf5c871-5c13-41ba-9117-5f8de7458dbc"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/dx1ded/react-pizza.git&quot;,
+    &quot;accountId&quot;: &quot;0cf5c871-5c13-41ba-9117-5f8de7458dbc&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -50,43 +76,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "NewWatcherDialog.advanced.open": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore_missing_gitignore": "true",
-    "last_opened_file_path": "/Users/volodymyr/WebstormProjects/react-pizza",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.stylelint": "/Users/volodymyr/WebstormProjects/react-pizza/client/node_modules/stylelint",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/Users/volodymyr/WebstormProjects/react-pizza/node_modules/prettier",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors",
-    "ts.external.directory.path": "/Applications/WebStorm.app/Contents/plugins/javascript-impl/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;NewWatcherDialog.advanced.open&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore_missing_gitignore&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/volodymyr/WebstormProjects/react-pizza/server&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;/Users/volodymyr/WebstormProjects/react-pizza/client/node_modules/stylelint&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/volodymyr/WebstormProjects/react-pizza/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/volodymyr/WebstormProjects/react-pizza/client/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "PLAIN_TEXT"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;PLAIN_TEXT&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/server" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/assets" />
       <recent name="$PROJECT_DIR$/client/public" />
       <recent name="$PROJECT_DIR$/client/src/components/Pagination" />
       <recent name="$PROJECT_DIR$/client" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/components/Nav" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -190,6 +219,11 @@
       <workItem from="1698812582842" duration="184000" />
       <workItem from="1698813682147" duration="694000" />
       <workItem from="1730505593308" duration="4292000" />
+      <workItem from="1730513134705" duration="33000" />
+      <workItem from="1731121434268" duration="1658000" />
+      <workItem from="1731123134074" duration="236000" />
+      <workItem from="1731123405050" duration="57000" />
+      <workItem from="1731123484159" duration="237000" />
     </task>
     <servers />
   </component>

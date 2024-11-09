@@ -1,3 +1,4 @@
+import "dotenv"
 import path from "path"
 
 import { defineConfig } from "vite"
@@ -6,6 +7,7 @@ import eslintPlugin from "vite-plugin-eslint"
 import stylelintPlugin from "vite-plugin-stylelint"
 
 export default defineConfig(() => ({
+  base: process.env.VITE_BASE_URL,
   plugins: [
     react(),
     eslintPlugin({
@@ -34,10 +36,10 @@ export default defineConfig(() => ({
       "@context": path.resolve(__dirname, "src/context"),
       "@assets": path.resolve(__dirname, "src/assets"),
       "@ui": path.resolve(__dirname, "src/@ui/_ui.js"),
+      "@redux": path.resolve(__dirname, "src/redux"),
       // For Styles
       "@mixins": path.resolve(__dirname, "src/styles/_mixins.scss"),
       "@breakpoints": path.resolve(__dirname, "src/breakpoints.js"),
-      "@redux": path.resolve(__dirname, "src/redux")
     }
   }
 }))

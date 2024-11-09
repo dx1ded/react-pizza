@@ -11,7 +11,7 @@ export function PublicRoutes() {
   const token = useSelector((state) => state.secret.token)
   const location = useLocation()
 
-  return token && location.pathname === "/auth" ? (
+  return token && location.pathname.endsWith("/auth") ? (
     <Navigate to="/" />
   ) : (
     <Outlet />

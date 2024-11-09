@@ -7,7 +7,7 @@ import { setSecret } from "@redux/secret/actions"
 import { Icon, Input } from "@ui"
 import breakpoints from "@breakpoints"
 import { DateOfBirthSchema } from "../yup.schemas"
-import { formatDate } from "../../../utils"
+import { formatDate, getServerUrl } from "@/utils"
 
 import { InputWrapper, LabelledInput, ValidationResult } from "../Auth.styled"
 import "@taak/react-modern-calendar-datepicker/lib/DatePicker.css"
@@ -48,7 +48,7 @@ export const DateOfBirth = forwardRef(function DateOfBirth(
     async onSubmit(values) {
       setButtonsDisabled(true)
 
-      const { secret } = await fetch("/api/auth/sign-up", {
+      const { secret } = await fetch(getServerUrl("/api/auth/sign-up"), {
         method: "POST",
         body: JSON.stringify({ ...data, ...values }),
         headers: {

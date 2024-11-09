@@ -1,6 +1,7 @@
 import { useCallback } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { removeSecret } from "@redux/secret/actions"
+import { getServerUrl } from "@/utils"
 
 export const useSecuredRequest = () => {
   const dispatch = useDispatch()
@@ -8,7 +9,7 @@ export const useSecuredRequest = () => {
 
   return useCallback(
     (url, options) =>
-      fetch(url, {
+      fetch(getServerUrl(url), {
         ...options,
         headers: {
           "Content-Type": "application/json",

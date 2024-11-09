@@ -2,6 +2,13 @@ import { createGlobalStyle } from "styled-components"
 import normalize from "normalize.css/normalize.css?inline"
 import breakpoints from "@breakpoints"
 
+import ProximaNovaRegularWoff2 from "@assets/ProximaNova-Regular.woff2"
+import ProximaNovaRegularWoff from "@assets/ProximaNova-Regular.woff"
+import ProximaNovaBoldWoff2 from "@assets/ProximaNova-Bold.woff2"
+import ProximaNovaBoldWoff from "@assets/ProximaNova-Bold.woff"
+import ProximaNovaExtrabldWoff2 from "@assets/ProximaNova-Extrabld.woff2"
+import ProximaNovaExtrabldWoff from "@assets/ProximaNova-Extrabld.woff"
+
 export const GlobalStyle = createGlobalStyle`
   ${normalize}
   
@@ -9,8 +16,8 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Proxima Nova";
     font-style: normal;
     font-weight: 400;
-    src: url("/ProximaNova-Regular.woff2") format("woff2"),
-         url("/ProximaNova-Regular.woff") format("woff");
+    src: url(${ProximaNovaRegularWoff2}) format("woff2"),
+         url(${ProximaNovaRegularWoff}) format("woff");
     font-display: swap;
   }
 
@@ -18,8 +25,8 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Proxima Nova";
     font-style: normal;
     font-weight: 700;
-    src: url("/ProximaNova-Bold.woff2") format("woff2"),
-         url("/ProximaNova-Bold.woff") format("woff");
+    src: url(${ProximaNovaBoldWoff2}) format("woff2"),
+         url(${ProximaNovaBoldWoff}) format("woff");
     font-display: swap;
   }
 
@@ -27,8 +34,8 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Proxima Nova";
     font-style: normal;
     font-weight: 800;
-    src: url("/ProximaNova-Extrabld.woff2") format("woff2"),
-         url("/ProximaNova-Extrabld.woff") format("woff");
+    src: url(${ProximaNovaExtrabldWoff2}) format("woff2"),
+         url(${ProximaNovaExtrabldWoff}) format("woff");
     font-display: swap;
   }
   

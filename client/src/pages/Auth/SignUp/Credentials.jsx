@@ -1,6 +1,7 @@
 import { forwardRef, useImperativeHandle } from "react"
 import { useFormik } from "formik"
 import { Input } from "@ui"
+import { getServerUrl } from "@/utils"
 import { CredentailsSchema } from "../yup.schemas"
 import { InputWrapper, ValidationResult } from "../Auth.styled"
 
@@ -18,7 +19,7 @@ export const Credentials = forwardRef(function Credentials(
     async onSubmit(values, { setErrors }) {
       setButtonsDisabled(true)
 
-      const { isTaken } = await fetch("/api/auth/isEmailTaken", {
+      const { isTaken } = await fetch(getServerUrl("/api/auth/isEmailTaken"), {
         method: "POST",
         body: JSON.stringify({ email: values.email }),
         headers: {

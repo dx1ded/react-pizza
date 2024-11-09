@@ -18,6 +18,14 @@ export const getAddressString = (address) => `
   }
 `
 
+export const getServerUrl = (path) => {
+  const _env = String(import.meta.env.VITE_BASE_URL)
+  const baseUrl = _env.endsWith("/") ? _env : `${_env}/`
+  const newPath = path.startsWith("/") ? path.slice(1) : path
+
+  return `${baseUrl}${newPath}`
+}
+
 export const calculateTotal = (items) =>
   items.reduce((acc, item) => (acc += item.price * item.count), 0)
 
