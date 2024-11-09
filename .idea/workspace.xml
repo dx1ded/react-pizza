@@ -5,34 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ab777b0c-9b7f-490d-87c0-bca3b9104be0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.eslintrc.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/client/.eslintrc.cjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/ProximaNova-Bold.woff" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/assets/ProximaNova-Bold.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/ProximaNova-Bold.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/assets/ProximaNova-Bold.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/ProximaNova-Extrabld.woff" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/assets/ProximaNova-Extrabld.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/ProximaNova-Extrabld.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/assets/ProximaNova-Extrabld.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/ProximaNova-Regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/assets/ProximaNova-Regular.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/ProximaNova-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/assets/ProximaNova-Regular.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/AccessRoutes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/AccessRoutes.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/globalStyle.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/globalStyle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/hooks/useSecuredRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/hooks/useSecuredRequest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/SignIn/SignInForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignIn/SignInForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/Credentials.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/Credentials.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/DateOfBirth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/DateOfBirth.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/Username.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/Username.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/vite.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/server/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,11 +86,11 @@
       <recent name="$PROJECT_DIR$/server" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/client/src/assets" />
       <recent name="$PROJECT_DIR$/client/public" />
       <recent name="$PROJECT_DIR$/client/src/components/Pagination" />
       <recent name="$PROJECT_DIR$/client" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -223,7 +198,7 @@
       <workItem from="1731121434268" duration="1658000" />
       <workItem from="1731123134074" duration="236000" />
       <workItem from="1731123405050" duration="57000" />
-      <workItem from="1731123484159" duration="237000" />
+      <workItem from="1731123484159" duration="479000" />
     </task>
     <servers />
   </component>
