@@ -17,8 +17,8 @@ FROM node:22-alpine
 RUN npm install -g serve
 
 # As it's a new node image we need to copy the build result from the other node image (the one that was used for building)
-COPY --from=builder /app/build /app/build
+COPY --from=builder /app/dist /app/dist
 
 EXPOSE 80
-CMD ["serve", "-s", "build", "-l", "80"]
+CMD ["serve", "-s", "dist", "-l", "80"]
 
