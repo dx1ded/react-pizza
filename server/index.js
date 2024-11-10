@@ -11,12 +11,12 @@ import OrderRouter from "./routes/order.routes.js"
 
 const app = express()
 
-app.use("/api/auth", AuthRouter)
-app.use("/api/products", ProductsRouter)
-app.use("/api/cart", CartRouter)
-app.use("/api/account", AccountRouter)
-app.use("/api/address", AddressRouter)
-app.use("/api/order", OrderRouter)
+app.use("/auth", AuthRouter)
+app.use("/products", ProductsRouter)
+app.use("/cart", CartRouter)
+app.use("/account", AccountRouter)
+app.use("/address", AddressRouter)
+app.use("/order", OrderRouter)
 
 app.listen(process.env.PORT, (err) => {
   if (err) throw err

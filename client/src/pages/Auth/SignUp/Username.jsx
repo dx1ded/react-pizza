@@ -1,7 +1,6 @@
 import { forwardRef, useImperativeHandle } from "react"
 import { useFormik } from "formik"
 import { Input } from "@ui"
-import { getServerUrl } from "@/utils"
 import { UsernameSchema } from "../yup.schemas"
 import { InputWrapper, LabelledInput, ValidationResult } from "../Auth.styled"
 
@@ -17,16 +16,13 @@ export const Username = forwardRef(function Username(
     async onSubmit(values, { setErrors }) {
       setButtonsDisabled(true)
 
-      const { isTaken } = await fetch(
-        getServerUrl("/api/auth/isUsernameTaken"),
-        {
-          method: "POST",
-          body: JSON.stringify({ username: values.username }),
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      ).then((response) => response.json())
+      const { isTaken } = await fetch("/api/auth/isUsernameTaken", {
+        method: "POST",
+        body: JSON.stringify({ username: values.username }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }).then((response) => response.json())
 
       setButtonsDisabled(false)
 

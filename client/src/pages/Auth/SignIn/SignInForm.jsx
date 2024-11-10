@@ -3,7 +3,6 @@ import { useDispatch } from "react-redux"
 import { useFormik } from "formik"
 import { setSecret } from "@redux/secret/actions"
 import { Input } from "@ui"
-import { getServerUrl } from "@/utils"
 import { SignInSchema } from "../yup.schemas"
 import { InputWrapper, ValidationResult } from "../Auth.styled"
 
@@ -21,7 +20,7 @@ export const SignInForm = forwardRef(function SignInForm(
     async onSubmit(values, { setErrors }) {
       setButtonsDisabled(true)
 
-      const { secret } = await fetch(getServerUrl("/api/auth/sign-in"), {
+      const { secret } = await fetch("/api/auth/sign-in", {
         method: "POST",
         body: JSON.stringify(values),
         headers: {

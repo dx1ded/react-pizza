@@ -7,6 +7,14 @@
     <list default="true" id="ab777b0c-9b7f-490d-87c0-bca3b9104be0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/client/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/hooks/useSecuredRequest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/hooks/useSecuredRequest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/SignIn/SignInForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignIn/SignInForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/Credentials.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/Credentials.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/DateOfBirth.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/DateOfBirth.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/Username.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Auth/SignUp/Username.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +210,10 @@
       <workItem from="1731124171505" duration="29000" />
       <workItem from="1731124275339" duration="4000" />
       <workItem from="1731124292551" duration="25000" />
-      <workItem from="1731124434679" duration="10000" />
+      <workItem from="1731124434679" duration="65000" />
+      <workItem from="1731203191485" duration="3000" />
+      <workItem from="1731203209089" duration="44000" />
+      <workItem from="1731203262081" duration="164000" />
     </task>
     <servers />
   </component>
