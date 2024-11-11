@@ -6,9 +6,6 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 
-# Setting the base url as /react-pizza
-ENV VITE_BASE_URL=/react-pizza
-
 RUN npm run build
 
 # Serving image
@@ -22,4 +19,3 @@ COPY --from=builder /app/dist /app/dist
 
 EXPOSE 80
 CMD ["serve", "-s", "dist", "-l", "80"]
-

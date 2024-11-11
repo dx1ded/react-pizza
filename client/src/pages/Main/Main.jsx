@@ -20,7 +20,7 @@ export function Main() {
 
   useEffect(() => {
     dispatch(setProductsLoading(true))
-    request(`api/products/list?${searchParams.toString()}`, {
+    request(`/api/products/list?${searchParams.toString()}`, {
       method: "POST",
       data: { productsPerPage: 4 },
     }).then((data) => {

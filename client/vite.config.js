@@ -1,4 +1,3 @@
-import "dotenv"
 import path from "path"
 
 import { defineConfig } from "vite"
@@ -7,7 +6,6 @@ import eslintPlugin from "vite-plugin-eslint"
 import stylelintPlugin from "vite-plugin-stylelint"
 
 export default defineConfig(() => ({
-  base: process.env.VITE_BASE_URL,
   plugins: [
     react(),
     eslintPlugin({

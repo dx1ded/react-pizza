@@ -8,7 +8,7 @@ import { Checkout } from "./pages/Checkout/Checkout"
 
 export function App() {
   return (
-    <BrowserRouter basename={import.meta.env.VITE_BASE_URL}>
+    <BrowserRouter>
       <Routes>
         {/* Private Routes */}
         <Route path="/" element={<PrivateRoutes />}>
