@@ -12,7 +12,7 @@ RUN npm run build
 FROM nginx:stable-alpine AS serve
 WORKDIR /usr/share/nginx/html
 
-COPY --from=builder /app/build .
+COPY --from=builder /app/dist .
 
 # Copy the custom nginx config
 COPY nginx.conf /etc/nginx/conf.d/default.conf
