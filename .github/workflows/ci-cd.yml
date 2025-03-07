@@ -22,7 +22,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          context: ./client
+          context: /client
           tags: ${{ secrets.DOCKERHUB_REPO }}:client-latest
 
   build-server-docker-image:
@@ -50,7 +50,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          context: ./server
+          context: /server
           tags: ${{ secrets.DOCKERHUB_REPO }}:server-latest
           secret-files: |
             "env_file=.env"
